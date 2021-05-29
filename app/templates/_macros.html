@@ -1,0 +1,40 @@
+{% macro pagination_widget(pagination, endpoint, fragment='') %}
+<div class="pagination_cust">
+
+    {% if not pagination.has_prev %} 
+        <a href="{% if pagination.has_prev %}{{ url_for(endpoint, page=pagination.prev_num, **kwargs) }}{{ fragment }}{% else %}#{% endif %}" class="disabled">
+            &laquo;
+        </a>
+    {% else %}
+        <a href="{% if pagination.has_prev %}{{ url_for(endpoint, page=pagination.prev_num, **kwargs) }}{{ fragment }}{% else %}#{% endif %}">
+            &laquo;
+        </a>
+    {% endif %}
+    
+    {% for p in pagination.iter_pages() %}
+        {% if p %}
+            {% if p == pagination.page %}
+            
+                <a href="{{ url_for(endpoint, page = p, **kwargs) }}{{ fragment }}" class="active">{{ p }}</a>
+            
+            {% else %}
+            
+                <a href="{{ url_for(endpoint, page = p, **kwargs) }}{{ fragment }}">{{ p }}</a>
+            {% endif %}
+        {% else %}
+        <a href="#" class="disabled">&hellip;</a>
+        {% endif %}
+    {% endfor %}
+
+    {% if not pagination.has_next %} 
+        <a href="{% if pagination.has_next %}{{ url_for(endpoint, page=pagination.next_num, **kwargs) }}{{ fragment }}{% else %}#{% endif %}" class="disabled">
+            &raquo;
+        </a>
+        {% else %}
+        <a href="{% if pagination.has_next %}{{ url_for(endpoint, page=pagination.next_num, **kwargs) }}{{ fragment }}{% else %}#{% endif %}">
+            &raquo;
+        </a>
+        {% endif %}
+    
+</div>
+{% endmacro %}

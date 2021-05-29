@@ -1,0 +1,53 @@
+<section class="features12 cid-svlqcYKAQo" id="features13-1y">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                {% for comment in comments %}
+                <div class="comment">
+                    <div class="item mbr-flex col-12 w3-pale-blue w3-border-blue" style="border-left: 6px solid #ccc!important;border-color: #21f383!important;padding-bottom:0em">
+                        <div class="icon-box" style="background: #ffffff;color: #ffff">
+                            <a href="{{ url_for('.user', username=comment.author.username) }}">
+                                <img class="img-rounded profile-thumbnail" src="{{ comment.author.gravatar(size=40) }}"
+                                    style="height: 3rem;width: 3rem">
+                                <!-- ;transform: translate(-22px, -22px); -->
+                            </a>
+                        </div>
+
+                        <div class="text-box postscust" style="width: 100%;padding-bottom: 0px; margin-bottom:6px">
+                        <p class="icon-title mbr-black mbr-fonts-style display-7" style="display: inline">
+                            <a href="{{ url_for('.user', username=comment.author.username) }}">
+                                <strong>{{ comment.author.username }}</strong></a>
+                        </p>
+                        <p class="icon-title mbr-black mbr-fonts-style display-7" style="display: inline;float: right">
+                            <strong>{{ moment(comment.timestamp).fromNow() }}</strong>
+                        </p>
+                        <div class="icon-text mbr-black mbr-fonts-style display-4">
+                            {% if comment.disabled %}
+                                <p><i>This comment has been disabled by a moderator.</i></p>
+                            {% endif %}
+                            {% if moderate or not comment.disabled %}
+                                {% if comment.body_html %}
+                                    {{ comment.body_html | safe }}
+                                    {% else %}
+                                    {{ comment.body }}
+                                {% endif %}
+                            {% endif %}
+                        </div>
+                        {% if moderate %}
+                            <br>
+                            {% if comment.disabled %}
+                                <a class="btn btn-success btn-xs" href="{{ url_for('.moderate_enable', id=comment.id, page=page) }}"> <span class="label label-primary">Enable</span>
+                                    </a>
+                            {% else %}
+                                <a class="btn btn-danger btn-xs" href="{{ url_for('.moderate_disable', id=comment.id, page=page) }}"> <span class="label label-primary">Disable</span> </a>
+                        {% endif %}
+                        {% endif %}
+                    </div>
+                </div>
+                
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+</section>

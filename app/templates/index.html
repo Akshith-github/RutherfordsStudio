@@ -1,0 +1,658 @@
+{% import "_macros.html" as macros %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Site made with Mobirise Website Builder v5.3.5, https://mobirise.com -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image:src" content="assets/images/about_page-meta.jpg">
+    <meta property="og:image" content="assets/images/about_page-meta.jpg">
+    <meta name="twitter:title" content="About_rutherfords">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="{{url_for('static', filename='images/mbr-96x114.jpg')}}" type="image/x-icon">
+    <meta name="description" content="Rutherfords' Initiative to make happy learning experience.
+Signin and Checkout our communities, blogs, projects and many more resources. ">
+
+
+    <title>About_rutherfords</title>
+
+    {% include 'nav_footer_css.html' %}
+    <link rel="stylesheet" href="{{url_for('static',filename='new_posts_style.css')}}">
+    
+
+</head>
+
+<body>
+
+    {% include 'nav.html' %}
+
+    <p class=" cid-s48MCQYojq mbr-section-title mbr-fonts-style mb-3 display-5 align-center container">
+        Hello,
+        {% if current_user.is_authenticated %}
+        {{ current_user.username }}
+        {% else %}
+        Stranger
+        {% endif %}!
+
+    <div class="justify-content-center">
+        {% if current_user.can(Permission.WRITE) %}
+        <form action="" method="POST" class="mbr-form form-with-styler">
+            <div class="dragArea row">
+                {{form.hidden_tag()}}
+                <div class="col-lg-8 mx-auto mbr-form justify-content-center align-center">
+                    <div class="col-12 form-group">
+                        {{form.body(class="form-control",placeholder=form.body.label.text)}}
+                    </div>
+
+                    <p class="row mbr-form container justify-content-center align-center" style="text-align:center">
+                        {{ form.submit(class="btn btn-success display-4") }}
+                        <!-- <button type="submit" class="btn btn-primary display-4">Send message</button> -->
+                    </p>
+                </div>
+            </div>
+        </form>
+        {% endif %}
+    </div>
+    <div class="post-tabs" style="padding:4rem">
+        <ul class="nav nav-tabs">
+            <div class="row">
+                <!-- <a href="javascript:void(0)" onclick="openCity(event, 'London');">
+                  <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">London</div>
+                </a> -->
+                <li {% if not show_followed %} class="nav-item active w3-padding"
+                            {% else %} class=" nav-item active w3-padding"{% endif %} >
+                    <a {% if not show_followed %} class="activatedtab w3-bottombar w3-hover-light-grey text-white customtabs nav-link link text-primary display-4" 
+                        {% else %} class="w3-bottombar w3-hover-light-grey customtabs nav-link link text-black text-primary display-4"{% endif %}
+                    href="{{ url_for('.show_all') }}">
+                        <span
+                        class="mobi-mbri  mbr-iconfont mbr-iconfont-btn ">
+                        All</span></a></li>
+                {% if current_user.is_authenticated %}
+                <li{% if show_followed %} class="nav-item active w3-padding " 
+                    {% else %} class=" nav-item active w3-padding"{% endif %}>
+                    <a {% if show_followed %} class="activatedtab w3-bottombar w3-hover-light-grey text-white customtabs nav-link link text-primary display-4" 
+                        {% else %} class="w3-bottombar w3-hover-light-grey customtabs nav-link link text-black text-primary display-4"{% endif %}
+                        href="{{ url_for('.show_followed') }}">
+                        <span
+                        class="mobi-mbri  mbr-iconfont mbr-iconfont-btn">
+                        Followers</span></a></li>
+                {% endif %}
+            </div>
+        </ul>
+    </div>
+    {% include 'posts_.html' %}
+    {% if pagination %}
+    <div class="justify-content-center  align-center">
+    <div class="justify-content-center pagination_cust" >
+        {{ macros.pagination_widget(pagination,pagination_endpoint) }}
+    </div>
+    </div>
+    {% endif %}
+</p>
+
+    <section class="header13 cid-svjC2xmOFK mbr-fullscreen" id="header13-m">
+
+
+
+        <div class="mbr-overlay" style="opacity: 0.2; background-color: rgb(255, 255, 255);"></div>
+
+        <div class="align-center container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-9">
+                    <h1 class="mbr-section-title mbr-fonts-style mb-3 display-1"><strong>Rutherfords'
+                            Intitative</strong></h1>
+
+                    <p class="mbr-text mbr-fonts-style mb-3 display-7">"<em><strong>Wisdom…. comes not from age, but
+                                from education and learning</strong></em>." <br>-&nbsp;Anton Chekhov<br>We as a member
+                        of Rutherfords' team aspire to provide a smart way of education.<br>Education in our terms is
+                        more close to being practical and theoretically strong from the roots of domain subject.</p>
+
+                    <div class="social-row display-7 mt-5">
+                        <div class="soc-item">
+                            <a href="https://twitter.com/mobirise" target="_blank">
+                                <span class="mbr-iconfont socicon socicon-facebook"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="https://twitter.com/mobirise" target="_blank">
+                                <span class="mbr-iconfont socicon socicon-twitter"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="https://twitter.com/mobirise" target="_blank">
+                                <span class="mbr-iconfont socicon-github socicon"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="https://twitter.com/mobirise" target="_blank">
+                                <span class="mbr-iconfont socicon socicon-youtube"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="https://twitter.com/mobirise" target="_blank">
+                                <span class="mbr-iconfont socicon socicon-telegram"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features1 cid-svjNCNBhSQ" id="features1-r">
+
+
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-9">
+                    <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+                        <strong>Features</strong>
+                    </h3>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="card col-12 col-md-6 col-lg-3">
+                    <div class="card-wrapper">
+                        <div class="card-box align-center">
+                            <div class="iconfont-wrapper">
+                                <span class="mbr-iconfont mobi-mbri-code mobi-mbri"></span>
+                            </div>
+                            <h5 class="card-title mbr-fonts-style display-7"><strong>Communities to support You</strong>
+                            </h5>
+                            <p class="card-text mbr-fonts-style display-7">&nbsp;<em>Learning is no more bind
+                                    game.<br>Communities provide u a brief idea on the targeted domain and as a platform
+                                    to collaborate in your work and research.</em></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card col-12 col-md-6 col-lg-3">
+                    <div class="card-wrapper">
+                        <div class="card-box align-center">
+                            <div class="iconfont-wrapper">
+                                <span class="mbr-iconfont mobi-mbri-responsive-2 mobi-mbri"></span>
+                            </div>
+                            <h5 class="card-title mbr-fonts-style display-7"><strong>User-Friendly and
+                                </strong><br><strong>rich in content</strong></h5>
+                            <p class="card-text mbr-fonts-style display-7"><em>The team is always on its hunt to provide
+                                    a better playground platform to motivate your learning attitude.</em></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card col-12 col-md-6 col-lg-3">
+                    <div class="card-wrapper">
+                        <div class="card-box align-center">
+                            <div class="iconfont-wrapper">
+                                <span class="mbr-iconfont mobi-mbri-website-theme-2 mobi-mbri"></span>
+                            </div>
+                            <h5 class="card-title mbr-fonts-style display-7"><strong>Integrated with Powerful
+                                    APIs'</strong></h5>
+                            <p class="card-text mbr-fonts-style display-7"><em>A great amount of technologies, content
+                                    and resources are at your fingers tip with</em>&nbsp;Rutherfords studio.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="features3 cid-svjNEJqazE" id="features3-s">
+
+
+        <div class="container">
+            <div class="mbr-section-head">
+                <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+                    <strong>Top Rated Resources</strong>
+                </h4>
+
+            </div>
+            <div class="row mt-4">
+                <div class="item features-image сol-12 col-md-6 col-lg-4">
+                    <div class="item-wrapper">
+                        <div class="item-img">
+                            <a href="https://machinelearningmastery.com/blog/" target="_blank"><img
+                                    src="assets/images/mbr-2-696x543.png" alt="Algorithms are the roots"></a>
+                        </div>
+                        <div class="item-content">
+                            <h5 class="item-title mbr-fonts-style display-7"><strong>Lets bring life in Statistics and
+                                    Machine learning&nbsp;</strong></h5>
+
+                            <p class="mbr-text mbr-fonts-style mt-3 display-7">A blog for statistics and Machine
+                                learning domain. It is featured with various practical daily life projects and themed to
+                                explain algorithms at its best. Contribution by Data science community</p>
+                        </div>
+                        <div class="mbr-section-btn item-footer mt-2"><a href=""
+                                class="btn btn-primary item-btn display-7" target="_blank">Learn More
+                                &gt;</a></div>
+                    </div>
+                </div>
+                <div class="item features-image сol-12 col-md-6 col-lg-4">
+                    <div class="item-wrapper">
+                        <div class="item-img">
+                            <a href="https://opencv.org/" target="_blank"><img src="assets/images/mbr-1-696x544.jpeg"
+                                    alt=""></a>
+                        </div>
+                        <div class="item-content">
+                            <h5 class="item-title mbr-fonts-style display-7"><strong>Computer Vision
+                                    Specialization</strong></h5>
+
+                            <p class="mbr-text mbr-fonts-style mt-3 display-7">A warehouse to craft and learn computer
+                                vision based algorithms to large scale computer vision projects. Aimed to make the
+                                better solutions with the ability to see.</p>
+                        </div>
+                        <div class="mbr-section-btn item-footer mt-2"><a href=""
+                                class="btn btn-primary item-btn display-7" target="_blank">Learn More
+                                &gt;</a></div>
+                    </div>
+                </div>
+                <div class="item features-image сol-12 col-md-6 col-lg-4">
+                    <div class="item-wrapper">
+                        <div class="item-img">
+                            <a href="https://www.cleverprogrammer.com/" target="_blank"><img
+                                    src="assets/images/mbr-696x497.jpg" alt=""></a>
+                        </div>
+                        <div class="item-content">
+                            <h5 class="item-title mbr-fonts-style display-7"><strong>Art of Full-Stack
+                                    Projects.&nbsp;</strong></h5>
+
+                            <p class="mbr-text mbr-fonts-style mt-3 display-7">Select the theme that suits you. Each
+                                theme
+                                in the Mobirise Website Software contains a set of unique blocks.<br></p>
+                        </div>
+                        <div class="mbr-section-btn item-footer mt-2"><a href=""
+                                class="btn btn-primary item-btn display-7" target="_blank">Learn More
+                                &gt;</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="countdown4 cid-svkl96Qiw8 mbr-fullscreen mbr-parallax-background" id="countdown4-v">
+
+        <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(68, 121, 217);">
+        </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h3 class="mbr-section-title mb-5 align-center mbr-fonts-style display-2"><strong>Upcoming Mega
+                            Resource !!</strong><br><strong> </strong><br><strong>Gate guidance community
+                            launch</strong><br><strong> by P.Shiridi kumar</strong></h3>
+
+                    <div class="countdown-cont align-center mb-5">
+                        <div class="daysCountdown col-xs-3 col-sm-3 col-md-3" title="14"></div>
+                        <div class="hoursCountdown col-xs-3 col-sm-3 col-md-3" title="12"></div>
+                        <div class="minutesCountdown col-xs-3 col-sm-3 col-md-3" title="29"></div>
+                        <div class="secondsCountdown col-xs-3 col-sm-3 col-md-3" title="10"></div>
+                        <div class="countdown" data-due-date="2021/03/11"></div>
+                    </div>
+                    <p class="mbr-text mb-5 align-center mbr-fonts-style display-7">
+                        Follow us online to find out when we launch.
+                    </p>
+                    <div class="icons-menu row justify-content-center display-7">
+
+
+
+
+                        <div class="soc-item col-auto">
+                            <a href="https://instagram.com/mobirise" target="_blank" class="social__link">
+                                <span class="mbr-iconfont socicon-instagram socicon"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item col-auto">
+                            <a href="https://twitter.com/mobirise" target="_blank" class="social__link">
+                                <span class="mbr-iconfont socicon-twitter socicon"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item col-auto">
+                            <a href="https://facebook.com/Mobirise/" target="_blank" class="social__link">
+                                <span class="mbr-iconfont socicon socicon-facebook"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item col-auto">
+                            <a href="https://youtube.com/c/mobirise" target="_blank" class="social__link">
+                                <span class="mbr-iconfont socicon socicon-youtube"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="countdown1 cid-svkl81dY1e" id="countdown1-u">
+
+        <div class="mbr-overlay" style="opacity: 0.3; background-color: rgb(255, 255, 255);">
+        </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h3 class="mbr-section-title mb-5 align-center mbr-fonts-style display-2"><strong><em>This
+                                "Technical Weekends"&nbsp; Session by D.Achuth</em></strong></h3>
+                    <h4 class="mbr-section-subtitle mb-5 align-center mbr-fonts-style display-5"><strong><em>A Whole
+                                Front end Zero to master course with three End to End Projects at upcoming technical
+                                week end.
+                            </em></strong></h4>
+                    <div class="countdown-cont align-center mb-5">
+                        <div class="daysCountdown col-xs-3 col-sm-3 col-md-3" title="Days"></div>
+                        <div class="hoursCountdown col-xs-3 col-sm-3 col-md-3" title="Hours"></div>
+                        <div class="minutesCountdown col-xs-3 col-sm-3 col-md-3" title="Minutes"></div>
+                        <div class="secondsCountdown col-xs-3 col-sm-3 col-md-3" title="Seconds"></div>
+                        <div class="countdown" data-due-date="2021/01/01"></div>
+                    </div>
+                    <p class="mbr-text mb-5 align-center mbr-fonts-style display-7">
+                        Subscribe to find out upcoming launches.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mx-auto mbr-form" data-form-type="formoid">
+                    <form action="https://mobirise.eu/" method="POST" class="mbr-form form-with-styler"
+                        data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true"
+                            value="4XShNlAU38zAdCO4DDU9YHfAXKpObT6CwooUojQCUSpZm4b+OzoSdWbTVLrBL+QDwj2llKadV4MxfgNTTdO1eUVFBtrkgFCFWbbRLv1cShjvbsIXAEtjWLce6Y0/dGqV">
+                        <div class="row">
+                            <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for
+                                filling out the form!</div>
+                            <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">Oops...!
+                                some problem!</div>
+                        </div>
+                        <div class="dragArea row">
+                            <div class="col form-group" data-for="email">
+                                <input type="text" name="email" placeholder="Email" data-form-field="email"
+                                    class="form-control" required="required" value="" id="email-countdown1-u">
+                            </div>
+                            <div class="mbr-section-btn">
+                                <button type="submit" class="btn btn-primary display-4">Subscribe</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonails3 carousel slide testimonials-slider cid-svk5ZWvTrc" data-interval="false"
+        id="testimonials3-t">
+
+
+
+
+
+        <div class="text-center container">
+            <h3 class="mb-4 mbr-fonts-style display-2"><strong>Our Team (@Rutherfords')</strong></h3>
+
+            <div class="carousel slide" role="listbox" data-pause="true" data-keyboard="false" data-ride="carousel"
+                data-interval="6000">
+                <div class="carousel-inner">
+
+
+                    <div class="carousel-item">
+                        <div class="user col-md-8">
+                            <div class="user_image">
+                                <a href="https://achuth-sportfolio.web.app/" target="_blank"><img
+                                        src="assets/images/achuth-400x400.jpeg" alt=""></a>
+                            </div>
+                            <div class="user_text mb-4">
+                                <p class="mbr-fonts-style display-7">Full fledged complete software developer, can build
+                                    sites with machine learning,&nbsp; computer vision and artificial intelligence ,
+                                    with various environments and tools .<br>Pursuing B.tech at KARE , and under the
+                                    research field of graphology . My works include published a Research paper on Skin
+                                    Cancer Classification using CNN and now I'm doing my second Research paper on
+                                    Reinforcement Learning to get Experience on that side as of now I completed most of
+                                    the front end web Development now I'm learning React.js and doing a project on
+                                    it<br></p>
+                            </div>
+                            <div class="user_name mbr-fonts-style mb-2 display-7"><strong>Dintakurthi Achuth</strong>
+                            </div>
+                            <div class="user_desk mbr-fonts-style display-7">
+                                DEVELOPER</div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="user col-md-8">
+                            <div class="user_image">
+                                <a href="https://in.linkedin.com/in/balasaraswathi-yugandher-563a2b17b"><img
+                                        src="assets/images/yugandher-200x200.jpeg" alt=""></a>
+                            </div>
+                            <div class="user_text mb-4">
+                                <p class="mbr-fonts-style display-7">
+                                    Student at kalasalingam university department of computer science and engineering.
+                                    wanted to build a entrepreneurship like a kingdom and serve the nation and world. my
+                                    main moto is to be helpful to all without seeking any benefits. dream to be work in
+                                    industrial giant's like google,apple,ibm etc., to gain experience. Always wish to
+                                    connect people
+                                </p>
+                            </div>
+                            <div class="user_name mbr-fonts-style mb-2 display-7"><strong>Balasaraswathi
+                                    Yugandher</strong></div>
+                            <div class="user_desk mbr-fonts-style display-7">
+                                DEVELOPER
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="user col-md-8">
+                            <div class="user_image">
+                                <img src="assets/images/nithin1594623431830-400x400.jpg" alt="">
+                            </div>
+                            <div class="user_text mb-4">
+                                <p class="mbr-fonts-style display-7">
+                                    Student at IBM-ICE under the stream Artificial Intelligence And Machine
+                                    Learning.(KARE)
+                                </p>
+                            </div>
+                            <div class="user_name mbr-fonts-style mb-2 display-7"><strong>Adiki Nithin</strong></div>
+                            <div class="user_desk mbr-fonts-style display-7">
+                                DEVELOPER
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="user col-md-8">
+                            <div class="user_image">
+                                <a href="https://akshith-portfolio.web.app/" target="_blank"><img
+                                        src="assets/images/akshith-5-400x474.jpeg" alt=""></a>
+                            </div>
+                            <div class="user_text mb-4">
+                                <p class="mbr-fonts-style display-7">Student at KARE in B.Tech, CSE with AI and ML
+                                    specialization.<br>Works include "Survey on sentiment Analysis" , a research paper
+                                    published in IEEE Xplorer. A Data Scientist trainee intern at Reliance netmeds.</p>
+                            </div>
+                            <div class="user_name mbr-fonts-style mb-2 display-7">
+                                <strong>Nukala Akshith</strong>
+                            </div>
+                            <div class="user_desk mbr-fonts-style display-7">
+                                DEVELOPER
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-controls">
+                    <a class="carousel-control-prev" role="button" data-slide="prev">
+                        <span aria-hidden="true" class="mobi-mbri mobi-mbri-arrow-prev mbr-iconfont"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+
+                    <a class="carousel-control-next" role="button" data-slide="next">
+                        <span aria-hidden="true" class="mobi-mbri mobi-mbri-arrow-next mbr-iconfont"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="form1 cid-svkmAUfTTz mbr-fullscreen mbr-parallax-background" id="form1-w">
+
+
+
+        <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(255, 255, 255);"></div>
+        <div class="align-center container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
+                    <form action="https://mobirise.eu/" method="POST" class="mbr-form form-with-styler"
+                        data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true"
+                            value="kQzMQxMSQIej+pjO+hdzKL+MBYHm6rmY9HvueQgBwTUL7U4dmz03LPOe3UEZGTOAHjc8FYBnTLLVwiK9oiXm33N/2d9aMHnyg2EYiz+jUZdEDD+YVtLJIGAQ16vRGlto">
+                        <div class="row">
+                            <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for
+                                filling
+                                out the form!</div>
+                            <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">Oops...!
+                                some
+                                problem!</div>
+                        </div>
+                        <div class="dragArea row">
+                            <div class="col-12">
+                                <h1 class="mbr-section-title mb-4 display-2">
+                                    <strong>Get Latest Updates!</strong>
+                                </h1>
+                            </div>
+                            <div class="col-12">
+                                <p class="mbr-text mbr-fonts-style mb-5 display-7">Get a monthly news letters of the
+                                    events, webinars and competitions that can help you.<br>Set your interests in the
+                                    profile section of the page to get personalized newsletter.<br><br>"You should never
+                                    bet against anything in science at odds of more than about 1012 to 1."<br>- Sir
+                                    Ernest Rutherford<br></p>
+                            </div>
+                            <div class="col-md col-12 form-group" data-for="name">
+                                <input type="text" name="name" placeholder="Name" data-form-field="Name"
+                                    class="form-control" id="name-form1-w">
+                            </div>
+                            <div class="col-md col-12 form-group" data-for="email">
+                                <input type="email" name="email" placeholder="Email" data-form-field="Email"
+                                    class="form-control" id="email-form1-w">
+                            </div>
+                            <div class="mbr-section-btn col-12 col-md-auto">
+                                <button type="submit" class="btn btn-primary display-4">Subscribe</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer4 cid-svkBIZxVvA" once="footers" id="footer4-x">
+
+
+
+        <div class="container">
+            <div class="row mbr-white">
+                <div class="col-6 col-lg-3">
+                    <div class="media-wrap col-md-8 col-12">
+                        <a
+                            href="https://www.google.com/search?q=ernest+rutherford&sxsrf=ALeKk01wwM9oBW17n_HVd1RKdwkoIWUl5A%3A1619113481415&source=hp&ei=CbaBYJvcFrf6z7sP_6-7oAw&iflsig=AINFCbYAAAAAYIHEGV1cZUQIy-jFh95OuSlMxxD8MKtb&gs_ssp=eJzj4tDP1TcwyjUvMmD0EkwtykstLlEoKi3JSC1Kyy9KAQCEJgnY&oq=ernest&gs_lcp=Cgdnd3Mtd2l6EAMYATIECCMQJzIHCC4QsQMQQzIECAAQQzIECAAQQzIECAAQQzIECAAQQzIECAAQQzIECAAQQzIFCC4QsQMyAggAOgoILhDqAhAnEJMCOgcIIxDqAhAnOgQILhBDOgsILhCxAxDHARCjAjoICAAQsQMQgwFQvAxY2hZg0iVoAXAAeACAAdgBiAGiCJIBBTAuNC4ymAEAoAEBqgEHZ3dzLXdperABCg&sclient=gws-wiz">
+                            <img src="{{url_for('static',filename='images/mbr-337x410.jpg')}}"
+                                alt="Sir Ernest Rutherford">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7">
+                        <strong>About Rutherfords Studio</strong>
+                    </h5>
+                    <p class="mbr-text mbr-fonts-style mb-4 display-4">Rutherfords' studio is a new turn of learning
+                        platforms. <br>It is enriched with all the revolutarizing technologies, communities, and wide
+                        variety of resources are supported here. We prove there is no limit and no custom for the
+                        education.&nbsp;</p>
+                    <h5 class="mbr-section-subtitle mbr-fonts-style mb-3 display-7">
+                        <strong>Follow Us</strong>
+                    </h5>
+                    <div class="social-row display-7">
+                        <div class="soc-item">
+                            <a href="https://twitter.com/mobirise" target="_blank">
+                                <span class="mbr-iconfont socicon socicon-facebook"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="https://twitter.com/mobirise" target="_blank">
+                                <span class="mbr-iconfont mbrib-github"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="https://twitter.com/mobirise" target="_blank">
+                                <span class="mbr-iconfont socicon-telegram socicon"></span>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7"><strong>Pages</strong></h5>
+                    <ul class="list mbr-fonts-style display-4">
+                        <li class="mbr-text item-wrap"><a href="index.html" class="text-primary" target="_blank">Home
+                                page</a></li>
+                        <li class="mbr-text item-wrap"><a href="page3.html#form5-1x" class="text-primary"
+                                target="_blank">Help Forums</a></li>
+                        <li class="mbr-text item-wrap"><a href="resources.html#features14-17"
+                                class="text-primary">Resources</a></li>
+                        <li class="mbr-text item-wrap"><a href="about_page.html#countdown1-u"
+                                class="text-primary">Events</a></li>
+                        <li class="mbr-text item-wrap"><a href="blog_gym.html#content4-2d" class="text-primary"
+                                target="_blank">Contribute your resources</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7"><strong>&nbsp;Features</strong></h5>
+                    <ul class="list mbr-fonts-style display-4">
+                        <li class="mbr-text item-wrap"><a href="https://pusher.com/tutorials/code-playground-react"
+                                class="text-primary" target="_blank">Code Editor</a></li><a
+                            href="https://pusher.com/tutorials/code-playground-react" class="text-primary"
+                            target="_blank">
+                        </a>
+                        <li class="mbr-text item-wrap"><a href="resources.html#team1-1d"
+                                class="text-primary">Communities</a></li>
+                        <li class="mbr-text item-wrap"><a href="blog_gym.html#content10-2k" class="text-primary">Github
+                                projects integration</a></li>
+                        <li class="mbr-text item-wrap"><a href="https://developers.google.com/books/docs/v1/using"
+                                class="text-primary" target="_blank">Google books API</a></li>
+                        <li class="mbr-text item-wrap"><a href="https://developers.google.com/classroom"
+                                class="text-primary">Google classroom API integration</a></li>
+                        <li class="mbr-text item-wrap"><a href="https://rapidapi.com/blog/top-free-music-data-apis/"
+                                class="text-primary" target="_blank">Music API</a></li>
+                        <li class="mbr-text item-wrap"><a href="https://developers.google.com/calendar"
+                                class="text-primary" target="_blank">Connect your google calaender</a></li>
+                        <li class="mbr-text item-wrap"><br></li>
+                    </ul>
+                </div>
+                <div class="col-12 mt-4">
+                    <p class="mbr-text mb-0 mbr-fonts-style copyright align-center display-7">
+                        © Copyright Team Rutherfords' 2021- All Rights Reserved
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include 'nav_footer_src.html' %}
+    <script>
+        function opentab(evt, cityName) {
+          var i, x, tablinks;
+          x = document.getElementsByClassName("city");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablink");
+          for (i = 0; i < x.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" w3-border-red", "");
+          }
+          document.getElementById(cityName).style.display = "block";
+          evt.currentTarget.firstElementChild.className += " w3-border-red";
+        }
+        </script>
+    <!-- <script src="assets/formoid/formoid.min.js"></script> -->
+
+    <!-- <script src="assets/theme/js/script.js"></script> -->
+    <!-- <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i
+                class="mbr-arrow-up-icon mbr-arrow-up-icon-cm cm-icon cm-icon-smallarrow-up"></i></a></div>
+    <input name="animation" type="hidden"> -->
+</body>
+
+</html>

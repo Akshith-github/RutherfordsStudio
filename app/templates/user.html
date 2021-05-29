@@ -1,0 +1,192 @@
+{% import "_macros.html" as macros %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Site made with Mobirise Website Builder v5.3.5, https://mobirise.com -->
+    <!-- <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v5.3.5, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="{{url_for('static', filename='images/mbr-96x114.jpg')}}" type="image/x-icon"> -->
+    <meta name="description" content="">
+
+
+    <title>profile page</title>
+    {% include "nav_footer_css.html" %}
+    
+</head>
+
+<body>
+
+    {% include "nav.html" %}
+    <!-- <div  class="user col-md-8"> -->
+    <!-- </div> -->
+
+    <div class="profile-header">
+        <section class="header1 cid-s48MCQYojq mbr-parallax-background align-center container" id="header1-f">
+
+            <div class="page-header">
+                <div class="image-wrapper row justify-content-center">
+                    <img class="img-rounded profile-thumbnail" src="{{ user.gravatar(size=256) }}"
+                        style="height: 3.8rem;width: 3.8rem;">
+                    <h1 style="padding: 10px 20px">{{ user.username }}</h1>
+                </div>
+            </div>
+        </section>
+        <div class="container" style="margin-top:20px">
+            <div class="justify-content-center align-center">
+                {% if user.name or user.location %}
+                <p>
+                    {% if user.name %}{{ user.name }}{% endif %}
+                    {% if user.location %}
+                    from <a href="http://maps.google.com/?q={{ user.location }}">{{ user.location }}</a>
+                    {% endif %}
+                </p>
+                {% endif %}
+                {% if current_user.is_administrator() %}
+                <p><a href="mailto:{{ user.email }}">{{ user.email }}</a></p>
+                {% endif %}
+                {% if user.about_me %}<p>{{ user.about_me }}</p>{% endif %}
+                <p>Member since {{ moment(user.member_since).format('L') }}. Last seen {{
+                    moment(user.last_seen).fromNow() }}.</p>
+                <p>{{ user.posts.count() }} blog posts. {{ user.comments.count() }} comments.</p>
+            </div>
+            <h3>Posts by {{ user.username }}</h3>
+            {% include 'posts_.html' %}
+            {% if pagination %}
+            <div class="justify-content-center  align-center">
+            <div class="justify-content-center pagination_cust" >
+                {{ macros.pagination_widget(pagination,pagination_endpoint,username=user.username) }}
+            </div>
+            </div>
+            {% endif %}
+
+            <p class="align-center">
+            {% if current_user.can(Permission.FOLLOW) and user != current_user %}
+                {% if not current_user.is_following(user) %}
+                    <a href="{{ url_for('.follow', username=user.username) }}" class="btn btn-primary">Follow</a>
+                {% else %}
+                    <a href="{{ url_for('.unfollow', username=user.username) }}" class="btn btn-default">Unfollow</a>
+                {% endif %}
+            {% endif %}
+            <a href="{{ url_for('.followers', username=user.username) }}">Followers: <span class="badge">{{ user.followers.count() - 1 }}</span></a>
+            <a href="{{ url_for('.followed_by', username=user.username) }}">Following: <span class="badge">{{ user.followed.count() - 1}}</span></a>
+            {% if current_user.is_authenticated and user != current_user and user.is_following(current_user) %}
+                | <span class="label label-default">Follows you</span>
+            {% endif %}
+        </p>
+        <p class="align-center">
+                {% if user == current_user %}
+                <a class="btn btn-success display-4" href="{{ url_for('.edit_profile') }}">Edit Profile</a>
+                {% endif %}
+                {% if current_user.is_administrator() %}
+                <a class="btn btn-success display-4" href="{{ url_for('.edit_profile_admin', id=user.id) }}">Edit
+                    Profile [Admin]</a>
+                {% endif %}
+            </p>
+        </div>
+        <section class="footer4 cid-svkBIZxVvA" once="footers" id="footer4-2p">
+
+
+
+            <div class="container">
+                <div class="row mbr-white">
+                    <div class="col-6 col-lg-3">
+                        <div class="media-wrap col-md-8 col-12">
+                            <a
+                                href="https://www.google.com/search?q=ernest+rutherford&sxsrf=ALeKk01wwM9oBW17n_HVd1RKdwkoIWUl5A%3A1619113481415&source=hp&ei=CbaBYJvcFrf6z7sP_6-7oAw&iflsig=AINFCbYAAAAAYIHEGV1cZUQIy-jFh95OuSlMxxD8MKtb&gs_ssp=eJzj4tDP1TcwyjUvMmD0EkwtykstLlEoKi3JSC1Kyy9KAQCEJgnY&oq=ernest&gs_lcp=Cgdnd3Mtd2l6EAMYATIECCMQJzIHCC4QsQMQQzIECAAQQzIECAAQQzIECAAQQzIECAAQQzIECAAQQzIECAAQQzIFCC4QsQMyAggAOgoILhDqAhAnEJMCOgcIIxDqAhAnOgQILhBDOgsILhCxAxDHARCjAjoICAAQsQMQgwFQvAxY2hZg0iVoAXAAeACAAdgBiAGiCJIBBTAuNC4ymAEAoAEBqgEHZ3dzLXdperABCg&sclient=gws-wiz">
+                                <img src="{{url_for('static',filename='images/mbr-337x410.jpg')}}"
+                                    alt="Sir Ernest Rutherford">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7">
+                            <strong>About Rutherfords Studio</strong>
+                        </h5>
+                        <p class="mbr-text mbr-fonts-style mb-4 display-4">Rutherfords' studio is a new turn of learning
+                            platforms. <br>It is enriched with all the revolutarizing technologies, communities, and
+                            wide variety of resources are supported here. We prove there is no limit and no custom for
+                            the education.&nbsp;</p>
+                        <h5 class="mbr-section-subtitle mbr-fonts-style mb-3 display-7">
+                            <strong>Follow Us</strong>
+                        </h5>
+                        <div class="social-row display-7">
+                            <div class="soc-item">
+                                <a href="https://twitter.com/mobirise" target="_blank">
+                                    <span class="mbr-iconfont socicon socicon-facebook"></span>
+                                </a>
+                            </div>
+                            <div class="soc-item">
+                                <a href="https://twitter.com/mobirise" target="_blank">
+                                    <span class="mbr-iconfont mbrib-github"></span>
+                                </a>
+                            </div>
+                            <div class="soc-item">
+                                <a href="https://twitter.com/mobirise" target="_blank">
+                                    <span class="mbr-iconfont socicon-telegram socicon"></span>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7"><strong>Pages</strong></h5>
+                        <ul class="list mbr-fonts-style display-4">
+                            <li class="mbr-text item-wrap"><a href="index.html" class="text-primary"
+                                    target="_blank">Home page</a></li>
+                            <li class="mbr-text item-wrap"><a href="page3.html#form5-1x" class="text-primary"
+                                    target="_blank">Help Forums</a></li>
+                            <li class="mbr-text item-wrap"><a href="resources.html#features14-17"
+                                    class="text-primary">Resources</a></li>
+                            <li class="mbr-text item-wrap"><a href="about_page.html#countdown1-u"
+                                    class="text-primary">Events</a></li>
+                            <li class="mbr-text item-wrap"><a href="blog_gym.html#content4-2d" class="text-primary"
+                                    target="_blank">Contribute your resources</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7"><strong>&nbsp;Features</strong>
+                        </h5>
+                        <ul class="list mbr-fonts-style display-4">
+                            <li class="mbr-text item-wrap"><a href="https://pusher.com/tutorials/code-playground-react"
+                                    class="text-primary" target="_blank">Code Editor</a></li><a
+                                href="https://pusher.com/tutorials/code-playground-react" class="text-primary"
+                                target="_blank">
+                            </a>
+                            <li class="mbr-text item-wrap"><a href="resources.html#team1-1d"
+                                    class="text-primary">Communities</a></li>
+                            <li class="mbr-text item-wrap"><a href="blog_gym.html#content10-2k"
+                                    class="text-primary">Github projects integration</a></li>
+                            <li class="mbr-text item-wrap"><a href="https://developers.google.com/books/docs/v1/using"
+                                    class="text-primary" target="_blank">Google books API</a></li>
+                            <li class="mbr-text item-wrap"><a href="https://developers.google.com/classroom"
+                                    class="text-primary">Google classroom API integration</a></li>
+                            <li class="mbr-text item-wrap"><a href="https://rapidapi.com/blog/top-free-music-data-apis/"
+                                    class="text-primary" target="_blank">Music API</a></li>
+                            <li class="mbr-text item-wrap"><a href="https://developers.google.com/calendar"
+                                    class="text-primary" target="_blank">Connect your google calaender</a></li>
+                            <li class="mbr-text item-wrap"><br></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 mt-4">
+                        <p class="mbr-text mb-0 mbr-fonts-style copyright align-center display-7">
+                            © Copyright Team Rutherfords' 2021- All Rights Reserved
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {% include "nav_footer_src.html" %}
+        <!-- <script src="assets/web/assets/jquery/jquery.min.js"></script>  <script src="assets/popper/popper.min.js"></script>  <script src="assets/tether/tether.min.js"></script>  <script src="assets/bootstrap/js/bootstrap.min.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/viewportchecker/jquery.viewportchecker.js"></script>  <script src="assets/dropdown/js/nav-dropdown.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>    -->
+
+        <script src="assets/theme/js/script.js"></script>
+        {{ moment.include_moment() }}
+        <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i
+                    class="mbr-arrow-up-icon mbr-arrow-up-icon-cm cm-icon cm-icon-smallarrow-up"></i></a></div>
+        <input name="animation" type="hidden">
+</body>
+
+</html>

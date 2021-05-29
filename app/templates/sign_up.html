@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)https://demo.hasthemes.com/adomx-preview/light/register.html -->
+
+<html
+    class="js sizes websockets customelements history postmessage webworkers picture pointerevents webanimations webgl srcset flexbox cssanimations csscolumns csscolumns-width csscolumns-span csscolumns-fill csscolumns-gap csscolumns-rule csscolumns-rulecolor csscolumns-rulestyle csscolumns-rulewidth csscolumns-breakbefore csscolumns-breakafter csscolumns-breakinside"
+    lang="en">
+
+<head>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style type="text/css">
+        .tippy-iOS {
+            cursor: pointer !important;
+            -webkit-tap-highlight-color: transparent
+        }
+
+        .tippy-popper {
+            transition-timing-function: cubic-bezier(.165, .84, .44, 1);
+            max-width: calc(100% - 8px);
+            pointer-events: none;
+            outline: 0
+        }
+
+        .tippy-popper[x-placement^=top] .tippy-backdrop {
+            border-radius: 40% 40% 0 0
+        }
+
+        .tippy-popper[x-placement^=top] .tippy-roundarrow {
+            bottom: -7px;
+            bottom: -6.5px;
+            -webkit-transform-origin: 50% 0;
+            transform-origin: 50% 0;
+            margin: 0 3px
+        }
+
+        .tippy-popper[x-placement^=top] .tippy-roundarrow svg {
+            position: absolute;
+            left: 0;
+            -webkit-transform: rotate(180deg);
+            transform: rotate(180deg)
+        }
+
+        .tippy-popper[x-placement^=top] .tippy-arrow {
+            border-top: 8px solid #333;
+            border-right: 8px solid transparent;
+            border-left: 8px solid transparent;
+            bottom: -7px;
+            margin: 0 3px;
+            -webkit-transform-origin: 50% 0;
+            transform-origin: 50% 0
+        }
+
+        .tippy-popper[x-placement^=top] .tippy-backdrop {
+            -webkit-transform-origin: 0 25%;
+            transform-origin: 0 25%
+        }
+
+        .tippy-popper[x-placement^=top] .tippy-backdrop[data-state=visible] {
+            -webkit-transform: scale(1) translate(-50%, -55%);
+            transform: scale(1) translate(-50%, -55%)
+        }
+
+        .tippy-popper[x-placement^=top] .tippy-backdrop[data-state=hidden] {
+            -webkit-transform: scale(.2) translate(-50%, -45%);
+            transform: scale(.2) translate(-50%, -45%);
+            opacity: 0
+        }
+
+        .tippy-popper[x-placement^=top] [data-animation=shift-toward][data-state=visible] {
+            -webkit-transform: translateY(-10px);
+            transform: translateY(-10px)
+        }
+
+        .tippy-popper[x-placement^=top] [data-animation=shift-toward][data-state=hidden] {
+            opacity: 0;
+            -webkit-transform: translateY(-20px);
+            transform: translateY(-20px)
+        }
+
+        .tippy-popper[x-placement^=top] [data-animation=perspective] {
+            -webkit-transform-origin: bottom;
+            transform-origin: bottom
+        }
+
+        .tippy-popper[x-placement^=top] [data-animation=perspective][data-state=visible] {
+            -webkit-transform: perspective(700px) translateY(-10px) rotateX(0);
+            transform: perspective(700px) translateY(-10px) rotateX(0)
+        }
+
+        .tippy-popper[x-placement^=top] [data-animation=perspective][data-state=hidden] {
+            opacity: 0;
+            -webkit-transform: perspective(700px) translateY(0) rotateX(60deg);
+            transform: perspective(700px) translateY(0) rotateX(60deg)
+        }
+
+        .tippy-popper[x-placement^=top] [data-animation=fade][data-state=visible] {
+            -webkit-transform: translateY(-10px);
+            transform: translateY(-10px)
+        }
+
+        .tippy-popper[x-placement^=top] [data-animation=fade][data-state=hidden] {
+            opacity: 0;
+            -webkit-transform: translateY(-10px);
+            transform: translateY(-10px)
+        }
+
+        .tippy-popper[x-placement^=top] [data-animation=shift-away][data-state=visible] {
+            -webkit-transform: translateY(-10px);
+            transform: translateY(-10px)
+        }
+
+        .tippy-popper[x-placement^=top] [data-animation=shift-away][data-state=hidden] {
+            opacity: 0;
+            -webkit-transform: translateY(0);
+            transform: translateY(0)
+        }
+
+        .tippy-popper[x-placement^=top] [data-animation=scale] {
+            -webkit-transform-origin: bottom;
+            transform-origin: bottom
+        }
+
+        .tippy-popper[x-placement^=top] [data-animation=scale][data-state=visible] {
+            -webkit-transform: translateY(-10px) scale(1);
+            transform: translateY(-10px) scale(1)
+        }
+
+        .tippy-popper[x-placement^=top] [data-animation=scale][data-state=hidden] {
+            opacity: 0;
+            -webkit-transform: translateY(-10px) scale(.5);
+            transform: translateY(-10px) scale(.5)
+        }
+
+        .tippy-popper[x-placement^=bottom] .tippy-backdrop {
+            border-radius: 0 0 30% 30%
+        }
+
+        .tippy-popper[x-placement^=bottom] .tippy-roundarrow {
+            top: -7px;
+            -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+            margin: 0 3px
+        }
+
+        .tippy-popper[x-placement^=bottom] .tippy-roundarrow svg {
+            position: absolute;
+            left: 0;
+            -webkit-transform: rotate(0);
+            transform: rotate(0)
+        }
+
+        .tippy-popper[x-placement^=bottom] .tippy-arrow {
+            border-bottom: 8px solid #333;
+            border-right: 8px solid transparent;
+            border-left: 8px solid transparent;
+            top: -7px;
+            margin: 0 3px;
+            -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%
+        }
+
+        .tippy-popper[x-placement^=bottom] .tippy-backdrop {
+            -webkit-transform-origin: 0 -50%;
+            transform-origin: 0 -50%
+        }
+
+        .tippy-popper[x-placement^=bottom] .tippy-backdrop[data-state=visible] {
+            -webkit-transform: scale(1) translate(-50%, -45%);
+            transform: scale(1) translate(-50%, -45%)
+        }
+
+        .tippy-popper[x-placement^=bottom] .tippy-backdrop[data-state=hidden] {
+            -webkit-transform: scale(.2) translate(-50%);
+            transform: scale(.2) translate(-50%);
+            opacity: 0
+        }
+
+        .tippy-popper[x-placement^=bottom] [data-animation=shift-toward][data-state=visible] {
+            -webkit-transform: translateY(10px);
+            transform: translateY(10px)
+        }
+
+        .tippy-popper[x-placement^=bottom] [data-animation=shift-toward][data-state=hidden] {
+            opacity: 0;
+            -webkit-transform: translateY(20px);
+            transform: translateY(20px)
+        }
+
+        .tippy-popper[x-placement^=bottom] [data-animation=perspective] {
+            -webkit-transform-origin: top;
+            transform-origin: top
+        }
+
+        .tippy-popper[x-placement^=bottom] [data-animation=perspective][data-state=visible] {
+            -webkit-transform: perspective(700px) translateY(10px) rotateX(0);
+            transform: perspective(700px) translateY(10px) rotateX(0)
+        }
+
+        .tippy-popper[x-placement^=bottom] [data-animation=perspective][data-state=hidden] {
+            opacity: 0;
+            -webkit-transform: perspective(700px) translateY(0) rotateX(-60deg);
+            transform: perspective(700px) translateY(0) rotateX(-60deg)
+        }
+
+        .tippy-popper[x-placement^=bottom] [data-animation=fade][data-state=visible] {
+            -webkit-transform: translateY(10px);
+            transform: translateY(10px)
+        }
+
+        .tippy-popper[x-placement^=bottom] [data-animation=fade][data-state=hidden] {
+            opacity: 0;
+            -webkit-transform: translateY(10px);
+            transform: translateY(10px)
+        }
+
+        .tippy-popper[x-placement^=bottom] [data-animation=shift-away][data-state=visible] {
+            -webkit-transform: translateY(10px);
+            transform: translateY(10px)
+        }
+
+        .tippy-popper[x-placement^=bottom] [data-animation=shift-away][data-state=hidden] {
+            opacity: 0;
+            -webkit-transform: translateY(0);
+            transform: translateY(0)
+        }
+
+        .tippy-popper[x-placement^=bottom] [data-animation=scale] {
+            -webkit-transform-origin: top;
+            transform-origin: top
+        }
+
+        .tippy-popper[x-placement^=bottom] [data-animation=scale][data-state=visible] {
+            -webkit-transform: translateY(10px) scale(1);
+            transform: translateY(10px) scale(1)
+        }
+
+        .tippy-popper[x-placement^=bottom] [data-animation=scale][data-state=hidden] {
+            opacity: 0;
+            -webkit-transform: translateY(10px) scale(.5);
+            transform: translateY(10px) scale(.5)
+        }
+
+        .tippy-popper[x-placement^=left] .tippy-backdrop {
+            border-radius: 50% 0 0 50%
+        }
+
+        .tippy-popper[x-placement^=left] .tippy-roundarrow {
+            right: -12px;
+            -webkit-transform-origin: 33.33333333% 50%;
+            transform-origin: 33.33333333% 50%;
+            margin: 3px 0
+        }
+
+        .tippy-popper[x-placement^=left] .tippy-roundarrow svg {
+            position: absolute;
+            left: 0;
+            -webkit-transform: rotate(90deg);
+            transform: rotate(90deg)
+        }
+
+        .tippy-popper[x-placement^=left] .tippy-arrow {
+            border-left: 8px solid #333;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+            right: -7px;
+            margin: 3px 0;
+            -webkit-transform-origin: 0 50%;
+            transform-origin: 0 50%
+        }
+
+        .tippy-popper[x-placement^=left] .tippy-backdrop {
+            -webkit-transform-origin: 50% 0;
+            transform-origin: 50% 0
+        }
+
+        .tippy-popper[x-placement^=left] .tippy-backdrop[data-state=visible] {
+            -webkit-transform: scale(1) translate(-50%, -50%);
+            transform: scale(1) translate(-50%, -50%)
+        }
+
+        .tippy-popper[x-placement^=left] .tippy-backdrop[data-state=hidden] {
+            -webkit-transform: scale(.2) translate(-75%, -50%);
+            transform: scale(.2) translate(-75%, -50%);
+            opacity: 0
+        }
+
+        .tippy-popper[x-placement^=left] [data-animation=shift-toward][data-state=visible] {
+            -webkit-transform: translateX(-10px);
+            transform: translateX(-10px)
+        }
+
+        .tippy-popper[x-placement^=left] [data-animation=shift-toward][data-state=hidden] {
+            opacity: 0;
+            -webkit-transform: translateX(-20px);
+            transform: translateX(-20px)
+        }
+
+        .tippy-popper[x-placement^=left] [data-animation=perspective] {
+            -webkit-transform-origin: right;
+            transform-origin: right
+        }
+
+        .tippy-popper[x-placement^=left] [data-animation=perspective][data-state=visible] {
+            -webkit-transform: perspective(700px) translateX(-10px) rotateY(0);
+            transform: perspective(700px) translateX(-10px) rotateY(0)
+        }
+
+        .tippy-popper[x-placement^=left] [data-animation=perspective][data-state=hidden] {
+            opacity: 0;
+            -webkit-transform: perspective(700px) translateX(0) rotateY(-60deg);
+            transform: perspective(700px) translateX(0) rotateY(-60deg)
+        }
+
+        .tippy-popper[x-placement^=left] [data-animation=fade][data-state=visible] {
+            -webkit-transform: translateX(-10px);
+            transform: translateX(-10px)
+        }
+
+        .tippy-popper[x-placement^=left] [data-animation=fade][data-state=hidden] {
+            opacity: 0;
+            -webkit-transform: translateX(-10px);
+            transform: translateX(-10px)
+        }
+
+        .tippy-popper[x-placement^=left] [data-animation=shift-away][data-state=visible] {
+            -webkit-transform: translateX(-10px);
+            transform: translateX(-10px)
+        }
+
+        .tippy-popper[x-placement^=left] [data-animation=shift-away][data-state=hidden] {
+            opacity: 0;
+            -webkit-transform: translateX(0);
+            transform: translateX(0)
+        }
+
+        .tippy-popper[x-placement^=left] [data-animation=scale] {
+            -webkit-transform-origin: right;
+            transform-origin: right
+        }
+
+        .tippy-popper[x-placement^=left] [data-animation=scale][data-state=visible] {
+            -webkit-transform: translateX(-10px) scale(1);
+            transform: translateX(-10px) scale(1)
+        }
+
+        .tippy-popper[x-placement^=left] [data-animation=scale][data-state=hidden] {
+            opacity: 0;
+            -webkit-transform: translateX(-10px) scale(.5);
+            transform: translateX(-10px) scale(.5)
+        }
+
+        .tippy-popper[x-placement^=right] .tippy-backdrop {
+            border-radius: 0 50% 50% 0
+        }
+
+        .tippy-popper[x-placement^=right] .tippy-roundarrow {
+            left: -12px;
+            -webkit-transform-origin: 66.66666666% 50%;
+            transform-origin: 66.66666666% 50%;
+            margin: 3px 0
+        }
+
+        .tippy-popper[x-placement^=right] .tippy-roundarrow svg {
+            position: absolute;
+            left: 0;
+            -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg)
+        }
+
+        .tippy-popper[x-placement^=right] .tippy-arrow {
+            border-right: 8px solid #333;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+            left: -7px;
+            margin: 3px 0;
+            -webkit-transform-origin: 100% 50%;
+            transform-origin: 100% 50%
+        }
+
+        .tippy-popper[x-placement^=right] .tippy-backdrop {
+            -webkit-transform-origin: -50% 0;
+            transform-origin: -50% 0
+        }
+
+        .tippy-popper[x-placement^=right] .tippy-backdrop[data-state=visible] {
+            -webkit-transform: scale(1) translate(-50%, -50%);
+            transform: scale(1) translate(-50%, -50%)
+        }
+
+        .tippy-popper[x-placement^=right] .tippy-backdrop[data-state=hidden] {
+            -webkit-transform: scale(.2) translate(-25%, -50%);
+            transform: scale(.2) translate(-25%, -50%);
+            opacity: 0
+        }
+
+        .tippy-popper[x-placement^=right] [data-animation=shift-toward][data-state=visible] {
+            -webkit-transform: translateX(10px);
+            transform: translateX(10px)
+        }
+
+        .tippy-popper[x-placement^=right] [data-animation=shift-toward][data-state=hidden] {
+            opacity: 0;
+            -webkit-transform: translateX(20px);
+            transform: translateX(20px)
+        }
+
+        .tippy-popper[x-placement^=right] [data-animation=perspective] {
+            -webkit-transform-origin: left;
+            transform-origin: left
+        }
+
+        .tippy-popper[x-placement^=right] [data-animation=perspective][data-state=visible] {
+            -webkit-transform: perspective(700px) translateX(10px) rotateY(0);
+            transform: perspective(700px) translateX(10px) rotateY(0)
+        }
+
+        .tippy-popper[x-placement^=right] [data-animation=perspective][data-state=hidden] {
+            opacity: 0;
+            -webkit-transform: perspective(700px) translateX(0) rotateY(60deg);
+            transform: perspective(700px) translateX(0) rotateY(60deg)
+        }
+
+        .tippy-popper[x-placement^=right] [data-animation=fade][data-state=visible] {
+            -webkit-transform: translateX(10px);
+            transform: translateX(10px)
+        }
+
+        .tippy-popper[x-placement^=right] [data-animation=fade][data-state=hidden] {
+            opacity: 0;
+            -webkit-transform: translateX(10px);
+            transform: translateX(10px)
+        }
+
+        .tippy-popper[x-placement^=right] [data-animation=shift-away][data-state=visible] {
+            -webkit-transform: translateX(10px);
+            transform: translateX(10px)
+        }
+
+        .tippy-popper[x-placement^=right] [data-animation=shift-away][data-state=hidden] {
+            opacity: 0;
+            -webkit-transform: translateX(0);
+            transform: translateX(0)
+        }
+
+        .tippy-popper[x-placement^=right] [data-animation=scale] {
+            -webkit-transform-origin: left;
+            transform-origin: left
+        }
+
+        .tippy-popper[x-placement^=right] [data-animation=scale][data-state=visible] {
+            -webkit-transform: translateX(10px) scale(1);
+            transform: translateX(10px) scale(1)
+        }
+
+        .tippy-popper[x-placement^=right] [data-animation=scale][data-state=hidden] {
+            opacity: 0;
+            -webkit-transform: translateX(10px) scale(.5);
+            transform: translateX(10px) scale(.5)
+        }
+
+        .tippy-tooltip {
+            position: relative;
+            color: #fff;
+            border-radius: .25rem;
+            font-size: .875rem;
+            padding: .3125rem .5625rem;
+            line-height: 1.4;
+            text-align: center;
+            background-color: #333
+        }
+
+        .tippy-tooltip[data-size=small] {
+            padding: .1875rem .375rem;
+            font-size: .75rem
+        }
+
+        .tippy-tooltip[data-size=large] {
+            padding: .375rem .75rem;
+            font-size: 1rem
+        }
+
+        .tippy-tooltip[data-animatefill] {
+            overflow: hidden;
+            background-color: transparent
+        }
+
+        .tippy-tooltip[data-interactive],
+        .tippy-tooltip[data-interactive] path {
+            pointer-events: auto
+        }
+
+        .tippy-tooltip[data-inertia][data-state=visible] {
+            transition-timing-function: cubic-bezier(.54, 1.5, .38, 1.11)
+        }
+
+        .tippy-tooltip[data-inertia][data-state=hidden] {
+            transition-timing-function: ease
+        }
+
+        .tippy-arrow,
+        .tippy-roundarrow {
+            position: absolute;
+            width: 0;
+            height: 0
+        }
+
+        .tippy-roundarrow {
+            width: 18px;
+            height: 7px;
+            fill: #333;
+            pointer-events: none
+        }
+
+        .tippy-backdrop {
+            position: absolute;
+            background-color: #333;
+            border-radius: 50%;
+            width: calc(110% + 2rem);
+            left: 50%;
+            top: 50%;
+            z-index: -1;
+            transition: all cubic-bezier(.46, .1, .52, .98);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden
+        }
+
+        .tippy-backdrop:after {
+            content: "";
+            float: left;
+            padding-top: 100%
+        }
+
+        .tippy-backdrop+.tippy-content {
+            transition-property: opacity;
+            will-change: opacity
+        }
+
+        .tippy-backdrop+.tippy-content[data-state=visible] {
+            opacity: 1
+        }
+
+        .tippy-backdrop+.tippy-content[data-state=hidden] {
+            opacity: 0
+        }
+    </style>
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!-- Adomx - Responsive Bootstrap 4 Admin Template -->
+    <title>Sign up Rutherfords Studio</title>
+    
+    <meta name="robots" content="noindex, follow">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+    <!-- https://demo.hasthemes.com/adomx-preview/light/assets/images/favicon.ico` -->
+    <link rel="shortcut icon" type="image/x-icon"
+        href="{{url_for('static',filename='images/index-meta.ico')}}">
+
+    <!-- CSS
+	============================================ -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/login_styles/bootstrap.min.css">
+
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="assets/login_styles/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="assets/login_styles/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/login_styles/themify-icons.css">
+    <link rel="stylesheet" href="assets/login_styles/cryptocurrency-icons.css">
+
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="assets/login_styles/plugins.css">
+
+    <!-- Helper CSS -->
+    <link rel="stylesheet" href="assets/login_styles/helper.css">
+
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="assets/login_styles/style.css">
+
+    <!-- Custom Style CSS Only For Demo Purpose -->
+    <link id="cus-style" rel="stylesheet" href="assets/login_styles/style-primary.css">
+
+    {% include 'nav_footer_css.html' %}
+    
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1008.0" data-gr-ext-installed="">
+
+    {% include "nav.html" %}
+    <div class="customizer-wrapper">
+        <!-- https://demo.hasthemes.com/adomx-preview/light/register.html# -->
+        <a href="#" class="customizer-toggle"><i class="ti-settings"></i></a>
+        <div class="inner custom-scroll ps">
+            <div class="dark-rtl-setting"><label class="adomx-switch primary toggle-dark"><input type="checkbox"> <i
+                        class="lever"></i> <span class="text">Dark Version</span></label>
+                        <!-- <label class="adomx-switch primary toggle-rtl"><input type="checkbox" checked=""> <i class="lever"></i>
+                    <span class="text">RTL Version</span></label> -->
+                </div>
+            <!-- <ul class="nav mb-20"> -->
+                <!-- https://demo.hasthemes.com/adomx-preview/light/register.html -->
+                <!-- <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#sidebar-setting">Sidebar</a>
+                </li> -->
+                <!-- https://demo.hasthemes.com/adomx-preview/light/register.html -->
+                <!-- <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#header-setting">Header</a>
+                </li> -->
+                <!-- https://demo.hasthemes.com/adomx-preview/light/register.html -->
+                <!-- <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#primary-setting">Primary</a>
+                </li> -->
+            <!-- </ul> -->
+<!--             
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="sidebar-setting">
+                    <h5 class="mb-20">Sidebar Skin Color</h5><button class="cus-radio light" data-target="side-header"
+                        data-color="light"><i class="icon"></i>light</button><button class="cus-radio dark active"
+                        data-target="side-header" data-color="dark"><i class="icon"></i>dark</button><button
+                        class="cus-radio primary" data-target="side-header" data-color="primary"><i
+                            class="icon"></i>primary</button><button class="cus-radio secondary"
+                        data-target="side-header" data-color="secondary"><i class="icon"></i>secondary</button><button
+                        class="cus-radio indigo" data-target="side-header" data-color="indigo"><i
+                            class="icon"></i>indigo</button><button class="cus-radio purple" data-target="side-header"
+                        data-color="purple"><i class="icon"></i>purple</button><button class="cus-radio pink"
+                        data-target="side-header" data-color="pink"><i class="icon"></i>pink</button><button
+                        class="cus-radio red" data-target="side-header" data-color="red"><i
+                            class="icon"></i>red</button><button class="cus-radio brown" data-target="side-header"
+                        data-color="brown"><i class="icon"></i>brown</button><button class="cus-radio orange"
+                        data-target="side-header" data-color="orange"><i class="icon"></i>orange</button><button
+                        class="cus-radio green" data-target="side-header" data-color="green"><i
+                            class="icon"></i>green</button>
+                </div>
+                <div class="tab-pane fade" id="header-setting">
+                    <h5 class="mb-20">Header Skin Color</h5><button class="cus-radio light active"
+                        data-target="header-top" data-color="light"><i class="icon"></i>light</button><button
+                        class="cus-radio dark" data-target="header-top" data-color="dark"><i
+                            class="icon"></i>dark</button><button class="cus-radio primary" data-target="header-top"
+                        data-color="primary"><i class="icon"></i>primary</button><button class="cus-radio secondary"
+                        data-target="header-top" data-color="secondary"><i class="icon"></i>secondary</button><button
+                        class="cus-radio indigo" data-target="header-top" data-color="indigo"><i
+                            class="icon"></i>indigo</button><button class="cus-radio purple" data-target="header-top"
+                        data-color="purple"><i class="icon"></i>purple</button><button class="cus-radio pink"
+                        data-target="header-top" data-color="pink"><i class="icon"></i>pink</button><button
+                        class="cus-radio red" data-target="header-top" data-color="red"><i
+                            class="icon"></i>red</button><button class="cus-radio brown" data-target="header-top"
+                        data-color="brown"><i class="icon"></i>brown</button><button class="cus-radio orange"
+                        data-target="header-top" data-color="orange"><i class="icon"></i>orange</button><button
+                        class="cus-radio green" data-target="header-top" data-color="green"><i
+                            class="icon"></i>green</button>
+                </div>
+                <div class="tab-pane fade" id="primary-setting">
+                    <h5 class="mb-20">Primary Color</h5><button class="cus-radio color primary active"
+                        data-color="primary"><i class="icon"></i>primary</button><button class="cus-radio color indigo"
+                        data-color="indigo"><i class="icon"></i>indigo</button><button class="cus-radio color purple"
+                        data-color="purple"><i class="icon"></i>purple</button><button class="cus-radio color pink"
+                        data-color="pink"><i class="icon"></i>pink</button><button class="cus-radio color red"
+                        data-color="red"><i class="icon"></i>red</button><button class="cus-radio color brown"
+                        data-color="brown"><i class="icon"></i>brown</button><button class="cus-radio color orange"
+                        data-color="orange"><i class="icon"></i>orange</button><button class="cus-radio color green"
+                        data-color="green"><i class="icon"></i>green</button>
+                </div>
+            </div>
+             -->
+            <div class="ps__rail-x" style="left: 0px; bottom: 3px;">
+                <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+            </div>
+            <div class="ps__rail-y" style="top: 0px; right: 3px;">
+                <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-wrapper">
+<!-- style="background-color: white;"> -->
+
+        <!-- Content Body Start -->
+        <div class="content-body m-0 p-0">
+
+            <div class="login-register-wrap">
+                <div class="row">
+
+                    <div class="d-flex align-self-center justify-content-center order-2 order-lg-1 col-lg-5 col-12">
+                        <div class="login-register-form-wrap">
+
+                            <div class="content">
+                                <h1>Sign up</h1>
+                                <!-- Lorem Ipsum is simply dummy text of the printing and typesetting industry. -->
+                                <p>Become a part of our Studio and  Gear up with our Rutherfords studio </p>
+                            </div>
+
+                            <div class="login-register-form">
+                                <!-- https://demo.hasthemes.com/adomx-preview/light/register.html -->
+                                <form action="#">
+                                    <div class="row">
+
+                                        <div class="col-12 mb-20"><input class="form-control" type="text"
+                                                placeholder="User ID / Email"></div>
+                                        <div class="col-12 mb-20"><input class="form-control" type="password"
+                                                placeholder="Password"></div>
+                                        <div class="col-12 mb-20"><input class="form-control" type="password"
+                                                placeholder="Retype Password"></div>
+                                        <div class="col-12">
+                                            <div class="row justify-content-between">
+                                                <!-- https://demo.hasthemes.com/adomx-preview/light/login.html -->
+                                                <div class="col-auto mb-15">Already have account? 
+                                                    <a href="{{url_for('auth.login')}}">Login Now.</a></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 mt-10"><button
+                                                class="button button-primary button-outline">sign up</button></div>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="login-register-bg order-1 order-lg-2 col-lg-7 col-12">
+                        <div class="content">
+                            <h1>Sign up</h1>
+                            <!-- Lorem Ipsum is simply dummy text of the printing and typesetting industry. -->
+                            <p>Become a part of our Studio and  Gear up with our Rutherfords studio </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div><!-- Content Body End -->
+
+    </div>
+
+
+    
+
+
+    
+    
+    
+    
+    <!-- JS
+============================================ -->
+    
+    <!-- Global Vendor, plugins & Activation JS -->
+    <script src="assets/login_styles/modernizr-3.6.0.min.js.download"></script>
+    <script src="assets/login_styles/jquery-3.3.1.min.js.download"></script>
+    <script src="assets/login_styles/popper.min.js.download"></script>
+    <script src="assets/login_styles/bootstrap.min.js.download"></script>
+    <!--Plugins JS-->
+    <script src="assets/login_styles/perfect-scrollbar.min.js.download"></script>
+    <script src="assets/login_styles/tippy4.min.js.js.download"></script>
+    <!--Main JS-->
+    <script src="assets/login_styles/main.js.download"></script>
+    {% include 'nav_footer_src.html' %}
+
+</body>
+
+</html>

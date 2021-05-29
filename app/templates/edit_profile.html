@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block title %}Edit Profile{% endblock %}
+
+{% block page_content %}
+<div class="page-header align-center">
+    <h1>
+        {% if request.endpoint=='main.edit_profile_admin' %}
+            (admin view) Edit {% if user.name %} {{user.name}}{% else %}{{user.username}}{% endif %}'s Profile
+        {% else %}
+        Edit Your Profile
+        {% endif %}
+    
+    </h1>
+</div>
+<section class="form5 cid-svlph4lLoJ">
+    
+    <div class="container-fluid">
+        
+        <div class="row justify-content-center mt-4">
+            <div class="col-lg-8 mx-auto mbr-form" >
+                <form action="" method="POST" class="mbr-form ">
+                    <div class="dragArea row">
+                        {{form.csrf_token()}}
+                        <div class="col-md form-group" >
+                            {{form.name.label}}
+                            {{form.name(class="form-control",placeholder="Real Name")}}
+                            
+                        </div>
+                        {% if 'username' in form.data %}
+                        <div class="col-md form-group" >
+                            {{form.username.label}}
+                            {{form.username(class="form-control",placeholder="User Name")}}
+                        </div>
+                        {% endif %}
+
+                        {% if 'email' in form.data%}
+                        <div class="col-12  form-group">
+                            {{form.email.label}}
+                            {{form.email(class="form-control",placeholder="Email",id="email-form5-1x")}}
+                        </div>
+                        {% endif %}
+
+                        {% if 'role' in form.data %}
+                            <div class="col-md col-sm-12 form-group">
+                                {{form.role.label}}
+                                {{form.role(class="form-control")}}
+                            </div>
+                        {% endif %}
+                        
+                        <div class="col-md  form-group">
+                            {{form.location.label}}
+                            {{form.location(class="form-control",placeholder="Your location")}}
+                        </div>
+                        
+                        <div class="col-12 form-group" >
+                            {% if request.endpoint=='main.edit_profile_admin' %}
+                                About {% if user.name %} {{user.name}}{% else %}{{user.username}}{% endif %}
+                            {% else %}
+                                {{form.about_me.label}}
+                            {% endif %}
+                            {{form.about_me(class="form-control",placeholder="Bio 'Skills' 'Passion' 'interests' 'goals' 'motto'")}}
+                            
+                        </div>
+                    
+                        <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn">
+                            {{ form.submit(class="btn btn-primary display-4") }}
+                            <!-- <button type="submit" class="btn btn-primary display-4">Send message</button> -->
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

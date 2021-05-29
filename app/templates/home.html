@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Site made with Mobirise Website Builder v5.3.5, https://mobirise.com -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image:src" content="assets/images/index-meta.png">
+    <meta property="og:image" content="assets/images/index-meta.png">
+    <meta name="twitter:title" content="Home page">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="{{url_for('static', filename='images/mbr-96x114.jpg')}}" type="image/x-icon"
+        style="background-color:white">
+    <meta name="description"
+        content="Rutherfords' studio is a new turn of learning platforms.
+It is enriched with all the heavy technologies, communities, and wide variety of resources are supported here. Checkout how our studio can help you.">
+
+
+    <title>Home page</title>
+    {% include 'nav_footer_css.html' %}
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Button used to open the chat form - fixed at the bottom of the page */
+        .open-button {
+            background-color: #555;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0.8;
+            position: fixed;
+            bottom: 23px;
+            right: 28px;
+            width: 280px;
+        }
+
+        /* The popup chat - hidden by default */
+        .chat-popup {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            right: 15px;
+            border: 3px solid #f1f1f1;
+            z-index: 9;
+        }
+
+        /* Add styles to the form container */
+        .form-container {
+            max-width: 300px;
+            padding: 10px;
+            background-color: white;
+        }
+
+        /* Full-width textarea */
+        .form-container input {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #f1f1f1;
+            resize: none;
+            min-height: 20px;
+        }
+
+        /* When the textarea gets focus, do something */
+        .form-container input:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        /* Set a style for the submit/send button */
+        .form-container .btn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+
+        /* Add a red background color to the cancel button */
+        .form-container .cancel {
+            background-color: red;
+        }
+
+        /* Add some hover effects to buttons */
+        .form-container .btn:hover,
+        .open-button:hover {
+            opacity: 1;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    {% include 'nav.html' %}
+    <p class=" cid-s48MCQYojq mbr-section-title mbr-fonts-style mb-3 display-5 align-center container">
+        Hello,
+        {% if current_user.is_authenticated %}
+        {{ current_user.username }}
+        {% else %}
+        Stranger
+        {% endif %}!
+
+    </p>
+
+    <section class="header1 cid-s48MCQYojq mbr-parallax-background" id="header1-f">
+
+        <div class="mbr-overlay" style="opacity: 0.8; background-color: rgb(255, 255, 255);"></div>
+
+        <div class="align-center container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-10">
+                    <h1 class="mbr-section-title mbr-fonts-style mb-3 display-5"><strong><em>Dash
+                                Board&nbsp;</em></strong></h1>
+
+                    <p class="mbr-text mbr-fonts-style display-7">Keyword of the day :
+                        <strong>{{word}}&nbsp;</strong><br>
+                        <!-- <strong>definition :&nbsp;</strong> -->
+                        <!-- 1 ) boiling, agitated 2)
+                        characterized by ebullience : having or showing liveliness and enthusiasm -->
+                        {% for i,word_info in enumerate(poss[:2]) %}
+                            <b>POS:</b> {{poss[i]}}
+                            <b> word (stem)</b> {{str(stems[i])[1:-1]}} 
+                            {% if offensive[i][0] %}
+                            <i>is offensive</i>
+                            {else}
+                            <i>is not offensive</i>
+                            {% endif %}
+                            <br>
+                        {% endfor %}
+
+                        <b>  Meanings:-</b> 
+                        {% for i,meaning in enumerate(defs[:2]) %}
+                                    {{str(meaning)[1:-1]}}  
+                        {% endfor %}<br>
+
+                        <b>examples :</b>
+                        {% for i,example in enumerate(examples) %}
+                                {% if len(str(example))>=4 %}
+                                    {{str(example)[1:-1] }}
+                                {% endif %}
+                        {% endfor %}
+                        {{txt}}
+                        <br>Events of the day
+                        :&nbsp; Full-stack weekends by D.Achuth<br>
+                    </p>
+                    <div class="mbr-section-btn mt-3"><a class="btn btn-success display-4"
+                            href="https://mobirise.com">Add Tasks</a> <a class="btn btn-success-outline display-4"
+                            href="https://mobirise.com">Add Event Remainder</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery3 cid-svl2WZLZok" id="gallery3-11">
+
+
+        <div class="container-fluid">
+            <div class="mbr-section-head">
+                <h6 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2"><strong>Books similiar to
+                        {{textwrap.shorten(data1['0']['bookTitle'],width=25,placeholder='...')}}</strong></h6>
+                <!-- Based on your Reads -->
+                <h5 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-2 display-5">Recommended books</h5>
+            </div>
+            <div class="row mt-4">
+                {% for bookno in keys %}
+                <div class="item features-image сol-12 col-md-6 col-lg-3">
+                    <div class="item-wrapper">
+                        <div class="item-img" style="height: 20rem;">
+                            <img src="{{data1[bookno]['imageUrlL']}}" style="width: 100%;height:100%"
+                                onerror="assets/images/features2.jpg">
+                        </div>
+                        <div class="item-content">
+                            <h5 class="item-title mbr-fonts-style display-7">
+                                <strong>{{textwrap.shorten(data1[bookno]['bookTitle'],width=55,placeholder='...')}}</strong>
+                            </h5>
+
+                            <p class="mbr-text mbr-fonts-style mt-3 display-7">Author :
+                                {{data1[bookno]['bookAuthor']}}<br>Published in {{data1[bookno]['yearOfPublication']}}
+                                by {{data1[bookno]['publisher']}}<br>ISBN : {{data1[bookno]['ISBN']}}Genre. Followed by the book
+                                overview.................................................<br>
+
+                                <a href="#" class="text-primary">Add to bag</a>&nbsp; &nbsp;<a
+                                    href="http://www.bing.com" class="text-primary" target="_blank">Remove this
+                                    card&nbsp;</a>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+                {% endfor %}
+                <!-- <div class="item features-image сol-12 col-md-6 col-lg-3">
+                    <div class="item-wrapper">
+                        <div class="item-img">
+                            <img src="assets/images/features2.jpg">
+                        </div>
+                        <div class="item-content">
+                            <h5 class="item-title mbr-fonts-style display-7"><strong>(Book 2 by Author 2)</strong></h5>
+
+                            <p class="mbr-text mbr-fonts-style mt-3 display-7">Genre. Followed by the book
+                                overview.................................................
+                                <br>Add to bag&nbsp; &nbsp;Remove this card&nbsp;<br>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="item features-image сol-12 col-md-6 col-lg-3">
+                    <div class="item-wrapper">
+                        <div class="item-img">
+                            <img src="assets/images/features3.jpg">
+                        </div>
+                        <div class="item-content">
+                            <h5 class="item-title mbr-fonts-style display-7"><strong>(Book 3 by Author 3)</strong></h5>
+
+                            <p class="mbr-text mbr-fonts-style mt-3 display-7">Genre. Followed by the book
+                                overview.................................................
+                                <br>Add to bag Remove this card&nbsp;<br>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="item features-image сol-12 col-md-6 col-lg-3">
+                    <div class="item-wrapper">
+                        <div class="item-img">
+                            <img src="assets/images/features4.jpg" alt="" title="">
+                        </div>
+                        <div class="item-content">
+                            <h5 class="item-title mbr-fonts-style display-7"><strong>Other Multimedia or
+                                    resource</strong></h5>
+
+                            <p class="mbr-text mbr-fonts-style mt-3 display-7">Based on the interested genres and
+                                log.<br>Open/Play&nbsp; &nbsp;Remove this card&nbsp;<br></p>
+                        </div>
+
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <section class="content13 cid-svkWHDIHFx mbr-parallax-background" id="content13-10">
+
+        <div class="mbr-overlay" style="opacity: 0.8; background-color: rgb(255, 255, 255);"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-12 col-lg-11">
+                    <h3 class="mbr-section-title mbr-fonts-style mb-4 display-5"><strong>General Note&nbsp;</strong>
+                    </h3>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-12 col-lg-11">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-lg-6">
+                            <ul class="list mbr-fonts-style display-7">
+                                <li><strong>As per the new update in the website :&nbsp; &nbsp; &nbsp;
+                                        &nbsp;&nbsp;</strong>A new "Books Recommendation feature" is deployed to fill
+                                    your page with things that you love.</li>
+                                <li><strong>New public community has been launched.</strong><br></li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <ul class="list mbr-fonts-style display-7">
+                                <li><strong>Checkout the oxford </strong><span
+                                        style="font-size: 19.2px;"><strong>dictionary</strong></span><strong>&nbsp;API
+                                        integration.</strong><br>Hope you find it ease to read new novels.</li>
+                                <li><strong>Mini Coding Platform is open for hunting. Gearup your coding
+                                        skills.<br></strong><br></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery2 cid-svkU2vTbwZ" id="gallery2-z">
+
+
+        <div class="container">
+            <div class="mbr-section-head">
+                <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2"><strong>Top in your
+                        Interested&nbsp;domains</strong></h4>
+
+            </div>
+            <div class="row mt-4">
+                <div class="item features-image сol-12 col-md-6 col-lg-4">
+                    <div class="item-wrapper">
+                        <div class="item-img">
+                            <img src="assets/images/features1.jpg">
+                        </div>
+                        <div class="item-content">
+                            <h5 class="item-title mbr-fonts-style display-5">Course 1<br></h5>
+
+                            <p class="mbr-text mbr-fonts-style mt-3 display-7">Referred by 90 users. Genre. in the
+                                Mobirise Site Builder.
+                            </p>
+                        </div>
+                        <div class="mbr-section-btn item-footer mt-2"><a href=""
+                                class="btn btn-primary item-btn display-7" target="_blank">Visit the resource</a></div>
+                    </div>
+                </div>
+                <div class="item features-image сol-12 col-md-6 col-lg-4">
+                    <div class="item-wrapper">
+                        <div class="item-img">
+                            <img src="assets/images/features2.jpg">
+                        </div>
+                        <div class="item-content">
+                            <h5 class="item-title mbr-fonts-style display-5">Community Y</h5>
+
+                            <p class="mbr-text mbr-fonts-style mt-3 display-7">Card Text. You don't have to code to
+                                create
+                                a site. Select one of available themes in the Mobirise Site Builder.</p>
+                        </div>
+                        <div class="mbr-section-btn item-footer mt-2"><a href=""
+                                class="btn btn-primary item-btn display-7" target="_blank">Visit Now!</a></div>
+                    </div>
+                </div>
+                <div class="item features-image сol-12 col-md-6 col-lg-4">
+                    <div class="item-wrapper">
+                        <div class="item-img">
+                            <img src="assets/images/mbr-1-696x464.jpg" data-slide-to="2" alt="">
+                        </div>
+                        <div class="item-content">
+                            <h5 class="item-title mbr-fonts-style display-5">Book Z</h5>
+
+                            <p class="mbr-text mbr-fonts-style mt-3 display-7">Card Text. You don't have to code to
+                                create
+                                a site. Select one of available themes in the Mobirise Site Builder.</p>
+                        </div>
+                        <div class="mbr-section-btn item-footer mt-2"><a href=""
+                                class="btn btn-primary item-btn display-7" target="_blank">Read Now!</a></div>
+                    </div>
+                </div>
+                <div class="item features-image сol-12 col-md-6 col-lg-4">
+                    <div class="item-wrapper">
+                        <div class="item-img">
+                            <img src="assets/images/features3.jpg" data-slide-to="3">
+                        </div>
+                        <div class="item-content">
+                            <h5 class="item-title mbr-fonts-style display-5">Create Site Today!</h5>
+
+                            <p class="mbr-text mbr-fonts-style mt-3 display-7">Card Text. You don't have to code to
+                                create
+                                a site. Select one of available themes in the Mobirise Site Builder.</p>
+                        </div>
+                        <div class="mbr-section-btn item-footer mt-2">
+                            <a href="" class="btn btn-primary item-btn display-7" target="_blank">Start
+                                Now!</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item features-image сol-12 col-md-6 col-lg-4">
+                    <div class="item-wrapper">
+                        <div class="item-img">
+                            <img src="assets/images/features4.jpg" alt="" title="" data-slide-to="4">
+                        </div>
+                        <div class="item-content">
+                            <h5 class="item-title mbr-fonts-style display-5">Create Site Today!</h5>
+
+                            <p class="mbr-text mbr-fonts-style mt-3 display-7">Card Text. You don't have to code to
+                                create
+                                a site. Select one of available themes in the Mobirise Site Builder.</p>
+                        </div>
+                        <div class="mbr-section-btn item-footer mt-2">
+                            <a href="" class="btn btn-primary item-btn display-7" target="_blank">Start
+                                Now!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonails3 carousel slide testimonials-slider cid-svl9Alo6Zd" data-interval="false"
+        id="testimonials3-13">
+
+
+
+
+
+        <div class="text-center container">
+            <h3 class="mb-4 mbr-fonts-style display-2"><strong>Books/previous log slider</strong></h3>
+
+            <div class="carousel slide" role="listbox" data-pause="true" data-keyboard="false" data-ride="carousel"
+                data-interval="8000">
+                <div class="carousel-inner">
+
+
+                    <div class="carousel-item">
+                        <div class="user col-md-8">
+                            <div class="user_image">
+                                <img src="assets/images/team3.jpg">
+                            </div>
+                            <div class="user_text mb-4">
+                                <p class="mbr-fonts-style display-7">
+                                    Themes in the Mobirise website builder offer multiple blocks: intros, sliders,
+                                    galleries, forms, articles, and so on. Start a project and click on the red plus
+                                    buttons to see the blocks available for your theme.
+                                </p>
+                            </div>
+                            <div class="user_name mbr-fonts-style mb-2 display-7">
+                                <strong>Alexa</strong>
+                            </div>
+                            <div class="user_desk mbr-fonts-style display-7">
+                                DESIGNER
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="user col-md-8">
+                            <div class="user_image">
+                                <img src="assets/images/team2.jpg">
+                            </div>
+                            <div class="user_text mb-4">
+                                <p class="mbr-fonts-style display-7">
+                                    Themes in the Mobirise website builder offer multiple blocks: intros, sliders,
+                                    galleries, forms, articles, and so on. Start a project and click on the red plus
+                                    buttons to see the blocks available for your theme.
+                                </p>
+                            </div>
+                            <div class="user_name mbr-fonts-style mb-2 display-7">
+                                <strong>Linda</strong>
+                            </div>
+                            <div class="user_desk mbr-fonts-style display-7">
+                                DEVELOPER
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="user col-md-8">
+                            <div class="user_image">
+                                <img src="assets/images/team2.jpg">
+                            </div>
+                            <div class="user_text mb-4">
+                                <p class="mbr-fonts-style display-7">
+                                    Themes in the Mobirise website builder offer multiple blocks: intros, sliders,
+                                    galleries, forms, articles, and so on. Start a project and click on the red plus
+                                    buttons to see the blocks available for your theme.
+                                </p>
+                            </div>
+                            <div class="user_name mbr-fonts-style mb-2 display-7">
+                                <strong>Linda</strong>
+                            </div>
+                            <div class="user_desk mbr-fonts-style display-7">
+                                DEVELOPER
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="user col-md-8">
+                            <div class="user_image">
+                                <img src="assets/images/team2.jpg">
+                            </div>
+                            <div class="user_text mb-4">
+                                <p class="mbr-fonts-style display-7">
+                                    Themes in the Mobirise website builder offer multiple blocks: intros, sliders,
+                                    galleries, forms, articles, and so on. Start a project and click on the red plus
+                                    buttons to see the blocks available for your theme.
+                                </p>
+                            </div>
+                            <div class="user_name mbr-fonts-style mb-2 display-7">
+                                <strong>Linda</strong>
+                            </div>
+                            <div class="user_desk mbr-fonts-style display-7">
+                                DEVELOPER
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="user col-md-8">
+                            <div class="user_image">
+                                <img src="assets/images/team2.jpg">
+                            </div>
+                            <div class="user_text mb-4">
+                                <p class="mbr-fonts-style display-7">
+                                    Themes in the Mobirise website builder offer multiple blocks: intros, sliders,
+                                    galleries, forms, articles, and so on. Start a project and click on the red plus
+                                    buttons to see the blocks available for your theme.
+                                </p>
+                            </div>
+                            <div class="user_name mbr-fonts-style mb-2 display-7">
+                                <strong>Linda</strong>
+                            </div>
+                            <div class="user_desk mbr-fonts-style display-7">
+                                DEVELOPER
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="user col-md-8">
+                            <div class="user_image">
+                                <img src="assets/images/team2.jpg">
+                            </div>
+                            <div class="user_text mb-4">
+                                <p class="mbr-fonts-style display-7">
+                                    Themes in the Mobirise website builder offer multiple blocks: intros, sliders,
+                                    galleries, forms, articles, and so on. Start a project and click on the red plus
+                                    buttons to see the blocks available for your theme.
+                                </p>
+                            </div>
+                            <div class="user_name mbr-fonts-style mb-2 display-7">
+                                <strong>Linda</strong>
+                            </div>
+                            <div class="user_desk mbr-fonts-style display-7">
+                                DEVELOPER
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="user col-md-8">
+                            <div class="user_image">
+                                <img src="assets/images/team2.jpg">
+                            </div>
+                            <div class="user_text mb-4">
+                                <p class="mbr-fonts-style display-7">
+                                    Themes in the Mobirise website builder offer multiple blocks: intros, sliders,
+                                    galleries, forms, articles, and so on. Start a project and click on the red plus
+                                    buttons to see the blocks available for your theme.
+                                </p>
+                            </div>
+                            <div class="user_name mbr-fonts-style mb-2 display-7">
+                                <strong>Linda</strong>
+                            </div>
+                            <div class="user_desk mbr-fonts-style display-7">
+                                DEVELOPER
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="user col-md-8">
+                            <div class="user_image">
+                                <img src="assets/images/team2.jpg">
+                            </div>
+                            <div class="user_text mb-4">
+                                <p class="mbr-fonts-style display-7">
+                                    Themes in the Mobirise website builder offer multiple blocks: intros, sliders,
+                                    galleries, forms, articles, and so on. Start a project and click on the red plus
+                                    buttons to see the blocks available for your theme.
+                                </p>
+                            </div>
+                            <div class="user_name mbr-fonts-style mb-2 display-7">
+                                <strong>Linda</strong>
+                            </div>
+                            <div class="user_desk mbr-fonts-style display-7">
+                                DEVELOPER
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="user col-md-8">
+                            <div class="user_image">
+                                <img src="assets/images/team2.jpg">
+                            </div>
+                            <div class="user_text mb-4">
+                                <p class="mbr-fonts-style display-7">
+                                    Themes in the Mobirise website builder offer multiple blocks: intros, sliders,
+                                    galleries, forms, articles, and so on. Start a project and click on the red plus
+                                    buttons to see the blocks available for your theme.
+                                </p>
+                            </div>
+                            <div class="user_name mbr-fonts-style mb-2 display-7">
+                                <strong>Linda</strong>
+                            </div>
+                            <div class="user_desk mbr-fonts-style display-7">
+                                DEVELOPER
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="user col-md-8">
+                            <div class="user_image">
+                                <img src="assets/images/team2.jpg">
+                            </div>
+                            <div class="user_text mb-4">
+                                <p class="mbr-fonts-style display-7">
+                                    Themes in the Mobirise website builder offer multiple blocks: intros, sliders,
+                                    galleries, forms, articles, and so on. Start a project and click on the red plus
+                                    buttons to see the blocks available for your theme.
+                                </p>
+                            </div>
+                            <div class="user_name mbr-fonts-style mb-2 display-7">
+                                <strong>Linda</strong>
+                            </div>
+                            <div class="user_desk mbr-fonts-style display-7">
+                                DEVELOPER
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="user col-md-8">
+                            <div class="user_image">
+                                <img src="assets/images/team2.jpg">
+                            </div>
+                            <div class="user_text mb-4">
+                                <p class="mbr-fonts-style display-7">
+                                    Themes in the Mobirise website builder offer multiple blocks: intros, sliders,
+                                    galleries, forms, articles, and so on. Start a project and click on the red plus
+                                    buttons to see the blocks available for your theme.
+                                </p>
+                            </div>
+                            <div class="user_name mbr-fonts-style mb-2 display-7">
+                                <strong>Linda</strong>
+                            </div>
+                            <div class="user_desk mbr-fonts-style display-7">
+                                DEVELOPER
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="user col-md-8">
+                            <div class="user_image">
+                                <img src="assets/images/team2.jpg">
+                            </div>
+                            <div class="user_text mb-4">
+                                <p class="mbr-fonts-style display-7">
+                                    Themes in the Mobirise website builder offer multiple blocks: intros, sliders,
+                                    galleries, forms, articles, and so on. Start a project and click on the red plus
+                                    buttons to see the blocks available for your theme.
+                                </p>
+                            </div>
+                            <div class="user_name mbr-fonts-style mb-2 display-7">
+                                <strong>Linda</strong>
+                            </div>
+                            <div class="user_desk mbr-fonts-style display-7">
+                                DEVELOPER
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="user col-md-8">
+                            <div class="user_image">
+                                <img src="assets/images/team2.jpg">
+                            </div>
+                            <div class="user_text mb-4">
+                                <p class="mbr-fonts-style display-7">
+                                    Themes in the Mobirise website builder offer multiple blocks: intros, sliders,
+                                    galleries, forms, articles, and so on. Start a project and click on the red plus
+                                    buttons to see the blocks available for your theme.
+                                </p>
+                            </div>
+                            <div class="user_name mbr-fonts-style mb-2 display-7">
+                                <strong>Linda</strong>
+                            </div>
+                            <div class="user_desk mbr-fonts-style display-7">
+                                DEVELOPER
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="user col-md-8">
+                            <div class="user_image">
+                                <img src="assets/images/team2.jpg">
+                            </div>
+                            <div class="user_text mb-4">
+                                <p class="mbr-fonts-style display-7">
+                                    Themes in the Mobirise website builder offer multiple blocks: intros, sliders,
+                                    galleries, forms, articles, and so on. Start a project and click on the red plus
+                                    buttons to see the blocks available for your theme.
+                                </p>
+                            </div>
+                            <div class="user_name mbr-fonts-style mb-2 display-7">
+                                <strong>Linda</strong>
+                            </div>
+                            <div class="user_desk mbr-fonts-style display-7">
+                                DEVELOPER
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="user col-md-8">
+                            <div class="user_image">
+                                <img src="assets/images/team2.jpg">
+                            </div>
+                            <div class="user_text mb-4">
+                                <p class="mbr-fonts-style display-7">
+                                    Themes in the Mobirise website builder offer multiple blocks: intros, sliders,
+                                    galleries, forms, articles, and so on. Start a project and click on the red plus
+                                    buttons to see the blocks available for your theme.
+                                </p>
+                            </div>
+                            <div class="user_name mbr-fonts-style mb-2 display-7">
+                                <strong>Linda</strong>
+                            </div>
+                            <div class="user_desk mbr-fonts-style display-7">
+                                DEVELOPER
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="user col-md-8">
+                            <div class="user_image">
+                                <img src="assets/images/team2.jpg">
+                            </div>
+                            <div class="user_text mb-4">
+                                <p class="mbr-fonts-style display-7">
+                                    Themes in the Mobirise website builder offer multiple blocks: intros, sliders,
+                                    galleries, forms, articles, and so on. Start a project and click on the red plus
+                                    buttons to see the blocks available for your theme.
+                                </p>
+                            </div>
+                            <div class="user_name mbr-fonts-style mb-2 display-7">
+                                <strong>Linda</strong>
+                            </div>
+                            <div class="user_desk mbr-fonts-style display-7">
+                                DEVELOPER
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="user col-md-8">
+                            <div class="user_image">
+                                <img src="assets/images/team2.jpg">
+                            </div>
+                            <div class="user_text mb-4">
+                                <p class="mbr-fonts-style display-7">
+                                    Themes in the Mobirise website builder offer multiple blocks: intros, sliders,
+                                    galleries, forms, articles, and so on. Start a project and click on the red plus
+                                    buttons to see the blocks available for your theme.
+                                </p>
+                            </div>
+                            <div class="user_name mbr-fonts-style mb-2 display-7">
+                                <strong>Linda</strong>
+                            </div>
+                            <div class="user_desk mbr-fonts-style display-7">
+                                DEVELOPER
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="user col-md-8">
+                            <div class="user_image">
+                                <img src="assets/images/team2.jpg">
+                            </div>
+                            <div class="user_text mb-4">
+                                <p class="mbr-fonts-style display-7">
+                                    Themes in the Mobirise website builder offer multiple blocks: intros, sliders,
+                                    galleries, forms, articles, and so on. Start a project and click on the red plus
+                                    buttons to see the blocks available for your theme.
+                                </p>
+                            </div>
+                            <div class="user_name mbr-fonts-style mb-2 display-7">
+                                <strong>Linda</strong>
+                            </div>
+                            <div class="user_desk mbr-fonts-style display-7">
+                                DEVELOPER
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="user col-md-8">
+                            <div class="user_image">
+                                <img src="assets/images/team2.jpg">
+                            </div>
+                            <div class="user_text mb-4">
+                                <p class="mbr-fonts-style display-7">
+                                    Themes in the Mobirise website builder offer multiple blocks: intros, sliders,
+                                    galleries, forms, articles, and so on. Start a project and click on the red plus
+                                    buttons to see the blocks available for your theme.
+                                </p>
+                            </div>
+                            <div class="user_name mbr-fonts-style mb-2 display-7">
+                                <strong>Linda</strong>
+                            </div>
+                            <div class="user_desk mbr-fonts-style display-7">
+                                DEVELOPER
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="user col-md-8">
+                            <div class="user_image">
+                                <img src="assets/images/team2.jpg">
+                            </div>
+                            <div class="user_text mb-4">
+                                <p class="mbr-fonts-style display-7">
+                                    Themes in the Mobirise website builder offer multiple blocks: intros, sliders,
+                                    galleries, forms, articles, and so on. Start a project and click on the red plus
+                                    buttons to see the blocks available for your theme.
+                                </p>
+                            </div>
+                            <div class="user_name mbr-fonts-style mb-2 display-7">
+                                <strong>Linda</strong>
+                            </div>
+                            <div class="user_desk mbr-fonts-style display-7">
+                                DEVELOPER
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-controls">
+                    <a class="carousel-control-prev" role="button" data-slide="prev">
+                        <span aria-hidden="true" class="mobi-mbri mobi-mbri-arrow-prev mbr-iconfont"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+
+                    <a class="carousel-control-next" role="button" data-slide="next">
+                        <span aria-hidden="true" class="mobi-mbri mobi-mbri-arrow-next mbr-iconfont"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team1 cid-svl9Bh639W" id="team1-14">
+
+
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <h3 class="mbr-section-title mbr-fonts-style align-center mb-4 display-2"><strong>books item
+                            list</strong></h3>
+
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="card-wrap">
+                        <div class="image-wrap">
+                            <img src="assets/images/team1.jpg">
+                        </div>
+                        <div class="content-wrap">
+                            <h5 class="mbr-section-title card-title mbr-fonts-style align-center m-0 display-5">
+                                <strong>Book 1</strong>
+                            </h5>
+                            <h6 class="mbr-role mbr-fonts-style align-center mb-3 display-4">
+                                <strong>Programmer</strong>
+                            </h6>
+                            <p class="card-text mbr-fonts-style align-center display-7">
+                                No special actions required, all sites you make with Mobirise are mobile-friendly.
+                            </p>
+                            <div class="social-row display-7">
+                                <div class="soc-item">
+                                    <a href="https://www.facebook.com/Mobirise/" target="_blank">
+                                        <span class="mbr-iconfont socicon socicon-facebook"></span>
+                                    </a>
+                                </div>
+                                <div class="soc-item">
+                                    <a href="https://twitter.com/mobirise" target="_blank">
+                                        <span class="mbr-iconfont socicon socicon-twitter"></span>
+                                    </a>
+                                </div>
+                                <div class="soc-item">
+                                    <a href="https://instagram.com/mobirise" target="_blank">
+                                        <span class="mbr-iconfont socicon socicon-instagram"></span>
+                                    </a>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-3">
+                    <div class="card-wrap">
+                        <div class="image-wrap">
+                            <img src="assets/images/team2.jpg">
+                        </div>
+                        <div class="content-wrap">
+                            <h5 class="mbr-section-title card-title mbr-fonts-style align-center m-0 display-5">
+                                <strong>Book 2</strong>
+                            </h5>
+                            <h6 class="mbr-role mbr-fonts-style align-center mb-3 display-4">
+                                <strong>Manager</strong>
+                            </h6>
+                            <p class="card-text mbr-fonts-style align-center display-7">
+                                Use Mobirise website building software to create multiple sites for your clients.
+                            </p>
+                            <div class="social-row display-7">
+                                <div class="soc-item">
+                                    <a href="https://www.facebook.com/Mobirise/" target="_blank">
+                                        <span class="mbr-iconfont socicon socicon-facebook"></span>
+                                    </a>
+                                </div>
+                                <div class="soc-item">
+                                    <a href="https://twitter.com/mobirise" target="_blank">
+                                        <span class="mbr-iconfont socicon socicon-twitter"></span>
+                                    </a>
+                                </div>
+                                <div class="soc-item">
+                                    <a href="https://instagram.com/mobirise" target="_blank">
+                                        <span class="mbr-iconfont socicon socicon-instagram"></span>
+                                    </a>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-3">
+                    <div class="card-wrap">
+                        <div class="image-wrap">
+                            <img src="assets/images/team3.jpg">
+                        </div>
+                        <div class="content-wrap">
+                            <h5 class="mbr-section-title card-title mbr-fonts-style align-center m-0 display-5">
+                                <strong>Book 3</strong>
+                            </h5>
+                            <h6 class="mbr-role mbr-fonts-style align-center mb-3 display-4">
+                                <strong>Analyst</strong>
+                            </h6>
+                            <p class="card-text mbr-fonts-style align-center display-7">
+                                Create multiple pages. Don't forget to set links to your pages after creating them.
+                            </p>
+                            <div class="social-row display-7">
+                                <div class="soc-item">
+                                    <a href="https://www.facebook.com/Mobirise/" target="_blank">
+                                        <span class="mbr-iconfont socicon socicon-facebook"></span>
+                                    </a>
+                                </div>
+                                <div class="soc-item">
+                                    <a href="https://twitter.com/mobirise" target="_blank">
+                                        <span class="mbr-iconfont socicon socicon-twitter"></span>
+                                    </a>
+                                </div>
+                                <div class="soc-item">
+                                    <a href="https://instagram.com/mobirise" target="_blank">
+                                        <span class="mbr-iconfont socicon socicon-instagram"></span>
+                                    </a>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-3">
+                    <div class="card-wrap">
+                        <div class="image-wrap">
+                            <img src="assets/images/team4.jpg">
+                        </div>
+                        <div class="content-wrap">
+                            <h5 class="mbr-section-title card-title mbr-fonts-style align-center m-0 display-5">
+                                <strong>Helen Smith</strong>
+                            </h5>
+                            <h6 class="mbr-role mbr-fonts-style align-center mb-3 display-4">
+                                <strong>Designer</strong>
+                            </h6>
+                            <p class="card-text mbr-fonts-style align-center display-7">
+                                Each theme in the Mobirise site builder contains a set of unique blocks.
+                            </p>
+                            <div class="social-row display-7">
+                                <div class="soc-item">
+                                    <a href="https://www.facebook.com/Mobirise/" target="_blank">
+                                        <span class="mbr-iconfont socicon socicon-facebook"></span>
+                                    </a>
+                                </div>
+                                <div class="soc-item">
+                                    <a href="https://twitter.com/mobirise" target="_blank">
+                                        <span class="mbr-iconfont socicon socicon-twitter"></span>
+                                    </a>
+                                </div>
+                                <div class="soc-item">
+                                    <a href="https://instagram.com/mobirise" target="_blank">
+                                        <span class="mbr-iconfont socicon socicon-instagram"></span>
+                                    </a>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content1 cid-s48udlf8KU" id="content1-8">
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="title col-12 col-md-12">
+                    <h3 class="mbr-section-title mbr-fonts-style align-center mb-4 display-2"><strong>Donate Resources
+                            to Enhance site power</strong></h3>
+                    <h4 class="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-7">
+                        <p><strong>How can You help the site ?&nbsp; &nbsp;</strong>join the communities , involve in
+                            discussions, support others and get support from the community.<br><strong>&nbsp; &nbsp;
+                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </strong>Share your
+                            Resources , Make others notify of an upcoming event through communities notification.</p>
+                    </h4>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="image3 cid-s48upRUlSD" id="image3-9">
+
+
+
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-6">
+                    <div class="image-wrapper">
+                        <img src="assets/images/6.jpg" alt="Mobirise">
+                        <p class="mbr-description mbr-fonts-style mt-2 align-center display-4">Create 2 free blogs on
+                            your own topic and host it here.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content1 cid-s48vaXqeL6" id="content1-b">
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="title col-12 col-md-9">
+                    <h3 class="mbr-section-title mbr-fonts-style align-center mb-4 display-2">Create blogs that make
+                        your ideas reach out people</h3>
+                    <h4 class="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-7">Make the best content
+                        that you can. Share Your Experiment observations. Compete with best content to make your blog at
+                        expo. Make learning easy.&nbsp; Witness new possibilities . Be your best.</h4>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content1 cid-s48vrXhP0J" id="content1-d">
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="title col-12 col-md-10">
+                    <h3 class="mbr-section-title mbr-fonts-style align-center mb-4 display-2"><strong>Host your project
+                            with our support</strong></h3>
+                    <h4 class="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-7">Have an idea ,
+                        <strong><em><a href="http://youtube.com" class="text-primary" target="_blank">Contact
+                                    us</a></em></strong>.&nbsp;<strong>Rutherfords' Team </strong>is <strong>open
+                        </strong>and <strong>Ready </strong>to build Projects that makes sense and Host them within the
+                        site to make a huge reach and better Success to your projects.
+                    </h4>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer4 cid-svkBIZxVvA" once="footers" id="footer4-x">
+
+
+
+        <div class="container">
+            <div class="row mbr-white">
+                <div class="col-6 col-lg-3">
+                    <div class="media-wrap col-md-8 col-12">
+                        <a
+                            href="https://www.google.com/search?q=ernest+rutherford&sxsrf=ALeKk01wwM9oBW17n_HVd1RKdwkoIWUl5A%3A1619113481415&source=hp&ei=CbaBYJvcFrf6z7sP_6-7oAw&iflsig=AINFCbYAAAAAYIHEGV1cZUQIy-jFh95OuSlMxxD8MKtb&gs_ssp=eJzj4tDP1TcwyjUvMmD0EkwtykstLlEoKi3JSC1Kyy9KAQCEJgnY&oq=ernest&gs_lcp=Cgdnd3Mtd2l6EAMYATIECCMQJzIHCC4QsQMQQzIECAAQQzIECAAQQzIECAAQQzIECAAQQzIECAAQQzIECAAQQzIFCC4QsQMyAggAOgoILhDqAhAnEJMCOgcIIxDqAhAnOgQILhBDOgsILhCxAxDHARCjAjoICAAQsQMQgwFQvAxY2hZg0iVoAXAAeACAAdgBiAGiCJIBBTAuNC4ymAEAoAEBqgEHZ3dzLXdperABCg&sclient=gws-wiz">
+                            <img src="{{url_for('static',filename='images/mbr-337x410.jpg')}}"
+                                alt="Sir Ernest Rutherford">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7">
+                        <strong>About Rutherfords Studio</strong>
+                    </h5>
+                    <p class="mbr-text mbr-fonts-style mb-4 display-4">Rutherfords' studio is a new turn of learning
+                        platforms. <br>It is enriched with all the revolutarizing technologies, communities, and wide
+                        variety of resources are supported here. We prove there is no limit and no custom for the
+                        education.&nbsp;</p>
+                    <h5 class="mbr-section-subtitle mbr-fonts-style mb-3 display-7">
+                        <strong>Follow Us</strong>
+                    </h5>
+                    <div class="social-row display-7">
+                        <div class="soc-item">
+                            <a href="https://twitter.com/mobirise" target="_blank">
+                                <span class="mbr-iconfont socicon socicon-facebook"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="https://twitter.com/mobirise" target="_blank">
+                                <span class="mbr-iconfont mbrib-github"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="https://twitter.com/mobirise" target="_blank">
+                                <span class="mbr-iconfont socicon-telegram socicon"></span>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7"><strong>Pages</strong></h5>
+                    <ul class="list mbr-fonts-style display-4">
+                        <li class="mbr-text item-wrap"><a href="index.html" class="text-primary" target="_blank">Home
+                                page</a></li>
+                        <li class="mbr-text item-wrap"><a href="page3.html#form5-1x" class="text-primary"
+                                target="_blank">Help Forums</a></li>
+                        <li class="mbr-text item-wrap"><a href="resources.html#features14-17"
+                                class="text-primary">Resources</a></li>
+                        <li class="mbr-text item-wrap"><a href="about_page.html#countdown1-u"
+                                class="text-primary">Events</a></li>
+                        <li class="mbr-text item-wrap"><a href="blog_gym.html#content4-2d" class="text-primary"
+                                target="_blank">Contribute your resources</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7"><strong>&nbsp;Features</strong></h5>
+                    <ul class="list mbr-fonts-style display-4">
+                        <li class="mbr-text item-wrap"><a href="https://pusher.com/tutorials/code-playground-react"
+                                class="text-primary" target="_blank">Code Editor</a></li><a
+                            href="https://pusher.com/tutorials/code-playground-react" class="text-primary"
+                            target="_blank">
+                        </a>
+                        <li class="mbr-text item-wrap"><a href="resources.html#team1-1d"
+                                class="text-primary">Communities</a></li>
+                        <li class="mbr-text item-wrap"><a href="blog_gym.html#content10-2k" class="text-primary">Github
+                                projects integration</a></li>
+                        <li class="mbr-text item-wrap"><a href="https://developers.google.com/books/docs/v1/using"
+                                class="text-primary" target="_blank">Google books API</a></li>
+                        <li class="mbr-text item-wrap"><a href="https://developers.google.com/classroom"
+                                class="text-primary">Google classroom API integration</a></li>
+                        <li class="mbr-text item-wrap"><a href="https://rapidapi.com/blog/top-free-music-data-apis/"
+                                class="text-primary" target="_blank">Music API</a></li>
+                        <li class="mbr-text item-wrap"><a href="https://developers.google.com/calendar"
+                                class="text-primary" target="_blank">Connect your google calaender</a></li>
+                        <li class="mbr-text item-wrap"><br></li>
+                    </ul>
+                </div>
+                <div class="col-12 mt-4">
+                    <p class="mbr-text mb-0 mbr-fonts-style copyright align-center display-7">
+                        © Copyright Team Rutherfords' 2021- All Rights Reserved
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <button class="open-button" onclick="openForm()">Extensions</button>
+
+    <div class="chat-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+            <h1>Check Meaning</h1>
+
+            <label for="msg"><b>Word</b></label>
+            <input placeholder="Type word.." name="msg" required style="padding:10px 10px;border-bottom:10px">
+            </input>
+
+            <button type="submit" class="btn">Send</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+
+
+    {% include 'nav_footer_src.html' %}
+    <script>
+
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>

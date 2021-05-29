@@ -1,0 +1,1 @@
+../final_rutherfords/rsenv/Scripts/activate.bat 

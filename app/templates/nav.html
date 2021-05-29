@@ -1,0 +1,92 @@
+<section class="menu cid-s48OLK6784" once="menu" id="menu1-2s">
+
+    <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+        <div class="container">
+            <div class="navbar-brand">
+                <span class="navbar-logo">
+                    <a href="https://en.wikipedia.org/wiki/Ernest_Rutherford" >
+                        <!-- assets/images/mbr-96x114.jpg -->
+                        <img src="{{url_for('static',filename='images/mbr-96x114.jpg')}}" alt="Rutherford" style="height: 3.8rem;background-color:white">
+                    </a>
+                </span>
+                <span class="navbar-caption-wrap"><a class="navbar-caption text-black text-primary display-7"
+                        href="{{url_for('main.index')}}" >Rutherfords Studio</a></span>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
+                    <li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="{{url_for('main.home')}}"
+                            ><span class="mbrib-home mbr-iconfont mbr-iconfont-btn"></span>Home</a></li>
+                    
+                    <li class="nav-item dropdown open"><a class="nav-link link text-black dropdown-toggle display-4"
+                            href="#" data-toggle="dropdown-submenu" aria-expanded="true"><span
+                                class="mobi-mbri mobi-mbri-extension mbr-iconfont mbr-iconfont-btn"></span>Resources</a>
+                        <div class="dropdown-menu">
+                            <a class="text-black dropdown-item text-primary display-4"
+                                href="{{url_for('main.open_resources')}}" >Communities and Misc<br></a>
+                            <a class="text-black dropdown-item text-primary display-4"
+                                href="https://a2zlibrarie.web.app/" >A2Zlibrary<br></a>
+                            <a class="text-black dropdown-item text-primary display-4"
+                                href="{{url_for('main.redirect_to_codearena')}}" >Code arena<br></a>
+                            <a class="text-black dropdown-item text-primary display-4"
+                                href="https://a2zlibrarie.web.app/" >Upcoming Events<br></a>
+                            <a class="text-black dropdown-item text-primary display-4" href="{{url_for('main.open_blogs')}}"
+                                >Expo and blogs<br></a>
+                            <a class="text-black dropdown-item text-primary display-4" href="{{url_for('main.open_contactus')}}"
+                                >Donate &amp; Feedback<br></a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link link text-black text-primary display-4"
+                            href="{{url_for('main.open_explorer')}}"><span
+                                class="mobi-mbri mobi-mbri-touch mbr-iconfont mbr-iconfont-btn">Explorer</span></a>
+                    </li>
+                    {% if current_user.is_authenticated %}
+                    <li class="dropdown">
+                        <a class="nav-link link text-black text-primary dropdown-toggle display-4" href="#" data-toggle="dropdown-submenu" aria-expanded="true">
+                        <span class="mbrib-user mobi-mbri-extension mbr-iconfont mbr-iconfont-btn">
+                        </span>{{ current_user.username }}'s Account</a>
+                            <div class="dropdown-menu">
+                                <a class="text-black dropdown-item text-primary display-4"
+                                        href="{{url_for('main.user', username=current_user.username)}}">Profile<br></a>
+                                <a class="text-black dropdown-item text-primary display-4"
+                                        href="{{url_for('auth.change_password')}}">Change password<br></a>
+                                <a class="text-black dropdown-item text-primary display-4"
+                                        href="{{url_for('auth.change_email_request')}}">Change Email<br></a>
+                                <a class="text-black dropdown-item text-primary display-4"
+                                        href="{{url_for('auth.logout')}}">Logout<br></a>
+                            </div>
+                    </li>
+                    
+                    {% else %}
+                    <li class="nav-item"><a class="nav-link link text-black text-primary display-4"
+                            href="{{url_for('auth.login')}}"><span
+                                class="mbrib-user mbr-iconfont mbr-iconfont-btn"></span>Login/Register</a></li>
+                    {% endif %}
+                </ul>
+
+
+            </div>
+        </div>
+    </nav>
+
+</section>
+{% if get_flashed_messages() %}
+<div class=" cid-s48MCQYojq mbr-section-title mbr-fonts-style mb-3 display-5 align-center container">
+    {% for message in get_flashed_messages() %}
+    <div class="alert alert-warning">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <h7>{{ message }}</h7>
+    </div>
+    {% endfor %}
+
+    {% block page_content %}{% endblock %}
+</div>
+{% endif %}

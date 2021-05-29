@@ -1,0 +1,115 @@
+.activatedtab{
+    background-color: rgb(97, 198, 245);
+    color: white;
+    border-color:rgb(97, 198, 245);
+}
+
+div.postcust-tabs {
+    margin-top: 16px;
+}
+a.customtabs{
+    /* color:#b1f1c2; */
+    /* transition-duration: 0.4s; */
+    transition: border .3s ease-out;
+}
+a.customtabs:hover{
+    border: 6px solid rgb(214, 72, 72) !important;
+}
+div.postcust-tabscust ul.postscust {
+    margin: 0px;
+    border-top: none;
+}
+
+.postscust {
+    padding:1rem 2em;
+    transition: transform .3s ease-out;
+    transition: background-color .2s ease-out;
+}
+
+.postscust:hover {
+    /* background-color: #2196f3; */
+    background-color: #7dfff89f;
+    color: #fdfeff;
+    border-radius: 5px;
+    transform: translate(10px, -5px);
+}
+
+.w3-bottombar-active {
+    border-bottom: 6px solid rgb(78, 241, 72)!important;
+}
+.w3-bottombar-deactive {
+    border-bottom: 6px solid rgb(228, 8, 8)!important;
+}
+.w3-padding {
+    padding: 8px 16px!important;
+}
+
+.w3-border-blue,
+.w3-hover-border-blue:hover {
+    border-color: #2196F3 !important;
+}
+
+.w3-pale-blue,
+.w3-hover-pale-blue:hover {
+    color: #000 !important;
+    background-color: #ddffff !important;
+}
+
+.w3-leftbar {
+    border-left: 6px solid #ccc !important;
+}
+
+.w3-rightbar {
+    border-right: 6px solid #ccc !important;
+}
+
+
+.pagination_cust {
+    display: inline-block;
+}
+
+.pagination_cust a {
+    color: black;
+    float: left;
+    padding: 1rem 1rem;
+    text-decoration: none;
+}
+
+.pagination_cust a.active {
+    background-color: #57d657;
+    color: white;
+    border-radius: 5px;
+}
+
+.pagination_cust a:hover:not(.active) {
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+div.flask-pagedown-preview {
+    margin: 10px 0px 10px 0px;
+    border: 1px solid #e0e0e0;
+    padding: 4px;
+}
+div.flask-pagedown-preview h1 {
+    font-size: 140%;
+}
+div.flask-pagedown-preview h2 {
+    font-size: 130%;
+}
+div.flask-pagedown-preview h3 {
+    font-size: 120%;
+}
+.post-body h1 {
+    font-size: 140%;
+}
+.post-body h2 {
+    font-size: 130%;
+}
+.post-body h3 {
+    font-size: 120%;
+}
+
+.table.followers tr {
+    border-bottom: 1px solid #e0e0e0;
+}

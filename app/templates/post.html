@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% import "_macros.html" as macros %}
+
+{% block title %}Flasky - Post{% endblock %}
+
+{% block page2_content %}
+{% include 'posts_.html' %}
+<div class="container" style="border: 1px solid;padding:-2em;border-radius:5px; ">
+<h4 class="row" id="comments" style="padding: 1rem">Comments</h4>
+{% if current_user.can(Permission.COMMENT) %}
+<div class="comment-form">
+    <div class="justify-content-center">
+        {% if current_user.can(Permission.WRITE) %}
+        <form action="" method="POST" class="mbr-form form-with-styler">
+            <div class="dragArea row">
+                {{form.hidden_tag()}}
+                <div class="col-lg-8 mx-auto mbr-form justify-content-center align-center">
+                    <div class="col-12 form-group">
+                        {{form.body(class="form-control",placeholder=form.body.label.text)}}
+                    </div>
+                    <p class="row mbr-form container justify-content-center align-center" style="float:left">
+                        {{ form.submit(class="btn btn-success display-4") }}
+                        <!-- <button type="submit" class="btn btn-primary display-4">Send message</button> -->
+                    </p>
+                </div>
+            </div>
+        </form>
+        {% endif %}
+    </div>
+</div>
+</div>
+{% endif %}
+{% include '_comments.html' %}
+{% if pagination %}
+<div class="pagination container">
+    <div class="align-center container">
+    {{ macros.pagination_widget(pagination, '.post', fragment='#comments', id=posts[0].id) }}
+    </div>
+</div>
+{% endif %}
+{% endblock %}

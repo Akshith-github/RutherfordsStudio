@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% import "_macros.html" as macros %}
+
+{% block title %}Edit - Post{% endblock %}
+
+{% block page_content %}
+
+<div class="justify-content-center">
+    <form action="" method="POST" class="mbr-form form-with-styler">
+        <div class="dragArea row">
+            {{form.hidden_tag()}}
+            <div class="col-lg-8 mx-auto mbr-form justify-content-center align-center">
+                <div class="col-12 form-group">
+                    {{form.body(class="form-control",placeholder=form.body.label.text)}}
+                </div>
+
+                <p class="row mbr-form container justify-content-center align-center" style="text-align:center">
+                    {{ form.submit(class="btn btn-success display-4") }}
+                    <!-- <button type="submit" class="btn btn-primary display-4">Send message</button> -->
+                </p>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}
