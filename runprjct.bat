@@ -6,5 +6,4 @@ set RECOMMEND_API=https://recommendbooksknn.herokuapp.com/recommend_book
 set RANDOM_WORD_API=https://random-word-api.herokuapp.com/word
 set WORD_MEANING_API=https://dictionaryapi.com/api/v3/references/collegiate/json/
 set WORD_MEANING_API_KEY=62d3c81b-3b90-4a82-9ecb-4a6cc543b9df
-set FLASK_CONFIG=development
 flask run
