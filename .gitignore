@@ -2,6 +2,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 rsenv/
+migrations/
 # C extensions
 *.so
 *.pyc
