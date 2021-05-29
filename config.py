@@ -28,20 +28,28 @@ class Config:
 
 class DevelopmentConfig(Config):
     DEBUG = True
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DEV_DATABASE_URL').replace('postgres','postgresql') or \
+    uri = os.environ.get('DEV_DATABASE_URL')
+    if(uri):
+        uri=uri.replace('postgres','postgresql') 
+    SQLALCHEMY_DATABASE_URI = uri or \
         'sqlite:///' + os.path.join(basedir, 'data-dev.sqlite')
 
 
 class TestingConfig(Config):
     TESTING = True
     WTF_CSRF_ENABLED = False
-    SQLALCHEMY_DATABASE_URI = os.environ.get('TEST_DATABASE_URL').replace('postgres','postgresql') or \
+    uri = os.environ.get('TEST_DATABASE_URL')
+    if(uri):
+        uri=uri.replace('postgres','postgresql') 
+    SQLALCHEMY_DATABASE_URI = uri or \
         'sqlite:///' + os.path.join(basedir, 'data-test.sqlite')
 
 
 class ProductionConfig(Config):
-
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL').replace('postgres','postgresql') or \
+    uri = os.environ.get('DATABASE_URL')
+    if(uri):
+        uri=uri.replace('postgres','postgresql') 
+    SQLALCHEMY_DATABASE_URI = uri or \
         'sqlite:///' + os.path.join(basedir, 'data.sqlite')
 
     @classmethod
