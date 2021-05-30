@@ -19,6 +19,7 @@ import textwrap
 
 load_dotenv()
 # print(os.getenv('FLASK_CONFIG'),type(os.getenv('FLASK_CONFIG')))
+print(((os.getenv('FLASK_CONFIG') or 'default')+" ")*10)
 app = create_app(os.getenv('FLASK_CONFIG') or 'default')
 # manager = Manager(app)
 migrate = Migrate(app, db)
