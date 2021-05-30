@@ -45,4 +45,4 @@ nosetests.xml
 venv
 __pycache__/
 tmp/
-
+testsCustom/

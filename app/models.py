@@ -292,19 +292,7 @@ def load_user(user_id):
     return User.query.get(int(user_id))
 
 
-class Post(db.Model):
-    __tablename__ = 'posts'
-    id = db.Column(db.Integer, primary_key=True)
-    body = db.Column(db.Text)
-    body_html = db.Column(db.Text)
-    timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
-    author_id = db.Column(db.Integer, db.ForeignKey('users.id'))
-    comments = db.relationship('Comment', backref='post', lazy='dynamic')
-
-    @staticmethod
-    def on_changed_body(target, value, oldvalue, initiator):
-        print(value)
-        attributes = {
+attributes = {
             'Global': [
                 'accesskey', 'autocapitalize', 'class', 'contenteditable',
                 'contextmenu', 'data-*', 'dir', 'draggable', 'hidden', 'id',
@@ -715,25 +703,31 @@ class Post(db.Model):
                 'title', 'translate'
             ]
         }
-        allowed_tags = list(set([
-            'a', 'abbr', 'acronym', 'b', 'blockquote', 'code', 'em', 'i', 'li',
-            'ol', 'pre', 'strong', 'ul', 'h1', 'h2', 'h3', 'p', 'div',
-            'iframe', 'width', 'height', 'src', 'data-video' ]+list(attributes.keys())))
-        try:
-            target.body_html = bleach.linkify(
-                bleach.clean(markdown(value,
-                                        output_format='html',
-                                        enable_attributes=True),
-                                tags=allowed_tags,
-                                attrbutes=attributes,
-                                strip=True))
-        except:
-                target.body_html = bleach.linkify(
-                bleach.clean(markdown(value,
-                                        output_format='html',
-                                        enable_attributes=True),
-                                tags=allowed_tags,
-                                strip=True))
+allowed_tags = list(set([
+    'a', 'abbr', 'acronym', 'b', 'blockquote', 'code', 'em', 'i', 'li',
+    'ol', 'pre', 'strong', 'ul', 'h1', 'h2', 'h3', 'p', 'div',
+    'iframe', 'width', 'height', 'src', 'data-video' ]+list(attributes.keys())))
+
+
+class Post(db.Model):
+    __tablename__ = 'posts'
+    id = db.Column(db.Integer, primary_key=True)
+    body = db.Column(db.Text)
+    body_html = db.Column(db.Text)
+    timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
+    author_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+    comments = db.relationship('Comment', backref='post', lazy='dynamic')
+    
+    @staticmethod
+    def on_changed_body(target, value, oldvalue, initiator):
+        print(value)
+        target.body_html = bleach.linkify(
+            bleach.clean(markdown(value,
+                                    output_format='html',
+                                    enable_attributes=True),
+                            tags=allowed_tags,
+                            attributes=attributes,
+                            strip=True))
 
     def to_json(self):
         json_post = {
@@ -768,10 +762,9 @@ class Comment(db.Model):
 
     @staticmethod
     def on_changed_body(target, value, oldvalue, initiator):
-        allowed_tags = ['a', 'abbr', 'acronym', 'b', 'code', 'em', 'i', 'strong']
         target.body_html = bleach.linkify(bleach.clean(
-            markdown(value, output_format='html'),
-            tags=allowed_tags, strip=True))
+            markdown(value, output_format='html',enable_attributes=True),
+            tags=allowed_tags, attributes=attributes, strip=True))
             
     def to_json(self):
         json_comment = {
