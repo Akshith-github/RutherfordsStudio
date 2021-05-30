@@ -433,13 +433,14 @@ Signin and Checkout our communities, blogs, projects and many more resources. ">
                     </div>
                     <div class="carousel-item">
                         <div class="user col-md-8">
-                            <div class="user_image">
+                            <div class="user_image devimage">
                                 <a href="https://www.linkedin.com/in/shiridi-kumar-peddinti-b33725199/"><img
+                                    onmouseover="onHover();"  id="menuImg" onmouseout="offHover();"
                                         src="assets/images/ShiridiDev.jpg" alt=""></a>
                             </div>
                             <div class="user_text mb-4">
                                 <p class="mbr-fonts-style display-7">
-                                    Student at kalasalingam university department of computer science and engineering.
+                                    Student at kalasalingam university department of computer science and engineering and with insane skills in algorithms & moreover a backend developer.
                                     An AI enthusiast and a good learner.
                                     Interest's in the field of Data science and Ai.
                                 </p>
@@ -644,6 +645,17 @@ Signin and Checkout our communities, blogs, projects and many more resources. ">
           document.getElementById(cityName).style.display = "block";
           evt.currentTarget.firstElementChild.className += " w3-border-red";
         }
+        </script>
+        <script>
+            function onHover()
+            {
+                $("#menuImg").attr('src', 'assets/images/ShiridiDev.jpeg');
+            }
+
+            function offHover()
+            {
+                $("#menuImg").attr('src', 'assets/images/ShiridiDev.jpg');
+            }
         </script>
     <!-- <script src="assets/formoid/formoid.min.js"></script> -->
 
