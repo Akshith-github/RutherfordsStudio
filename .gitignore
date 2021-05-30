@@ -2,7 +2,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 rsenv/
-migrations/
+
 # C extensions
 *.so
 *.pyc
@@ -45,4 +45,4 @@ nosetests.xml
 venv
 __pycache__/
 tmp/
-migrations/
+
