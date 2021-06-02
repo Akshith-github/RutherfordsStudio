@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{book[2]}}</title>
+    {% include 'nav_footer_css.html' %}
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        /* Style the tab */
+        .tab {
+            float: left;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+            width: 30%;
+            /* height: 300px; */
+            min-height: 450px;
+        }
+
+        /* Style the buttons that are used to open the tab content */
+        .tab button {
+            display: block;
+            background-color: inherit;
+            color: black;
+            padding: 22px 16px;
+            width: 100%;
+            border: none;
+            outline: none;
+            text-align: left;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+            background-color: #ddd;
+        }
+        .tab button:hover > .tabspaces{
+            background-color: rgb(99, 226, 173);
+            padding:0.8em;
+        }
+        
+        /* Create an active/current "tab button" class */
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        .tab button.active>.tabspaces{
+            background-color: rgb(92, 216, 247);
+            padding:0.8em;
+        }
+        /* Style the tab content */
+        .tabcontent {
+            float: left;
+            padding: 0px 12px;
+            border: 1px solid #ccc;
+            width: 70%;
+            border-left: none;
+            /* height: 300px; */
+            min-height: 450px;
+
+        }
+
+        .cardraised:hover {
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+
+<body>
+    {% include 'nav.html' %}
+    <!-- product info -->
+    <section class="header14 cid-svlswrTrfi" id="header14-21">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-12 col-md-4 image-wrapper cardraised">
+                    <img src="{{book[-2]}}" alt="Rutherfords Studio">
+                </div>
+                <div class="col-12 col-md">
+                    <div class="text-wrapper">
+                        <h1 class="mbr-section-title mbr-fonts-style mb-3 display-2">
+                            <strong>{{book[2]}}</strong>
+                        </h1>
+                        <p class="mbr-text mbr-fonts-style display-7">
+                            <strong>Description:</strong>
+                            {{textwrap.shorten(str(book[5]),width=300,placeholder='...')}}
+                        </p>
+                        <p class="mbr-text mbr-fonts-style display-7">
+                            <strong>Publishers:</strong> {{str(book[3])[2:-2]}}
+                        </p>
+                        <p class="mbr-text mbr-fonts-style display-7">
+                            <strong>Publication:</strong> {{book[29]}}
+                        </p>
+                        <p class="mbr-text mbr-fonts-style display-7">
+                            <strong>Pages/volumes/part:</strong> {{book[14]}} || {{book[18]}}
+                        </p>
+                        <p class="mbr-text mbr-fonts-style display-7">
+                            <strong>ISBN(10):</strong> {{book[-3]}}
+                        </p>
+                        <p class="mbr-text mbr-fonts-style display-7">
+                            <strong>Subjects :</strong> {{book[31]}}
+                        </p>
+                        <div class="mbr-section-btn mt-3">
+                            <a class="btn btn-secondary display-4" href="https://mobiri.se">Add to bag</a>
+                            <a class="btn btn-black-outline display-4" href="https://mobiri.se">
+                                Check Book Sample &gt;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery3 cid-svl2WZLZok">
+        <div class="container-fluid">
+            <div class="mbr-section-head">
+                <h6 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2"><strong>Books similiar to
+                        {{textwrap.shorten(data1['0']['bookTitle'],width=25,placeholder='...')}}</strong></h6>
+                <!-- Based on your Reads -->
+                <h5 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-2 display-5">Recommended books</h5>
+            </div>
+            <div class="row mt-4">
+                {% for bookno in keys %}
+                <div class="item features-image сol-12 col-md-6 col-lg-3">
+                    <div class="item-wrapper">
+                        <div class="item-img" style="height: 20rem;">
+                            <img src="{{data1[bookno]['imageUrlL']}}" style="width: 100%;height:100%"
+                                onerror="assets/images/features2.jpg">
+                        </div>
+                        <div class="item-content">
+                            <h5 class="item-title mbr-fonts-style display-7">
+                                <strong>{{textwrap.shorten(data1[bookno]['bookTitle'],width=55,placeholder='...')}}</strong>
+                            </h5>
+
+                            <p class="mbr-text mbr-fonts-style mt-3 display-7">Author :
+                                {{data1[bookno]['bookAuthor']}}<br>Published in {{data1[bookno]['yearOfPublication']}}
+                                by {{data1[bookno]['publisher']}}<br>ISBN : {{data1[bookno]['ISBN']}}Followed by the book
+                                overview.................................................<br>
+                                
+                                <a href="{{url_for('main.open_book',isbn=data1[bookno]['ISBN'])}}">
+                                <div style="text-align:center;border: 1px solid black;border-radius: 5px;padding:0.5em;">
+                                    {% if data1[bookno]['ISBN'] in booksDF.ISBN.values %}
+                                    <b style="color:green"> Book available</b>
+                                    {% else %}
+                                    <b style="color:red"> Book Not available</b>
+                                    {% endif %}
+                                    <a href="{{url_for('main.open_book',isbn=data1[bookno]['ISBN'])}}" class="text-primary" >View</a></div></a>
+                                    &nbsp; &nbsp;
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="tab">
+            <button class="tablinks active" onclick="openCity(event, 'London')">
+                <span class="tabspaces"> Preface Details</span></button>
+            <button class="tablinks" onclick="openCity(event, 'Paris')">
+                <span class="tabspaces"> Links and Secondary details</span>
+            </button>
+            <button class="tablinks" onclick="openCity(event, 'Tokyo')">
+                <span class="tabspaces"> Survey details</span>
+            </button>
+        </div>
+
+        <div id="London" class="tabcontent" style="padding:2em">
+            <ol style="list-style-type: none">
+                {% for i in (list(bookDict.keys())[2:6]) %}
+                <li><strong>{{i.capitalize()}}:</strong>
+                    {{"  "+str(bookDict[i])[5:-2].replace("'","").replace('"',"")}}</li>
+                <br>
+                {% endfor %}
+                <li>
+                    <strong>Languages:</strong>
+                    {{str(bookDict['languages'])[15:-4]}}</li>
+                <br>
+                <li>
+                    <strong>Series:</strong>
+                    {% if len(str(bookDict['series'])[8:-4])>3 %}
+                    {{(str(bookDict['series'])[8:-4])}}
+                    {% else %}
+                    Unknown
+                    {% endif %}
+                </li>
+            </ol>
+        </div>
+
+        <div id="Paris" class="tabcontent" style="display: none;padding:2em">
+            <ol style="list-style-type: none">
+                {% for i in (list(bookDict.keys())[6:15]) %}
+                <li><strong>{{i.capitalize()}}:</strong>
+                    {{"  "+str(bookDict[i])[5:-2].replace("'","").replace('"',"")}}</li>
+                <br>
+                {% endfor %}
+            </ol>
+        </div>
+
+        <div id="Tokyo" class="tabcontent" style="display: none;padding:2em">
+            <ol style="list-style-type: none">
+                {% for i in (list(bookDict.keys())[15:32]) %}
+                <li><strong>{{i.capitalize()}}:</strong>
+                    {{"  "+str(bookDict[i])[5:-2].replace("'","").replace('"',"")}}</li>
+                <br>
+                {% endfor %}
+            </ol>
+        </div>
+    </section>
+
+    {% include 'nav_footer_src.html' %}
+    <script>
+        function openCity(evt, cityName) {
+            // Declare all variables
+            var i, tabcontent, tablinks;
+
+            // Get all elements with class="tabcontent" and hide them
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Show the current tab, and add an "active" class to the link that opened the tab
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+
+</html>
