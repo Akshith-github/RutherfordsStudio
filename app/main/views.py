@@ -259,21 +259,19 @@ def open_book(isbn):
     # from .api_fxns import def_extract,fl_extract,meta_extract,shortdef_extract
     url=os.environ.get('RECOMMEND_API')
     # print(book[0][2],type(book[0][2]))
-    print(len(book))
-    print(book)
+    # print(len(book))
+    # print(book)
     try:
-        data= requests.api.get(url,params={'n':5,'book_name':book[0][-1]})
+        data= requests.api.get(url,params={'n':5,'isbn':isbn})
         keys=list(data.json().keys())[1:]
         data1=data.json()
     except:
         keys=[]
         data1=[]
-        try:
-            print(data.json())
-        except:
-            print(data.text)
-    input()
-    return render_template('bookPage.html',book=book[0],type=type,eval=eval,len=len,str=str,enumerate=enumerate,textwrap=textwrap,bookDict=bookDict,dict=dict,list=list,keys=keys,data1=data1,booksDF=booksDF)
+    book=book[0]
+    # input()
+    print(data1)
+    return render_template('bookPage.html',book=book,type=type,eval=eval,len=len,str=str,enumerate=enumerate,textwrap=textwrap,bookDict=bookDict,dict=dict,list=list,keys=keys,data1=data1,booksDF=booksDF)
 
 @main.route('/post/<int:id>', methods=['GET', 'POST'])
 def post(id):

@@ -72,7 +72,7 @@ Sign-in and Checkout our communities, blogs, projects and many more resources. B
                             tab. Click on it to open the Extensions list.</li>
                         <li><strong>What is Rutherford Studio?
                             </strong><br> Rutherford studio Kit is a service that provides the access to all current and new
-                            themes/extensions developed byRutherrford Studio.</li>
+                            themes/extensions developed by Rutherford Studio.</li>
                         <li><strong>What is Code Editor?<br></strong>This extension allows editing the code of block in
                             the
                             app. Also,
@@ -108,9 +108,13 @@ Sign-in and Checkout our communities, blogs, projects and many more resources. B
                             <p class="mbr-text mbr-fonts-style mb-4 display-7">
                                 Use Rutherfords studio to create multiple sites for commercial and
                                 non-profit projects.</p>
-                            <div class="mbr-section-btn">
-                                <a class="btn btn-primary display-4" href="https://mobiri.se">Create your own site</a>
-                            </div>
+            <div class="mbr-section-btn">
+                {% if current_user.is_authenticated %}
+                <a class="btn btn-primary display-4" href="{{url_for('auth.sign_up')}}">Create account &gt;</a>
+                {% else %}
+                <a class="btn btn-primary display-4" href="{{url_for('main.index')}}">check blog &gt;</a>
+                {% endif %}
+                </div>
                         </div>
                     </div>
                 </div>

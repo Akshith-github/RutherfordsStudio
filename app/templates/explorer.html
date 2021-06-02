@@ -45,10 +45,16 @@
                             Full width intro with a sold background and a picture on the side. You can easily change the
                             size of image in block parameters.</p>
                         <div class="mbr-section-btn mt-3">
-                            <a class="btn btn-secondary display-4" href="https://mobiri.se">Explore
-                                all features</a>
-                            <a class="btn btn-black-outline display-4" href="https://mobiri.se">Create
+                            <a class="btn btn-secondary display-4" 
+                            href="{{url_for('main.open_resources')}}">
+                                Explore all features</a>
+                            {% if current_user.is_authenticated %}
+                            <a class="btn btn-black-outline display-4" href="{{url_for('auth.sign_up')}}">Create
                                 account &gt;</a>
+                            {% else %}
+                            <a class="btn btn-black-outline display-4" href="{{url_for('main.index')}}">check
+                                blog &gt;</a>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
@@ -69,10 +75,9 @@
                         <h3 class="mbr-section-title mb-4 mbr-fonts-style display-5"><strong>Youtube Course of the
                                 week</strong></h3>
                         <p class="mbr-text mb-4 mbr-fonts-style display-4">
-                            Visit our Help Center to get started developing websites withRutherrford Studio. Use Help Center to
+                            Visit our Help Center to get started developing websites with Rutherford Studio. Use Help Center to
                             find answers to your questions. Contact us directly at info@site.com</p>
-                        <div class="mbr-section-btn"><a class="btn btn-white display-4" href="https://mobiri.se">Watch
-                                the course</a></div>
+                        <div class="mbr-section-btn"><a class="btn btn-white display-4" href="{{url_for('main.index')}}">Watch the course</a></div>
                     </div>
                 </div>
                 <div class="col-12 col-lg-6">
@@ -82,7 +87,7 @@
                         <p class="mbr-text mbr-fonts-style mb-4 display-4">
                             Beautiful website blocks, templates and themes help you to start easily. Expand your
                            Rutherford Studioexperience with Code Editor, Form Builder and other extensions.</p>
-                        <div class="mbr-section-btn"><a class="btn btn-white display-4" href="https://mobiri.se">Visit
+                        <div class="mbr-section-btn"><a class="btn btn-white display-4" href="{{url_for('auth.sign_up')}}">Visit
                                 site&nbsp;</a></div>
                     </div>
                 </div>
