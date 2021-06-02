@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--   -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image:src" content="assets/images/explorer-meta.png">
+    <meta property="og:image" content="assets/images/explorer-meta.png">
+    <meta name="twitter:title" content="Explorer 🌍">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="{{url_for('static', filename='images/mbr-96x114.jpg')}}" type="image/x-icon">
+    <meta name="description"
+        content="As a part of Rutherfords' Initiative to make happy learning experience. The explorer is a platform of all practical and top courses and blogs expo. Signin and Checkout our communities, blogs, projects and many more resources. ">
+    <style>
+        .cardraised{
+            border-radius: 1em;
+        }
+        .cardraised:hover{
+            transform: scale(1.02);
+            /* border-radius: 8px solid; */
+            border: 10px solid black;
+            margin: 0px;
+            padding:0px
+        }
+        .card-body a{
+            display: none;
+            padding:0.2em;
+        }
+        .card:hover > .card-body{
+            margin-top: -0px;
+            -webkit-transition: all 1s ease;
+            -moz-transition: all 1s ease;
+            -o-transition: all 1s ease;
+            transition: all 1s ease;
+            border:1px solid;
+            padding:0.2em;
+            }
+        .card:hover > .card-body > a{
+            display: block;
+        }
+
+        .dispHoverchild{display:none;}
+        .dispHover:hover > .dispHoverchild{
+            display:block
+        }
+        
+        .dispcard:hover{
+            border: 10px solid black;
+        }
+
+    </style>
+
+
+    <title>Library 📚</title>
+    {% include 'nav_footer_css.html' %}
+
+
+
+
+</head>
+
+<body>
+    {% include 'nav.html' %}
+    <section class="header14 cid-svlswrTrfi" id="header14-21">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-12 col-md-4 image-wrapper" >
+                    <a href="https://christopherstoll.org/2021/04/04/computer-vision-success-factors.html"
+                        target="_blank">
+                    <img src="http://christopherstoll.org/assets/photos/2021/04-computer-vision/thumbs/2021-03-31_IMG_0313.jpg" alt="Rutherfords Studio" style="height:25em" class="cardraised">
+                    </a>
+                </div>
+                <div class="col-12 col-md">
+                    <div class="text-wrapper">
+                        <h1 class="mbr-section-title mbr-fonts-style mb-3 display-2">
+                            The blog of the week :<br>
+                            <strong>
+                                Five Success Factors for Computer Vision Projects
+                            </strong>
+                        </h1>
+                        <p class="mbr-text mbr-fonts-style display-7">
+                            Full width intro with a sold background and a picture on the side. You can easily change the
+                            size of image in block parameters.</p>
+                            <a class="btn btn-secondary display-4" href="https://christopherstoll.org/2021/04/04/computer-vision-success-factors.html">
+                                Checkout the blog</a>
+                            <a class="btn btn-black-outline display-4" href="{{url_for('auth.sign_up')}}">Create
+                                account &gt;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="info2 cid-svluu1ofGP" id="info2-27">
+
+
+        <div class="align-center container-fluid">
+            <div class="row justify-content-center">
+                <div class="card col-12 col-lg-6">
+                    <div class="wrapper">
+                        <h3 class="mbr-section-title mb-4 mbr-fonts-style display-5"><strong>Youtube Course of the
+                                week</strong></h3>
+                        <p class="mbr-text mb-4 mbr-fonts-style display-4">
+                            <a href="https://www.youtube.com/watch?v=dJc_0bc5ETE"><b style="font-size:20px;border: 1px solid black;border-radius: 5px;padding:0.5em;color:black;"> React JS Full Course + 2 Apps - React Tutorial for Beginners</b></a>
+                            <br><br>
+                            TABLE OF CONTENT
+                            Introduction,What you will learn
+                            Install Development Tools
+                            Hello World
+                            JSX
+                            Render Elements
+                            Components and Props
+                            State and Lifecycle Methods
+                            Handle Events
+                            Conditional Rendering
+                            Lists and Keys
+                            Input Forms
+                            Create Todo App
+                            Use State Hook
+                            Use Effect Hook
+                            React Context
+                            Use Reducer
+                            React Router
+                            Create Blog App.</p>
+                        <div class="mbr-section-btn"><a class="btn btn-white display-4" href="https://www.youtube.com/watch?v=dJc_0bc5ETE">Watch
+                                the course</a></div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="wrapper">
+                        <h3 class="mbr-section-title mbr-fonts-style mb-4 display-5"><strong>OpenSource Course of the
+                                week</strong></h3>
+                        <p class="mbr-text mbr-fonts-style mb-4 display-4">
+                            <a href="https://www.freecodecamp.org/learn/machine-learning-with-python/"><b style="font-size:20px;border: 1px solid black;border-radius: 5px;padding:0.5em;color:black;">Machine Learning with Python</b></a>
+                            <br><br>
+                            <b class=""></b>
+                            Machine learning has many practical applications that you can use in your projects or on the job.
+
+                            In the Machine Learning with Python Certification, you'll use the TensorFlow framework to build several neural networks and explore more advanced techniques like natural language processing and reinforcement learning.
+                        </p>
+                        <div class="mbr-section-btn"><a class="btn btn-white display-4" href="https://www.freecodecamp.org/learn/machine-learning-with-python/">Visit
+                                site&nbsp;</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="gallery3 cid-svl2WZLZok" id="gallery3-11">
+
+
+        <div class="container-fluid">
+            <div class="mbr-section-head">
+                <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2"><strong>Random 20 books</strong></h4>
+                <h5 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-2 display-5">-----</h5>
+            </div>
+            <div class="row mt-4">
+                {% for book in booksDf[:] %}
+                <div class="item features-image сol-10 col-md-4 col-lg-3">
+                    <div class="item-wrapper cardraised">
+                        <div class="item-img card" style="padding-bottom:1px;">
+                            <img src="{{book[-2]}}" style="height:25em">
+                        <a href="{{url_for('main.open_book',isbn=book[-3])}}"
+                        style="font-size:20px;border:1px solid;border-radius:5px;padding:0.2em">
+                            <center>View</center>
+                        </a>
+                        <div class="card-body">
+                            <a href="{{url_for('main.open_book',isbn=book['ISBN'])}}" onclick="addCart()"
+                            style="font-size:20px">
+                                <center>Add to cart</center>
+                            </a>
+                        </div>
+                        </div>
+                        <div class="item-content"  style="padding-top:0.01em;padding-bottom:0;">
+                            <h5 class="item-title mbr-fonts-style display-7"><strong>{{book[2]}}</strong></h5>
+
+                            <p class="mbr-text mbr-fonts-style mt-3 display-7">ISBN : {{book[-3]}}<br>
+                                Genre: {{eval(book[-5])[0]}}<br>
+                                {% if len(str(book[-6]))>3 %}
+                                Series: {{book[-6]}}<br>
+                                {% endif %}
+                                pages: {{book[18]}}
+                                &nbsp; &nbsp;
+                                <!-- <a href="http://www.bing.com"
+                                    class="text-primary" target="_blank">Remove this card&nbsp;</a> -->
+                                </p>
+                        </div>
+
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <section class="features3 cid-svlt59mjkm" id="features3-22">
+
+
+        <div class="container">
+            <div class="mbr-section-head">
+                <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+                    <strong>
+                    Research papers and Articles&nbsp;
+                    </strong>
+                    (click on titles to see description)
+                </h4>
+            </div>
+            <div class="row mt-3">
+                <div class="item features-image сol-16 col-md-8 col-lg-4 dispcard">
+                    <div class="item-wrapper">
+                        <div class="item-img">
+                            <img src="https://miro.medium.com/max/1604/0*KTak4HI5Lp3w8D6l" style="height:15em">
+                        </div>
+                        <div class="item-content dispHover">
+                            <h5 class="item-title mbr-fonts-style display-7"><strong>Skin cancer classification using Convolutional neural networks</strong></h5>
+                            <h6 class="item-subtitle mbr-fonts-style mt-1 display-7">
+                                <em><b>Authors:</b> R Raja Subramanian; Dintakurthi Achuth; P Shiridi Kumar; Kovvuru Naveen kumar Reddy; </em>
+                            </h6>
+                            <p class="mbr-text mbr-fonts-style mt-3 display-7 dispHoverchild"> There is a necessary need for early detection of skin cancer and can prevent further spread in some cases of skin cancers, such as melanoma and focal cell carcinoma. Anyhow there are several factors that have bad impacts on the detection accuracy. In Recent times, the use of image processing and machine vision in the field of healthcare .&nbsp;</p>
+                        </div>
+                        <div class="mbr-section-btn item-footer mt-2"><a href="https://www.researchgate.net/publication/350080769_Skin_cancer_classification_using_Convolutional_neural_networks?_sg=YCKF88QXQt7HIOwONXjm-I8pcqbfxD5esupesDv1tYxL89AKRMc14OMFY-EYI89ifloG0UHVuVQj5ZbRF-0RBYRc5aEfW6mXzmc-pPvJ.sDJhoBRjZejzEdlOShJiJ9tzPUkNNYeyp_7eXhyjrzFD4GXrVBpM2RN27228zD0KhEDlGpqy-EZpV_gk098Awg"
+                                class="btn btn-primary item-btn display-7" target="_blank"> View on ResearchGate
+                                &gt;</a></div>
+                    </div>
+                </div>
+                <div class="item features-image сol-16 col-md-8 col-lg-4 dispcard">
+                    <div class="item-wrapper">
+                        <div class="item-img">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrJbSKOkuuXgDJoVoPtJbPf29_R8Ax88wMIg&usqp=CAU" style="height:15em">
+                        </div>
+                        <div class="item-content dispHover">
+                            <h5 class="item-title mbr-fonts-style display-7"><strong>A Survey on Sentiment Analysis</strong></h5>
+                            <h6 class="item-subtitle mbr-fonts-style mt-1 display-7">
+                                <em><b>Authors:</b>R Raja Subramanian; Nukala Akshith; Gogula Narasimha Murthy; Manchala Vikas </em>
+                            </h6>
+                            <p class="mbr-text mbr-fonts-style mt-3 display-7 dispHoverchild">  In this paper, from defining the sentiment analysis to algorithms for sentiment analysis and from the first step of sentiment analysis to evaluating the predictions of sentiment classifiers, additional feature extractions to boost performance are discussed with practical results. &nbsp;</p>
+                        </div>
+                        <div class="mbr-section-btn item-footer mt-2"><a href="https://www.researchgate.net/publication/350080341_A_Survey_on_Sentiment_Analysis/stats"
+                                class="btn btn-primary item-btn display-7" target="_blank"> View on ResearchGate
+                                &gt;</a></div>
+                    </div>
+                </div>
+                <div class="item features-image сol-16 col-md-8 col-lg-4 dispcard">
+                    <div class="item-wrapper">
+                        <div class="item-img">
+                            <img src="{{url_for('static',filename='images//2mins_hide_seek.PNG')}}" style="height:15em">
+                        </div>
+                        <div class="item-content dispHover">
+                            <h5 class="item-title mbr-fonts-style display-7"><strong>Emergent Tool Use from Multi-Agent Interaction</strong></h5>
+                            <h6 class="item-subtitle mbr-fonts-style mt-1 display-7">
+                                <em><b>Authors:</b>Bowen Baker, Ingmar Kanitscheider, Todor Markov, Yi Wu, Glenn Powell, Bob McGrew, Igor Mordatch</em>
+                            </h6>
+                            <a class="btn btn-primary" role="button" href="https://www.youtube.com/watch?v=Lu56xVlZ40M">
+                                Check video by Two Minute Papers
+                                </a>
+                            <p class="mbr-text mbr-fonts-style mt-3 display-7 dispHoverchild"> We’ve observed agents discovering progressively more complex tool use while playing a simple game of hide-and-seek. Through training in our new simulated hide-and-seek environment, agents build a series of six distinct strategies and counter strategies, some of which we did not know our environment supported.&nbsp;</p>
+                        </div>
+                        <div class="mbr-section-btn item-footer mt-2"><a href="https://www.researchgate.net/publication/350080769_Skin_cancer_classification_using_Convolutional_neural_networks?_sg=YCKF88QXQt7HIOwONXjm-I8pcqbfxD5esupesDv1tYxL89AKRMc14OMFY-EYI89ifloG0UHVuVQj5ZbRF-0RBYRc5aEfW6mXzmc-pPvJ.sDJhoBRjZejzEdlOShJiJ9tzPUkNNYeyp_7eXhyjrzFD4GXrVBpM2RN27228zD0KhEDlGpqy-EZpV_gk098Awg"
+                                class="btn btn-primary item-btn display-7" target="_blank"> View on ResearchGate
+                                &gt;</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content4 cid-svlu2N0nMz" id="content4-26">
+
+
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="title col-md-12 col-lg-11">
+                    <h3 class="mbr-section-title mbr-fonts-style align-center mb-4 display-2"><strong>Trending
+                            Projects</strong></h3>
+                    <h4 class="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-5">
+                        You can arrange your articles with the Rutherfords studio.
+                    </h4>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slider2 cid-svltklZLIN" id="slider2-23">
+
+
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-12">
+                    <div class="carousel slide" id="svtV1KjwL4" data-ride="carousel" data-interval="5000">
+
+                        <ol class="carousel-indicators">
+                            <li data-slide-to="0" class="active" data-target="#svtV1KjwL4"></li>
+                            <li data-slide-to="1" data-target="#svtV1KjwL4"></li>
+                            <li data-slide-to="2" data-target="#svtV1KjwL4"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item slider-image item active">
+                                <div class="item-wrapper">
+                                    <img class="d-block w-100" src="assets/images/background3.jpg">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5 class="mbr-section-subtitle mbr-fonts-style display-5">
+                                            <strong>Fixed-Height Slider</strong>
+                                        </h5>
+                                        <p class="mbr-section-text mbr-fonts-style display-7">
+                                            Click on the image to edit slides.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item slider-image item">
+                                <div class="item-wrapper">
+                                    <img class="d-block w-100" src="assets/images/background5.jpg">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5 class="mbr-section-subtitle mbr-fonts-style display-5">
+                                            <strong>Fixed-Height Slider</strong>
+                                        </h5>
+                                        <p class="mbr-section-text mbr-fonts-style display-7">
+                                            Click on the image to edit slides.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item slider-image item">
+                                <div class="item-wrapper">
+                                    <img class="d-block w-100" src="assets/images/background8.jpg">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5 class="mbr-section-subtitle mbr-fonts-style display-5">
+                                            <strong>Fixed-Height Slider</strong>
+                                        </h5>
+                                        <p class="mbr-section-text mbr-fonts-style display-7">
+                                            Click on the image to edit slides.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control carousel-control-prev" role="button" data-slide="prev"
+                            href="#svtV1KjwL4">
+                            <span class="mobi-mbri mobi-mbri-arrow-prev" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control carousel-control-next" role="button" data-slide="next"
+                            href="#svtV1KjwL4">
+                            <span class="mobi-mbri mobi-mbri-arrow-next" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team2 cid-svltqjxdpK" xmlns="http://www.w3.org/1999/html" id="team2-25">
+
+
+        <div class="container">
+            <div class="card">
+                <div class="card-wrapper">
+                    <div class="row align-items-center">
+                        <div class="col-12 col-md-4">
+                            <div class="image-wrapper">
+                                <img src="assets/images/team1.jpg" alt="Rutherfords Studio">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md">
+                            <div class="card-box">
+                                <h5 class="card-title mbr-fonts-style m-0 display-5">
+                                    <strong>John Smith</strong>
+                                </h5>
+                                <h6 class="mbr-fonts-style mb-3 display-4">
+                                    <strong>Programmer</strong>
+                                </h6>
+                                <p class="mbr-text mbr-fonts-style display-7">
+                                    Themes in the Rutherford Studio web app offer multiple blocks: intros, sliders,
+                                    galleries, forms, articles, and so on. Start a project and click on the red plus
+                                    buttons
+                                    to see the blocks available for your theme.
+                                </p>
+                                <div class="social-row display-7">
+                                    <div class="soc-item">
+                                        <a href="#" target="_blank">
+                                            <span class="mbr-iconfont socicon socicon-facebook"></span>
+                                        </a>
+                                    </div>
+                                    <div class="soc-item">
+                                        <a href="#" target="_blank">
+                                            <span class="mbr-iconfont socicon socicon-twitter"></span>
+                                        </a>
+                                    </div>
+                                    <div class="soc-item">
+                                        <a href="#" target="_blank">
+                                            <span class="mbr-iconfont socicon socicon-instagram"></span>
+                                        </a>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-wrapper">
+                    <div class="row align-items-center">
+                        <div class="col-12 col-md-4">
+                            <div class="image-wrapper">
+                                <img src="assets/images/team2.jpg" alt="Rutherfords Studio">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md">
+                            <div class="card-box">
+                                <h5 class="card-title mbr-fonts-style m-0 display-5">
+                                    <strong>Ann Brown</strong>
+                                </h5>
+                                <h6 class="mbr-fonts-style mb-3 display-4">
+                                    <strong>Manager</strong>
+                                </h6>
+                                <p class="mbr-text mbr-fonts-style display-7">
+                                    Themes in the Rutherford Studio web app offer multiple blocks: intros, sliders,
+                                    galleries, forms, articles, and so on. Start a project and click on the red plus
+                                    buttons
+                                    to see the blocks available for your theme.
+                                </p>
+                                <div class="social-row display-7">
+                                    <div class="soc-item">
+                                        <a href="#" target="_blank">
+                                            <span class="mbr-iconfont socicon socicon-facebook"></span>
+                                        </a>
+                                    </div>
+                                    <div class="soc-item">
+                                        <a href="#" target="_blank">
+                                            <span class="mbr-iconfont socicon socicon-twitter"></span>
+                                        </a>
+                                    </div>
+                                    <div class="soc-item">
+                                        <a href="#" target="_blank">
+                                            <span class="mbr-iconfont socicon socicon-instagram"></span>
+                                        </a>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="footer4 cid-svkBIZxVvA" once="footers" id="footer4-20">
+
+
+
+        <div class="container">
+            <div class="row mbr-white">
+                <div class="col-6 col-lg-3">
+                    <div class="media-wrap col-md-8 col-12">
+                        <a
+                            href="https://www.google.com/search?q=ernest+rutherford&sxsrf=ALeKk01wwM9oBW17n_HVd1RKdwkoIWUl5A%3A1619113481415&source=hp&ei=CbaBYJvcFrf6z7sP_6-7oAw&iflsig=AINFCbYAAAAAYIHEGV1cZUQIy-jFh95OuSlMxxD8MKtb&gs_ssp=eJzj4tDP1TcwyjUvMmD0EkwtykstLlEoKi3JSC1Kyy9KAQCEJgnY&oq=ernest&gs_lcp=Cgdnd3Mtd2l6EAMYATIECCMQJzIHCC4QsQMQQzIECAAQQzIECAAQQzIECAAQQzIECAAQQzIECAAQQzIECAAQQzIFCC4QsQMyAggAOgoILhDqAhAnEJMCOgcIIxDqAhAnOgQILhBDOgsILhCxAxDHARCjAjoICAAQsQMQgwFQvAxY2hZg0iVoAXAAeACAAdgBiAGiCJIBBTAuNC4ymAEAoAEBqgEHZ3dzLXdperABCg&sclient=gws-wiz">
+                            <img src="{{url_for('static',filename='images/mbr-337x410.jpg')}}"
+                                alt="Sir Ernest Rutherford">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7">
+                        <strong>About Rutherfords Studio</strong>
+                    </h5>
+                    <p class="mbr-text mbr-fonts-style mb-4 display-4">Rutherfords' studio is a new turn of learning
+                        platforms. <br>It is enriched with all the revolutarizing technologies, communities, and wide
+                        variety of resources are supported here. We prove there is no limit and no custom for the
+                        education.&nbsp;</p>
+                    <h5 class="mbr-section-subtitle mbr-fonts-style mb-3 display-7">
+                        <strong>Follow Us</strong>
+                    </h5>
+                    <div class="social-row display-7">
+                        <div class="soc-item">
+                            <a href="#" target="_blank">
+                                <span class="mbr-iconfont socicon socicon-facebook"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="#" target="_blank">
+                                <span class="mbr-iconfont mbrib-github"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="#" target="_blank">
+                                <span class="mbr-iconfont socicon-telegram socicon"></span>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7"><strong>Pages</strong></h5>
+                    <ul class="list mbr-fonts-style display-4">
+                        <li class="mbr-text item-wrap"><a href="index.html" class="text-primary" target="_blank">Home
+                                page</a></li>
+                        <li class="mbr-text item-wrap"><a href="page3.html#form5-1x" class="text-primary"
+                                target="_blank">Help Forums</a></li>
+                        <li class="mbr-text item-wrap"><a href="resources.html#features14-17"
+                                class="text-primary">Resources</a></li>
+                        <li class="mbr-text item-wrap"><a href="about_page.html#countdown1-u"
+                                class="text-primary">Events</a></li>
+                        <li class="mbr-text item-wrap"><a href="blog_gym.html#content4-2d" class="text-primary"
+                                target="_blank">Contribute your resources</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7"><strong>&nbsp;Features</strong></h5>
+                    <ul class="list mbr-fonts-style display-4">
+                        <li class="mbr-text item-wrap"><a href="https://pusher.com/tutorials/code-playground-react"
+                                class="text-primary" target="_blank">Code Editor</a></li><a
+                            href="https://pusher.com/tutorials/code-playground-react" class="text-primary"
+                            target="_blank">
+                        </a>
+                        <li class="mbr-text item-wrap"><a href="resources.html#team1-1d"
+                                class="text-primary">Communities</a></li>
+                        <li class="mbr-text item-wrap"><a href="blog_gym.html#content10-2k" class="text-primary">Github
+                                projects integration</a></li>
+                        <li class="mbr-text item-wrap"><a href="https://developers.google.com/books/docs/v1/using"
+                                class="text-primary" target="_blank">Google books API</a></li>
+                        <li class="mbr-text item-wrap"><a href="https://developers.google.com/classroom"
+                                class="text-primary">Google classroom API integration</a></li>
+                        <li class="mbr-text item-wrap"><a href="https://rapidapi.com/blog/top-free-music-data-apis/"
+                                class="text-primary" target="_blank">Music API</a></li>
+                        <li class="mbr-text item-wrap"><a href="https://developers.google.com/calendar"
+                                class="text-primary" target="_blank">Connect your google calaender</a></li>
+                        <li class="mbr-text item-wrap"><br></li>
+                    </ul>
+                </div>
+                <div class="col-12 mt-4">
+                    <p class="mbr-text mb-0 mbr-fonts-style copyright align-center display-7">
+                        © Copyright Team Rutherfords' 2021- All Rights Reserved
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    {% include "nav_footer_src.html" %}
+</body>
+
+</html>

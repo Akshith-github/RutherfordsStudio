@@ -30,6 +30,23 @@
     <script src="{{url_for('static',filename='datepicker/jquery.datetimepicker.full.js')}}"></script>
     <!-- assets/formoid/formoid.min.js -->
     <script src="{{url_for('static',filename='formoid/formoid.min.js')}}"></script>
+    <script>
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 50) {
+                $('.scrollToTop:hidden').stop(true, true).fadeIn();
+            } else {
+                $('.scrollToTop').stop(true, true).fadeOut();
+            }
+        });
+        $(function () { $(".scroll").click(function () { $("html,body").animate({ scrollTop: $(".topper_top").offset().top }, "1000"); return false }) })
+    </script>
+
+    <div id="scrollToTop" class="scrollToTop mbr-arrow-up">
+        <a class="scroll" style="text-align: center;">
+            <i class="mbr-arrow-up-icon mbr-arrow-up-icon-cm cm-icon cm-icon-smallarrow-up"></i>
+        </a>
+    </div>
+    <input name="animation" type="hidden">
     <!-- <script src="assets/theme/js/script.js"></script> -->
     <!-- <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i
         class="mbr-arrow-up-icon mbr-arrow-up-icon-cm cm-icon cm-icon-smallarrow-up"></i></a></div>

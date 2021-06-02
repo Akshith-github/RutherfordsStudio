@@ -1,16 +1,17 @@
-<section class="menu cid-s48OLK6784" once="menu" id="menu1-2s">
+<div class='topper_top'></div>
+<section class="menu cid-s48OLK6784" once="menu" id="menu1-2s" style="margin:5px;">
 
     <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
         <div class="container">
-            <div class="navbar-brand">
+            <div class="navbar-brand" style="padding-right:0rem">
                 <span class="navbar-logo">
                     <a href="https://en.wikipedia.org/wiki/Ernest_Rutherford" >
                         <!-- assets/images/mbr-96x114.jpg -->
                         <img src="{{url_for('static',filename='images/mbr-96x114.jpg')}}" alt="Rutherford" style="height: 3.8rem;background-color:white">
                     </a>
                 </span>
-                <span class="navbar-caption-wrap"><a class="navbar-caption text-black text-primary display-7"
-                        href="{{url_for('main.index')}}" >Rutherfords Studio</a></span>
+                <span class="navbar-caption-wrap" style="padding-right:0rem"><a class="navbar-caption text-black text-primary display-7"
+                        href="{{url_for('main.index')}}"  style="padding-right:0rem">Rutherfords Studio</a></span>
             </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,6 +37,8 @@
                                 href="https://a2zlibrarie.web.app/" >A2Zlibrary<br></a>
                             <a class="text-black dropdown-item text-primary display-4"
                                 href="{{url_for('main.redirect_to_codearena')}}" >Code arena<br></a>
+                            <a class="text-black dropdown-item text-primary display-4"
+                                href="{{url_for('main.open_library')}}" >Library<br></a>
                             <a class="text-black dropdown-item text-primary display-4"
                                 href="https://a2zlibrarie.web.app/" >Upcoming Events<br></a>
                             <a class="text-black dropdown-item text-primary display-4" href="{{url_for('main.open_blogs')}}"

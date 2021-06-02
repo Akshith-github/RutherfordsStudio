@@ -224,9 +224,20 @@ def redirect_to_codearena():
 def open_explorer():
     return render_template('explorer.html')
 
+@main.route('/library2')
+def open_library2():
+    return render_template('library2.html')
+
+
 @main.route('/contactus')
 def open_contactus():
     return render_template('contact_us.html')
+
+@main.route('/library')
+def open_library():
+    import pandas as pd
+    booksDf=pd.read_csv("65_books.csv").sample(n=12).values
+    return render_template('library.html',booksDf=booksDf,type=type,eval=eval,len=len,str=str,enumerate=enumerate)
 
 @main.route('/blogs')
 def open_blogs():
@@ -235,6 +246,32 @@ def open_blogs():
 @main.route('/Resources')
 def open_resources():
     return render_template('resources.html')
+@main.route('/book/<isbn>')
+def open_book(isbn):
+    import pandas as pd
+    booksDF=pd.read_csv("65_books.csv")
+    if not(isbn in booksDF.ISBN.values):
+        flash(f'Requested Book with {isbn} is not still available in library or the isbn is wrong..')
+        return redirect(url_for('main.open_library'))
+    book=booksDF[booksDF.ISBN==isbn].values
+    bookDict=booksDF[booksDF.ISBN==isbn].to_dict()
+    # print(book[0],len(book))
+    # from .api_fxns import def_extract,fl_extract,meta_extract,shortdef_extract
+    url=os.environ.get('RECOMMEND_API')
+    # print(book[0][2],type(book[0][2]))
+    # print(len(book))
+    # print(book)
+    try:
+        data= requests.api.get(url,params={'n':5,'isbn':isbn})
+        keys=list(data.json().keys())[1:]
+        data1=data.json()
+    except:
+        keys=[]
+        data1=[]
+    book=book[0]
+    # input()
+    print(data1)
+    return render_template('bookPage.html',book=book,type=type,eval=eval,len=len,str=str,enumerate=enumerate,textwrap=textwrap,bookDict=bookDict,dict=dict,list=list,keys=keys,data1=data1,booksDF=booksDF)
 
 @main.route('/post/<int:id>', methods=['GET', 'POST'])
 def post(id):

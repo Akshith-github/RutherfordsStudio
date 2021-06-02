@@ -76,11 +76,11 @@ class ProductionConfig(Config):
         app.logger.addHandler(mail_handler)
 
 class HerokuConfig(ProductionConfig):
-    print('heroku config sett\n'*10)
     SSL_REDIRECT = True if os.environ.get('DYNO') else False
 
     @classmethod
     def init_app(cls, app):
+        print('heroku config sett\n'*10)
         ProductionConfig.init_app(app)
 
         # handle reverse proxy server headers
