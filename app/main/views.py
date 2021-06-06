@@ -246,6 +246,7 @@ def open_blogs():
 @main.route('/Resources')
 def open_resources():
     return render_template('resources.html')
+
 @main.route('/book/<isbn>')
 def open_book(isbn):
     import pandas as pd
@@ -272,6 +273,12 @@ def open_book(isbn):
     # input()
     print(data1)
     return render_template('bookPage.html',book=book,type=type,eval=eval,len=len,str=str,enumerate=enumerate,textwrap=textwrap,bookDict=bookDict,dict=dict,list=list,keys=keys,data1=data1,booksDF=booksDF)
+
+
+@main.route('/codePlayground')
+def open_code_ground():
+    return render_template('Code Executer.html')
+
 
 @main.route('/post/<int:id>', methods=['GET', 'POST'])
 def post(id):

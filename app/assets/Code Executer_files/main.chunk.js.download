@@ -1,0 +1,2214 @@
+(this["webpackJsonpcode-executer"] = this["webpackJsonpcode-executer"] || []).push([["main"],{
+
+/***/ "./node_modules/ace-builds/src-min-noconflict sync recursive ^\\.\\/mode\\-.*$":
+/*!************************************************************************!*\
+  !*** ./node_modules/ace-builds/src-min-noconflict sync ^\.\/mode\-.*$ ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./mode-abap": "./node_modules/ace-builds/src-min-noconflict/mode-abap.js",
+	"./mode-abap.js": "./node_modules/ace-builds/src-min-noconflict/mode-abap.js",
+	"./mode-abc": "./node_modules/ace-builds/src-min-noconflict/mode-abc.js",
+	"./mode-abc.js": "./node_modules/ace-builds/src-min-noconflict/mode-abc.js",
+	"./mode-actionscript": "./node_modules/ace-builds/src-min-noconflict/mode-actionscript.js",
+	"./mode-actionscript.js": "./node_modules/ace-builds/src-min-noconflict/mode-actionscript.js",
+	"./mode-ada": "./node_modules/ace-builds/src-min-noconflict/mode-ada.js",
+	"./mode-ada.js": "./node_modules/ace-builds/src-min-noconflict/mode-ada.js",
+	"./mode-alda": "./node_modules/ace-builds/src-min-noconflict/mode-alda.js",
+	"./mode-alda.js": "./node_modules/ace-builds/src-min-noconflict/mode-alda.js",
+	"./mode-apache_conf": "./node_modules/ace-builds/src-min-noconflict/mode-apache_conf.js",
+	"./mode-apache_conf.js": "./node_modules/ace-builds/src-min-noconflict/mode-apache_conf.js",
+	"./mode-apex": "./node_modules/ace-builds/src-min-noconflict/mode-apex.js",
+	"./mode-apex.js": "./node_modules/ace-builds/src-min-noconflict/mode-apex.js",
+	"./mode-applescript": "./node_modules/ace-builds/src-min-noconflict/mode-applescript.js",
+	"./mode-applescript.js": "./node_modules/ace-builds/src-min-noconflict/mode-applescript.js",
+	"./mode-aql": "./node_modules/ace-builds/src-min-noconflict/mode-aql.js",
+	"./mode-aql.js": "./node_modules/ace-builds/src-min-noconflict/mode-aql.js",
+	"./mode-asciidoc": "./node_modules/ace-builds/src-min-noconflict/mode-asciidoc.js",
+	"./mode-asciidoc.js": "./node_modules/ace-builds/src-min-noconflict/mode-asciidoc.js",
+	"./mode-asl": "./node_modules/ace-builds/src-min-noconflict/mode-asl.js",
+	"./mode-asl.js": "./node_modules/ace-builds/src-min-noconflict/mode-asl.js",
+	"./mode-assembly_x86": "./node_modules/ace-builds/src-min-noconflict/mode-assembly_x86.js",
+	"./mode-assembly_x86.js": "./node_modules/ace-builds/src-min-noconflict/mode-assembly_x86.js",
+	"./mode-autohotkey": "./node_modules/ace-builds/src-min-noconflict/mode-autohotkey.js",
+	"./mode-autohotkey.js": "./node_modules/ace-builds/src-min-noconflict/mode-autohotkey.js",
+	"./mode-batchfile": "./node_modules/ace-builds/src-min-noconflict/mode-batchfile.js",
+	"./mode-batchfile.js": "./node_modules/ace-builds/src-min-noconflict/mode-batchfile.js",
+	"./mode-c9search": "./node_modules/ace-builds/src-min-noconflict/mode-c9search.js",
+	"./mode-c9search.js": "./node_modules/ace-builds/src-min-noconflict/mode-c9search.js",
+	"./mode-c_cpp": "./node_modules/ace-builds/src-min-noconflict/mode-c_cpp.js",
+	"./mode-c_cpp.js": "./node_modules/ace-builds/src-min-noconflict/mode-c_cpp.js",
+	"./mode-cirru": "./node_modules/ace-builds/src-min-noconflict/mode-cirru.js",
+	"./mode-cirru.js": "./node_modules/ace-builds/src-min-noconflict/mode-cirru.js",
+	"./mode-clojure": "./node_modules/ace-builds/src-min-noconflict/mode-clojure.js",
+	"./mode-clojure.js": "./node_modules/ace-builds/src-min-noconflict/mode-clojure.js",
+	"./mode-cobol": "./node_modules/ace-builds/src-min-noconflict/mode-cobol.js",
+	"./mode-cobol.js": "./node_modules/ace-builds/src-min-noconflict/mode-cobol.js",
+	"./mode-coffee": "./node_modules/ace-builds/src-min-noconflict/mode-coffee.js",
+	"./mode-coffee.js": "./node_modules/ace-builds/src-min-noconflict/mode-coffee.js",
+	"./mode-coldfusion": "./node_modules/ace-builds/src-min-noconflict/mode-coldfusion.js",
+	"./mode-coldfusion.js": "./node_modules/ace-builds/src-min-noconflict/mode-coldfusion.js",
+	"./mode-crystal": "./node_modules/ace-builds/src-min-noconflict/mode-crystal.js",
+	"./mode-crystal.js": "./node_modules/ace-builds/src-min-noconflict/mode-crystal.js",
+	"./mode-csharp": "./node_modules/ace-builds/src-min-noconflict/mode-csharp.js",
+	"./mode-csharp.js": "./node_modules/ace-builds/src-min-noconflict/mode-csharp.js",
+	"./mode-csound_document": "./node_modules/ace-builds/src-min-noconflict/mode-csound_document.js",
+	"./mode-csound_document.js": "./node_modules/ace-builds/src-min-noconflict/mode-csound_document.js",
+	"./mode-csound_orchestra": "./node_modules/ace-builds/src-min-noconflict/mode-csound_orchestra.js",
+	"./mode-csound_orchestra.js": "./node_modules/ace-builds/src-min-noconflict/mode-csound_orchestra.js",
+	"./mode-csound_score": "./node_modules/ace-builds/src-min-noconflict/mode-csound_score.js",
+	"./mode-csound_score.js": "./node_modules/ace-builds/src-min-noconflict/mode-csound_score.js",
+	"./mode-csp": "./node_modules/ace-builds/src-min-noconflict/mode-csp.js",
+	"./mode-csp.js": "./node_modules/ace-builds/src-min-noconflict/mode-csp.js",
+	"./mode-css": "./node_modules/ace-builds/src-min-noconflict/mode-css.js",
+	"./mode-css.js": "./node_modules/ace-builds/src-min-noconflict/mode-css.js",
+	"./mode-curly": "./node_modules/ace-builds/src-min-noconflict/mode-curly.js",
+	"./mode-curly.js": "./node_modules/ace-builds/src-min-noconflict/mode-curly.js",
+	"./mode-d": "./node_modules/ace-builds/src-min-noconflict/mode-d.js",
+	"./mode-d.js": "./node_modules/ace-builds/src-min-noconflict/mode-d.js",
+	"./mode-dart": "./node_modules/ace-builds/src-min-noconflict/mode-dart.js",
+	"./mode-dart.js": "./node_modules/ace-builds/src-min-noconflict/mode-dart.js",
+	"./mode-diff": "./node_modules/ace-builds/src-min-noconflict/mode-diff.js",
+	"./mode-diff.js": "./node_modules/ace-builds/src-min-noconflict/mode-diff.js",
+	"./mode-django": "./node_modules/ace-builds/src-min-noconflict/mode-django.js",
+	"./mode-django.js": "./node_modules/ace-builds/src-min-noconflict/mode-django.js",
+	"./mode-dockerfile": "./node_modules/ace-builds/src-min-noconflict/mode-dockerfile.js",
+	"./mode-dockerfile.js": "./node_modules/ace-builds/src-min-noconflict/mode-dockerfile.js",
+	"./mode-dot": "./node_modules/ace-builds/src-min-noconflict/mode-dot.js",
+	"./mode-dot.js": "./node_modules/ace-builds/src-min-noconflict/mode-dot.js",
+	"./mode-drools": "./node_modules/ace-builds/src-min-noconflict/mode-drools.js",
+	"./mode-drools.js": "./node_modules/ace-builds/src-min-noconflict/mode-drools.js",
+	"./mode-edifact": "./node_modules/ace-builds/src-min-noconflict/mode-edifact.js",
+	"./mode-edifact.js": "./node_modules/ace-builds/src-min-noconflict/mode-edifact.js",
+	"./mode-eiffel": "./node_modules/ace-builds/src-min-noconflict/mode-eiffel.js",
+	"./mode-eiffel.js": "./node_modules/ace-builds/src-min-noconflict/mode-eiffel.js",
+	"./mode-ejs": "./node_modules/ace-builds/src-min-noconflict/mode-ejs.js",
+	"./mode-ejs.js": "./node_modules/ace-builds/src-min-noconflict/mode-ejs.js",
+	"./mode-elixir": "./node_modules/ace-builds/src-min-noconflict/mode-elixir.js",
+	"./mode-elixir.js": "./node_modules/ace-builds/src-min-noconflict/mode-elixir.js",
+	"./mode-elm": "./node_modules/ace-builds/src-min-noconflict/mode-elm.js",
+	"./mode-elm.js": "./node_modules/ace-builds/src-min-noconflict/mode-elm.js",
+	"./mode-erlang": "./node_modules/ace-builds/src-min-noconflict/mode-erlang.js",
+	"./mode-erlang.js": "./node_modules/ace-builds/src-min-noconflict/mode-erlang.js",
+	"./mode-forth": "./node_modules/ace-builds/src-min-noconflict/mode-forth.js",
+	"./mode-forth.js": "./node_modules/ace-builds/src-min-noconflict/mode-forth.js",
+	"./mode-fortran": "./node_modules/ace-builds/src-min-noconflict/mode-fortran.js",
+	"./mode-fortran.js": "./node_modules/ace-builds/src-min-noconflict/mode-fortran.js",
+	"./mode-fsharp": "./node_modules/ace-builds/src-min-noconflict/mode-fsharp.js",
+	"./mode-fsharp.js": "./node_modules/ace-builds/src-min-noconflict/mode-fsharp.js",
+	"./mode-fsl": "./node_modules/ace-builds/src-min-noconflict/mode-fsl.js",
+	"./mode-fsl.js": "./node_modules/ace-builds/src-min-noconflict/mode-fsl.js",
+	"./mode-ftl": "./node_modules/ace-builds/src-min-noconflict/mode-ftl.js",
+	"./mode-ftl.js": "./node_modules/ace-builds/src-min-noconflict/mode-ftl.js",
+	"./mode-gcode": "./node_modules/ace-builds/src-min-noconflict/mode-gcode.js",
+	"./mode-gcode.js": "./node_modules/ace-builds/src-min-noconflict/mode-gcode.js",
+	"./mode-gherkin": "./node_modules/ace-builds/src-min-noconflict/mode-gherkin.js",
+	"./mode-gherkin.js": "./node_modules/ace-builds/src-min-noconflict/mode-gherkin.js",
+	"./mode-gitignore": "./node_modules/ace-builds/src-min-noconflict/mode-gitignore.js",
+	"./mode-gitignore.js": "./node_modules/ace-builds/src-min-noconflict/mode-gitignore.js",
+	"./mode-glsl": "./node_modules/ace-builds/src-min-noconflict/mode-glsl.js",
+	"./mode-glsl.js": "./node_modules/ace-builds/src-min-noconflict/mode-glsl.js",
+	"./mode-gobstones": "./node_modules/ace-builds/src-min-noconflict/mode-gobstones.js",
+	"./mode-gobstones.js": "./node_modules/ace-builds/src-min-noconflict/mode-gobstones.js",
+	"./mode-golang": "./node_modules/ace-builds/src-min-noconflict/mode-golang.js",
+	"./mode-golang.js": "./node_modules/ace-builds/src-min-noconflict/mode-golang.js",
+	"./mode-graphqlschema": "./node_modules/ace-builds/src-min-noconflict/mode-graphqlschema.js",
+	"./mode-graphqlschema.js": "./node_modules/ace-builds/src-min-noconflict/mode-graphqlschema.js",
+	"./mode-groovy": "./node_modules/ace-builds/src-min-noconflict/mode-groovy.js",
+	"./mode-groovy.js": "./node_modules/ace-builds/src-min-noconflict/mode-groovy.js",
+	"./mode-haml": "./node_modules/ace-builds/src-min-noconflict/mode-haml.js",
+	"./mode-haml.js": "./node_modules/ace-builds/src-min-noconflict/mode-haml.js",
+	"./mode-handlebars": "./node_modules/ace-builds/src-min-noconflict/mode-handlebars.js",
+	"./mode-handlebars.js": "./node_modules/ace-builds/src-min-noconflict/mode-handlebars.js",
+	"./mode-haskell": "./node_modules/ace-builds/src-min-noconflict/mode-haskell.js",
+	"./mode-haskell.js": "./node_modules/ace-builds/src-min-noconflict/mode-haskell.js",
+	"./mode-haskell_cabal": "./node_modules/ace-builds/src-min-noconflict/mode-haskell_cabal.js",
+	"./mode-haskell_cabal.js": "./node_modules/ace-builds/src-min-noconflict/mode-haskell_cabal.js",
+	"./mode-haxe": "./node_modules/ace-builds/src-min-noconflict/mode-haxe.js",
+	"./mode-haxe.js": "./node_modules/ace-builds/src-min-noconflict/mode-haxe.js",
+	"./mode-hjson": "./node_modules/ace-builds/src-min-noconflict/mode-hjson.js",
+	"./mode-hjson.js": "./node_modules/ace-builds/src-min-noconflict/mode-hjson.js",
+	"./mode-html": "./node_modules/ace-builds/src-min-noconflict/mode-html.js",
+	"./mode-html.js": "./node_modules/ace-builds/src-min-noconflict/mode-html.js",
+	"./mode-html_elixir": "./node_modules/ace-builds/src-min-noconflict/mode-html_elixir.js",
+	"./mode-html_elixir.js": "./node_modules/ace-builds/src-min-noconflict/mode-html_elixir.js",
+	"./mode-html_ruby": "./node_modules/ace-builds/src-min-noconflict/mode-html_ruby.js",
+	"./mode-html_ruby.js": "./node_modules/ace-builds/src-min-noconflict/mode-html_ruby.js",
+	"./mode-ini": "./node_modules/ace-builds/src-min-noconflict/mode-ini.js",
+	"./mode-ini.js": "./node_modules/ace-builds/src-min-noconflict/mode-ini.js",
+	"./mode-io": "./node_modules/ace-builds/src-min-noconflict/mode-io.js",
+	"./mode-io.js": "./node_modules/ace-builds/src-min-noconflict/mode-io.js",
+	"./mode-jack": "./node_modules/ace-builds/src-min-noconflict/mode-jack.js",
+	"./mode-jack.js": "./node_modules/ace-builds/src-min-noconflict/mode-jack.js",
+	"./mode-jade": "./node_modules/ace-builds/src-min-noconflict/mode-jade.js",
+	"./mode-jade.js": "./node_modules/ace-builds/src-min-noconflict/mode-jade.js",
+	"./mode-java": "./node_modules/ace-builds/src-min-noconflict/mode-java.js",
+	"./mode-java.js": "./node_modules/ace-builds/src-min-noconflict/mode-java.js",
+	"./mode-javascript": "./node_modules/ace-builds/src-min-noconflict/mode-javascript.js",
+	"./mode-javascript.js": "./node_modules/ace-builds/src-min-noconflict/mode-javascript.js",
+	"./mode-json": "./node_modules/ace-builds/src-min-noconflict/mode-json.js",
+	"./mode-json.js": "./node_modules/ace-builds/src-min-noconflict/mode-json.js",
+	"./mode-json5": "./node_modules/ace-builds/src-min-noconflict/mode-json5.js",
+	"./mode-json5.js": "./node_modules/ace-builds/src-min-noconflict/mode-json5.js",
+	"./mode-jsoniq": "./node_modules/ace-builds/src-min-noconflict/mode-jsoniq.js",
+	"./mode-jsoniq.js": "./node_modules/ace-builds/src-min-noconflict/mode-jsoniq.js",
+	"./mode-jsp": "./node_modules/ace-builds/src-min-noconflict/mode-jsp.js",
+	"./mode-jsp.js": "./node_modules/ace-builds/src-min-noconflict/mode-jsp.js",
+	"./mode-jssm": "./node_modules/ace-builds/src-min-noconflict/mode-jssm.js",
+	"./mode-jssm.js": "./node_modules/ace-builds/src-min-noconflict/mode-jssm.js",
+	"./mode-jsx": "./node_modules/ace-builds/src-min-noconflict/mode-jsx.js",
+	"./mode-jsx.js": "./node_modules/ace-builds/src-min-noconflict/mode-jsx.js",
+	"./mode-julia": "./node_modules/ace-builds/src-min-noconflict/mode-julia.js",
+	"./mode-julia.js": "./node_modules/ace-builds/src-min-noconflict/mode-julia.js",
+	"./mode-kotlin": "./node_modules/ace-builds/src-min-noconflict/mode-kotlin.js",
+	"./mode-kotlin.js": "./node_modules/ace-builds/src-min-noconflict/mode-kotlin.js",
+	"./mode-latex": "./node_modules/ace-builds/src-min-noconflict/mode-latex.js",
+	"./mode-latex.js": "./node_modules/ace-builds/src-min-noconflict/mode-latex.js",
+	"./mode-less": "./node_modules/ace-builds/src-min-noconflict/mode-less.js",
+	"./mode-less.js": "./node_modules/ace-builds/src-min-noconflict/mode-less.js",
+	"./mode-liquid": "./node_modules/ace-builds/src-min-noconflict/mode-liquid.js",
+	"./mode-liquid.js": "./node_modules/ace-builds/src-min-noconflict/mode-liquid.js",
+	"./mode-lisp": "./node_modules/ace-builds/src-min-noconflict/mode-lisp.js",
+	"./mode-lisp.js": "./node_modules/ace-builds/src-min-noconflict/mode-lisp.js",
+	"./mode-livescript": "./node_modules/ace-builds/src-min-noconflict/mode-livescript.js",
+	"./mode-livescript.js": "./node_modules/ace-builds/src-min-noconflict/mode-livescript.js",
+	"./mode-logiql": "./node_modules/ace-builds/src-min-noconflict/mode-logiql.js",
+	"./mode-logiql.js": "./node_modules/ace-builds/src-min-noconflict/mode-logiql.js",
+	"./mode-logtalk": "./node_modules/ace-builds/src-min-noconflict/mode-logtalk.js",
+	"./mode-logtalk.js": "./node_modules/ace-builds/src-min-noconflict/mode-logtalk.js",
+	"./mode-lsl": "./node_modules/ace-builds/src-min-noconflict/mode-lsl.js",
+	"./mode-lsl.js": "./node_modules/ace-builds/src-min-noconflict/mode-lsl.js",
+	"./mode-lua": "./node_modules/ace-builds/src-min-noconflict/mode-lua.js",
+	"./mode-lua.js": "./node_modules/ace-builds/src-min-noconflict/mode-lua.js",
+	"./mode-luapage": "./node_modules/ace-builds/src-min-noconflict/mode-luapage.js",
+	"./mode-luapage.js": "./node_modules/ace-builds/src-min-noconflict/mode-luapage.js",
+	"./mode-lucene": "./node_modules/ace-builds/src-min-noconflict/mode-lucene.js",
+	"./mode-lucene.js": "./node_modules/ace-builds/src-min-noconflict/mode-lucene.js",
+	"./mode-makefile": "./node_modules/ace-builds/src-min-noconflict/mode-makefile.js",
+	"./mode-makefile.js": "./node_modules/ace-builds/src-min-noconflict/mode-makefile.js",
+	"./mode-markdown": "./node_modules/ace-builds/src-min-noconflict/mode-markdown.js",
+	"./mode-markdown.js": "./node_modules/ace-builds/src-min-noconflict/mode-markdown.js",
+	"./mode-mask": "./node_modules/ace-builds/src-min-noconflict/mode-mask.js",
+	"./mode-mask.js": "./node_modules/ace-builds/src-min-noconflict/mode-mask.js",
+	"./mode-matlab": "./node_modules/ace-builds/src-min-noconflict/mode-matlab.js",
+	"./mode-matlab.js": "./node_modules/ace-builds/src-min-noconflict/mode-matlab.js",
+	"./mode-maze": "./node_modules/ace-builds/src-min-noconflict/mode-maze.js",
+	"./mode-maze.js": "./node_modules/ace-builds/src-min-noconflict/mode-maze.js",
+	"./mode-mediawiki": "./node_modules/ace-builds/src-min-noconflict/mode-mediawiki.js",
+	"./mode-mediawiki.js": "./node_modules/ace-builds/src-min-noconflict/mode-mediawiki.js",
+	"./mode-mel": "./node_modules/ace-builds/src-min-noconflict/mode-mel.js",
+	"./mode-mel.js": "./node_modules/ace-builds/src-min-noconflict/mode-mel.js",
+	"./mode-mixal": "./node_modules/ace-builds/src-min-noconflict/mode-mixal.js",
+	"./mode-mixal.js": "./node_modules/ace-builds/src-min-noconflict/mode-mixal.js",
+	"./mode-mushcode": "./node_modules/ace-builds/src-min-noconflict/mode-mushcode.js",
+	"./mode-mushcode.js": "./node_modules/ace-builds/src-min-noconflict/mode-mushcode.js",
+	"./mode-mysql": "./node_modules/ace-builds/src-min-noconflict/mode-mysql.js",
+	"./mode-mysql.js": "./node_modules/ace-builds/src-min-noconflict/mode-mysql.js",
+	"./mode-nginx": "./node_modules/ace-builds/src-min-noconflict/mode-nginx.js",
+	"./mode-nginx.js": "./node_modules/ace-builds/src-min-noconflict/mode-nginx.js",
+	"./mode-nim": "./node_modules/ace-builds/src-min-noconflict/mode-nim.js",
+	"./mode-nim.js": "./node_modules/ace-builds/src-min-noconflict/mode-nim.js",
+	"./mode-nix": "./node_modules/ace-builds/src-min-noconflict/mode-nix.js",
+	"./mode-nix.js": "./node_modules/ace-builds/src-min-noconflict/mode-nix.js",
+	"./mode-nsis": "./node_modules/ace-builds/src-min-noconflict/mode-nsis.js",
+	"./mode-nsis.js": "./node_modules/ace-builds/src-min-noconflict/mode-nsis.js",
+	"./mode-nunjucks": "./node_modules/ace-builds/src-min-noconflict/mode-nunjucks.js",
+	"./mode-nunjucks.js": "./node_modules/ace-builds/src-min-noconflict/mode-nunjucks.js",
+	"./mode-objectivec": "./node_modules/ace-builds/src-min-noconflict/mode-objectivec.js",
+	"./mode-objectivec.js": "./node_modules/ace-builds/src-min-noconflict/mode-objectivec.js",
+	"./mode-ocaml": "./node_modules/ace-builds/src-min-noconflict/mode-ocaml.js",
+	"./mode-ocaml.js": "./node_modules/ace-builds/src-min-noconflict/mode-ocaml.js",
+	"./mode-pascal": "./node_modules/ace-builds/src-min-noconflict/mode-pascal.js",
+	"./mode-pascal.js": "./node_modules/ace-builds/src-min-noconflict/mode-pascal.js",
+	"./mode-perl": "./node_modules/ace-builds/src-min-noconflict/mode-perl.js",
+	"./mode-perl.js": "./node_modules/ace-builds/src-min-noconflict/mode-perl.js",
+	"./mode-perl6": "./node_modules/ace-builds/src-min-noconflict/mode-perl6.js",
+	"./mode-perl6.js": "./node_modules/ace-builds/src-min-noconflict/mode-perl6.js",
+	"./mode-pgsql": "./node_modules/ace-builds/src-min-noconflict/mode-pgsql.js",
+	"./mode-pgsql.js": "./node_modules/ace-builds/src-min-noconflict/mode-pgsql.js",
+	"./mode-php": "./node_modules/ace-builds/src-min-noconflict/mode-php.js",
+	"./mode-php.js": "./node_modules/ace-builds/src-min-noconflict/mode-php.js",
+	"./mode-php_laravel_blade": "./node_modules/ace-builds/src-min-noconflict/mode-php_laravel_blade.js",
+	"./mode-php_laravel_blade.js": "./node_modules/ace-builds/src-min-noconflict/mode-php_laravel_blade.js",
+	"./mode-pig": "./node_modules/ace-builds/src-min-noconflict/mode-pig.js",
+	"./mode-pig.js": "./node_modules/ace-builds/src-min-noconflict/mode-pig.js",
+	"./mode-plain_text": "./node_modules/ace-builds/src-min-noconflict/mode-plain_text.js",
+	"./mode-plain_text.js": "./node_modules/ace-builds/src-min-noconflict/mode-plain_text.js",
+	"./mode-powershell": "./node_modules/ace-builds/src-min-noconflict/mode-powershell.js",
+	"./mode-powershell.js": "./node_modules/ace-builds/src-min-noconflict/mode-powershell.js",
+	"./mode-praat": "./node_modules/ace-builds/src-min-noconflict/mode-praat.js",
+	"./mode-praat.js": "./node_modules/ace-builds/src-min-noconflict/mode-praat.js",
+	"./mode-prisma": "./node_modules/ace-builds/src-min-noconflict/mode-prisma.js",
+	"./mode-prisma.js": "./node_modules/ace-builds/src-min-noconflict/mode-prisma.js",
+	"./mode-prolog": "./node_modules/ace-builds/src-min-noconflict/mode-prolog.js",
+	"./mode-prolog.js": "./node_modules/ace-builds/src-min-noconflict/mode-prolog.js",
+	"./mode-properties": "./node_modules/ace-builds/src-min-noconflict/mode-properties.js",
+	"./mode-properties.js": "./node_modules/ace-builds/src-min-noconflict/mode-properties.js",
+	"./mode-protobuf": "./node_modules/ace-builds/src-min-noconflict/mode-protobuf.js",
+	"./mode-protobuf.js": "./node_modules/ace-builds/src-min-noconflict/mode-protobuf.js",
+	"./mode-puppet": "./node_modules/ace-builds/src-min-noconflict/mode-puppet.js",
+	"./mode-puppet.js": "./node_modules/ace-builds/src-min-noconflict/mode-puppet.js",
+	"./mode-python": "./node_modules/ace-builds/src-min-noconflict/mode-python.js",
+	"./mode-python.js": "./node_modules/ace-builds/src-min-noconflict/mode-python.js",
+	"./mode-qml": "./node_modules/ace-builds/src-min-noconflict/mode-qml.js",
+	"./mode-qml.js": "./node_modules/ace-builds/src-min-noconflict/mode-qml.js",
+	"./mode-r": "./node_modules/ace-builds/src-min-noconflict/mode-r.js",
+	"./mode-r.js": "./node_modules/ace-builds/src-min-noconflict/mode-r.js",
+	"./mode-razor": "./node_modules/ace-builds/src-min-noconflict/mode-razor.js",
+	"./mode-razor.js": "./node_modules/ace-builds/src-min-noconflict/mode-razor.js",
+	"./mode-rdoc": "./node_modules/ace-builds/src-min-noconflict/mode-rdoc.js",
+	"./mode-rdoc.js": "./node_modules/ace-builds/src-min-noconflict/mode-rdoc.js",
+	"./mode-red": "./node_modules/ace-builds/src-min-noconflict/mode-red.js",
+	"./mode-red.js": "./node_modules/ace-builds/src-min-noconflict/mode-red.js",
+	"./mode-redshift": "./node_modules/ace-builds/src-min-noconflict/mode-redshift.js",
+	"./mode-redshift.js": "./node_modules/ace-builds/src-min-noconflict/mode-redshift.js",
+	"./mode-rhtml": "./node_modules/ace-builds/src-min-noconflict/mode-rhtml.js",
+	"./mode-rhtml.js": "./node_modules/ace-builds/src-min-noconflict/mode-rhtml.js",
+	"./mode-rst": "./node_modules/ace-builds/src-min-noconflict/mode-rst.js",
+	"./mode-rst.js": "./node_modules/ace-builds/src-min-noconflict/mode-rst.js",
+	"./mode-ruby": "./node_modules/ace-builds/src-min-noconflict/mode-ruby.js",
+	"./mode-ruby.js": "./node_modules/ace-builds/src-min-noconflict/mode-ruby.js",
+	"./mode-rust": "./node_modules/ace-builds/src-min-noconflict/mode-rust.js",
+	"./mode-rust.js": "./node_modules/ace-builds/src-min-noconflict/mode-rust.js",
+	"./mode-sass": "./node_modules/ace-builds/src-min-noconflict/mode-sass.js",
+	"./mode-sass.js": "./node_modules/ace-builds/src-min-noconflict/mode-sass.js",
+	"./mode-scad": "./node_modules/ace-builds/src-min-noconflict/mode-scad.js",
+	"./mode-scad.js": "./node_modules/ace-builds/src-min-noconflict/mode-scad.js",
+	"./mode-scala": "./node_modules/ace-builds/src-min-noconflict/mode-scala.js",
+	"./mode-scala.js": "./node_modules/ace-builds/src-min-noconflict/mode-scala.js",
+	"./mode-scheme": "./node_modules/ace-builds/src-min-noconflict/mode-scheme.js",
+	"./mode-scheme.js": "./node_modules/ace-builds/src-min-noconflict/mode-scheme.js",
+	"./mode-scss": "./node_modules/ace-builds/src-min-noconflict/mode-scss.js",
+	"./mode-scss.js": "./node_modules/ace-builds/src-min-noconflict/mode-scss.js",
+	"./mode-sh": "./node_modules/ace-builds/src-min-noconflict/mode-sh.js",
+	"./mode-sh.js": "./node_modules/ace-builds/src-min-noconflict/mode-sh.js",
+	"./mode-sjs": "./node_modules/ace-builds/src-min-noconflict/mode-sjs.js",
+	"./mode-sjs.js": "./node_modules/ace-builds/src-min-noconflict/mode-sjs.js",
+	"./mode-slim": "./node_modules/ace-builds/src-min-noconflict/mode-slim.js",
+	"./mode-slim.js": "./node_modules/ace-builds/src-min-noconflict/mode-slim.js",
+	"./mode-smarty": "./node_modules/ace-builds/src-min-noconflict/mode-smarty.js",
+	"./mode-smarty.js": "./node_modules/ace-builds/src-min-noconflict/mode-smarty.js",
+	"./mode-snippets": "./node_modules/ace-builds/src-min-noconflict/mode-snippets.js",
+	"./mode-snippets.js": "./node_modules/ace-builds/src-min-noconflict/mode-snippets.js",
+	"./mode-soy_template": "./node_modules/ace-builds/src-min-noconflict/mode-soy_template.js",
+	"./mode-soy_template.js": "./node_modules/ace-builds/src-min-noconflict/mode-soy_template.js",
+	"./mode-space": "./node_modules/ace-builds/src-min-noconflict/mode-space.js",
+	"./mode-space.js": "./node_modules/ace-builds/src-min-noconflict/mode-space.js",
+	"./mode-sparql": "./node_modules/ace-builds/src-min-noconflict/mode-sparql.js",
+	"./mode-sparql.js": "./node_modules/ace-builds/src-min-noconflict/mode-sparql.js",
+	"./mode-sql": "./node_modules/ace-builds/src-min-noconflict/mode-sql.js",
+	"./mode-sql.js": "./node_modules/ace-builds/src-min-noconflict/mode-sql.js",
+	"./mode-sqlserver": "./node_modules/ace-builds/src-min-noconflict/mode-sqlserver.js",
+	"./mode-sqlserver.js": "./node_modules/ace-builds/src-min-noconflict/mode-sqlserver.js",
+	"./mode-stylus": "./node_modules/ace-builds/src-min-noconflict/mode-stylus.js",
+	"./mode-stylus.js": "./node_modules/ace-builds/src-min-noconflict/mode-stylus.js",
+	"./mode-svg": "./node_modules/ace-builds/src-min-noconflict/mode-svg.js",
+	"./mode-svg.js": "./node_modules/ace-builds/src-min-noconflict/mode-svg.js",
+	"./mode-swift": "./node_modules/ace-builds/src-min-noconflict/mode-swift.js",
+	"./mode-swift.js": "./node_modules/ace-builds/src-min-noconflict/mode-swift.js",
+	"./mode-tcl": "./node_modules/ace-builds/src-min-noconflict/mode-tcl.js",
+	"./mode-tcl.js": "./node_modules/ace-builds/src-min-noconflict/mode-tcl.js",
+	"./mode-terraform": "./node_modules/ace-builds/src-min-noconflict/mode-terraform.js",
+	"./mode-terraform.js": "./node_modules/ace-builds/src-min-noconflict/mode-terraform.js",
+	"./mode-tex": "./node_modules/ace-builds/src-min-noconflict/mode-tex.js",
+	"./mode-tex.js": "./node_modules/ace-builds/src-min-noconflict/mode-tex.js",
+	"./mode-text": "./node_modules/ace-builds/src-min-noconflict/mode-text.js",
+	"./mode-text.js": "./node_modules/ace-builds/src-min-noconflict/mode-text.js",
+	"./mode-textile": "./node_modules/ace-builds/src-min-noconflict/mode-textile.js",
+	"./mode-textile.js": "./node_modules/ace-builds/src-min-noconflict/mode-textile.js",
+	"./mode-toml": "./node_modules/ace-builds/src-min-noconflict/mode-toml.js",
+	"./mode-toml.js": "./node_modules/ace-builds/src-min-noconflict/mode-toml.js",
+	"./mode-tsx": "./node_modules/ace-builds/src-min-noconflict/mode-tsx.js",
+	"./mode-tsx.js": "./node_modules/ace-builds/src-min-noconflict/mode-tsx.js",
+	"./mode-turtle": "./node_modules/ace-builds/src-min-noconflict/mode-turtle.js",
+	"./mode-turtle.js": "./node_modules/ace-builds/src-min-noconflict/mode-turtle.js",
+	"./mode-twig": "./node_modules/ace-builds/src-min-noconflict/mode-twig.js",
+	"./mode-twig.js": "./node_modules/ace-builds/src-min-noconflict/mode-twig.js",
+	"./mode-typescript": "./node_modules/ace-builds/src-min-noconflict/mode-typescript.js",
+	"./mode-typescript.js": "./node_modules/ace-builds/src-min-noconflict/mode-typescript.js",
+	"./mode-vala": "./node_modules/ace-builds/src-min-noconflict/mode-vala.js",
+	"./mode-vala.js": "./node_modules/ace-builds/src-min-noconflict/mode-vala.js",
+	"./mode-vbscript": "./node_modules/ace-builds/src-min-noconflict/mode-vbscript.js",
+	"./mode-vbscript.js": "./node_modules/ace-builds/src-min-noconflict/mode-vbscript.js",
+	"./mode-velocity": "./node_modules/ace-builds/src-min-noconflict/mode-velocity.js",
+	"./mode-velocity.js": "./node_modules/ace-builds/src-min-noconflict/mode-velocity.js",
+	"./mode-verilog": "./node_modules/ace-builds/src-min-noconflict/mode-verilog.js",
+	"./mode-verilog.js": "./node_modules/ace-builds/src-min-noconflict/mode-verilog.js",
+	"./mode-vhdl": "./node_modules/ace-builds/src-min-noconflict/mode-vhdl.js",
+	"./mode-vhdl.js": "./node_modules/ace-builds/src-min-noconflict/mode-vhdl.js",
+	"./mode-visualforce": "./node_modules/ace-builds/src-min-noconflict/mode-visualforce.js",
+	"./mode-visualforce.js": "./node_modules/ace-builds/src-min-noconflict/mode-visualforce.js",
+	"./mode-wollok": "./node_modules/ace-builds/src-min-noconflict/mode-wollok.js",
+	"./mode-wollok.js": "./node_modules/ace-builds/src-min-noconflict/mode-wollok.js",
+	"./mode-xml": "./node_modules/ace-builds/src-min-noconflict/mode-xml.js",
+	"./mode-xml.js": "./node_modules/ace-builds/src-min-noconflict/mode-xml.js",
+	"./mode-xquery": "./node_modules/ace-builds/src-min-noconflict/mode-xquery.js",
+	"./mode-xquery.js": "./node_modules/ace-builds/src-min-noconflict/mode-xquery.js",
+	"./mode-yaml": "./node_modules/ace-builds/src-min-noconflict/mode-yaml.js",
+	"./mode-yaml.js": "./node_modules/ace-builds/src-min-noconflict/mode-yaml.js",
+	"./mode-zeek": "./node_modules/ace-builds/src-min-noconflict/mode-zeek.js",
+	"./mode-zeek.js": "./node_modules/ace-builds/src-min-noconflict/mode-zeek.js"
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "./node_modules/ace-builds/src-min-noconflict sync recursive ^\\.\\/mode\\-.*$";
+
+/***/ }),
+
+/***/ "./node_modules/ace-builds/src-min-noconflict sync recursive ^\\.\\/theme\\-.*$":
+/*!*************************************************************************!*\
+  !*** ./node_modules/ace-builds/src-min-noconflict sync ^\.\/theme\-.*$ ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./theme-ambiance": "./node_modules/ace-builds/src-min-noconflict/theme-ambiance.js",
+	"./theme-ambiance.js": "./node_modules/ace-builds/src-min-noconflict/theme-ambiance.js",
+	"./theme-chaos": "./node_modules/ace-builds/src-min-noconflict/theme-chaos.js",
+	"./theme-chaos.js": "./node_modules/ace-builds/src-min-noconflict/theme-chaos.js",
+	"./theme-chrome": "./node_modules/ace-builds/src-min-noconflict/theme-chrome.js",
+	"./theme-chrome.js": "./node_modules/ace-builds/src-min-noconflict/theme-chrome.js",
+	"./theme-clouds": "./node_modules/ace-builds/src-min-noconflict/theme-clouds.js",
+	"./theme-clouds.js": "./node_modules/ace-builds/src-min-noconflict/theme-clouds.js",
+	"./theme-clouds_midnight": "./node_modules/ace-builds/src-min-noconflict/theme-clouds_midnight.js",
+	"./theme-clouds_midnight.js": "./node_modules/ace-builds/src-min-noconflict/theme-clouds_midnight.js",
+	"./theme-cobalt": "./node_modules/ace-builds/src-min-noconflict/theme-cobalt.js",
+	"./theme-cobalt.js": "./node_modules/ace-builds/src-min-noconflict/theme-cobalt.js",
+	"./theme-crimson_editor": "./node_modules/ace-builds/src-min-noconflict/theme-crimson_editor.js",
+	"./theme-crimson_editor.js": "./node_modules/ace-builds/src-min-noconflict/theme-crimson_editor.js",
+	"./theme-dawn": "./node_modules/ace-builds/src-min-noconflict/theme-dawn.js",
+	"./theme-dawn.js": "./node_modules/ace-builds/src-min-noconflict/theme-dawn.js",
+	"./theme-dracula": "./node_modules/ace-builds/src-min-noconflict/theme-dracula.js",
+	"./theme-dracula.js": "./node_modules/ace-builds/src-min-noconflict/theme-dracula.js",
+	"./theme-dreamweaver": "./node_modules/ace-builds/src-min-noconflict/theme-dreamweaver.js",
+	"./theme-dreamweaver.js": "./node_modules/ace-builds/src-min-noconflict/theme-dreamweaver.js",
+	"./theme-eclipse": "./node_modules/ace-builds/src-min-noconflict/theme-eclipse.js",
+	"./theme-eclipse.js": "./node_modules/ace-builds/src-min-noconflict/theme-eclipse.js",
+	"./theme-github": "./node_modules/ace-builds/src-min-noconflict/theme-github.js",
+	"./theme-github.js": "./node_modules/ace-builds/src-min-noconflict/theme-github.js",
+	"./theme-gob": "./node_modules/ace-builds/src-min-noconflict/theme-gob.js",
+	"./theme-gob.js": "./node_modules/ace-builds/src-min-noconflict/theme-gob.js",
+	"./theme-gruvbox": "./node_modules/ace-builds/src-min-noconflict/theme-gruvbox.js",
+	"./theme-gruvbox.js": "./node_modules/ace-builds/src-min-noconflict/theme-gruvbox.js",
+	"./theme-idle_fingers": "./node_modules/ace-builds/src-min-noconflict/theme-idle_fingers.js",
+	"./theme-idle_fingers.js": "./node_modules/ace-builds/src-min-noconflict/theme-idle_fingers.js",
+	"./theme-iplastic": "./node_modules/ace-builds/src-min-noconflict/theme-iplastic.js",
+	"./theme-iplastic.js": "./node_modules/ace-builds/src-min-noconflict/theme-iplastic.js",
+	"./theme-katzenmilch": "./node_modules/ace-builds/src-min-noconflict/theme-katzenmilch.js",
+	"./theme-katzenmilch.js": "./node_modules/ace-builds/src-min-noconflict/theme-katzenmilch.js",
+	"./theme-kr_theme": "./node_modules/ace-builds/src-min-noconflict/theme-kr_theme.js",
+	"./theme-kr_theme.js": "./node_modules/ace-builds/src-min-noconflict/theme-kr_theme.js",
+	"./theme-kuroir": "./node_modules/ace-builds/src-min-noconflict/theme-kuroir.js",
+	"./theme-kuroir.js": "./node_modules/ace-builds/src-min-noconflict/theme-kuroir.js",
+	"./theme-merbivore": "./node_modules/ace-builds/src-min-noconflict/theme-merbivore.js",
+	"./theme-merbivore.js": "./node_modules/ace-builds/src-min-noconflict/theme-merbivore.js",
+	"./theme-merbivore_soft": "./node_modules/ace-builds/src-min-noconflict/theme-merbivore_soft.js",
+	"./theme-merbivore_soft.js": "./node_modules/ace-builds/src-min-noconflict/theme-merbivore_soft.js",
+	"./theme-mono_industrial": "./node_modules/ace-builds/src-min-noconflict/theme-mono_industrial.js",
+	"./theme-mono_industrial.js": "./node_modules/ace-builds/src-min-noconflict/theme-mono_industrial.js",
+	"./theme-monokai": "./node_modules/ace-builds/src-min-noconflict/theme-monokai.js",
+	"./theme-monokai.js": "./node_modules/ace-builds/src-min-noconflict/theme-monokai.js",
+	"./theme-nord_dark": "./node_modules/ace-builds/src-min-noconflict/theme-nord_dark.js",
+	"./theme-nord_dark.js": "./node_modules/ace-builds/src-min-noconflict/theme-nord_dark.js",
+	"./theme-pastel_on_dark": "./node_modules/ace-builds/src-min-noconflict/theme-pastel_on_dark.js",
+	"./theme-pastel_on_dark.js": "./node_modules/ace-builds/src-min-noconflict/theme-pastel_on_dark.js",
+	"./theme-solarized_dark": "./node_modules/ace-builds/src-min-noconflict/theme-solarized_dark.js",
+	"./theme-solarized_dark.js": "./node_modules/ace-builds/src-min-noconflict/theme-solarized_dark.js",
+	"./theme-solarized_light": "./node_modules/ace-builds/src-min-noconflict/theme-solarized_light.js",
+	"./theme-solarized_light.js": "./node_modules/ace-builds/src-min-noconflict/theme-solarized_light.js",
+	"./theme-sqlserver": "./node_modules/ace-builds/src-min-noconflict/theme-sqlserver.js",
+	"./theme-sqlserver.js": "./node_modules/ace-builds/src-min-noconflict/theme-sqlserver.js",
+	"./theme-terminal": "./node_modules/ace-builds/src-min-noconflict/theme-terminal.js",
+	"./theme-terminal.js": "./node_modules/ace-builds/src-min-noconflict/theme-terminal.js",
+	"./theme-textmate": "./node_modules/ace-builds/src-min-noconflict/theme-textmate.js",
+	"./theme-textmate.js": "./node_modules/ace-builds/src-min-noconflict/theme-textmate.js",
+	"./theme-tomorrow": "./node_modules/ace-builds/src-min-noconflict/theme-tomorrow.js",
+	"./theme-tomorrow.js": "./node_modules/ace-builds/src-min-noconflict/theme-tomorrow.js",
+	"./theme-tomorrow_night": "./node_modules/ace-builds/src-min-noconflict/theme-tomorrow_night.js",
+	"./theme-tomorrow_night.js": "./node_modules/ace-builds/src-min-noconflict/theme-tomorrow_night.js",
+	"./theme-tomorrow_night_blue": "./node_modules/ace-builds/src-min-noconflict/theme-tomorrow_night_blue.js",
+	"./theme-tomorrow_night_blue.js": "./node_modules/ace-builds/src-min-noconflict/theme-tomorrow_night_blue.js",
+	"./theme-tomorrow_night_bright": "./node_modules/ace-builds/src-min-noconflict/theme-tomorrow_night_bright.js",
+	"./theme-tomorrow_night_bright.js": "./node_modules/ace-builds/src-min-noconflict/theme-tomorrow_night_bright.js",
+	"./theme-tomorrow_night_eighties": "./node_modules/ace-builds/src-min-noconflict/theme-tomorrow_night_eighties.js",
+	"./theme-tomorrow_night_eighties.js": "./node_modules/ace-builds/src-min-noconflict/theme-tomorrow_night_eighties.js",
+	"./theme-twilight": "./node_modules/ace-builds/src-min-noconflict/theme-twilight.js",
+	"./theme-twilight.js": "./node_modules/ace-builds/src-min-noconflict/theme-twilight.js",
+	"./theme-vibrant_ink": "./node_modules/ace-builds/src-min-noconflict/theme-vibrant_ink.js",
+	"./theme-vibrant_ink.js": "./node_modules/ace-builds/src-min-noconflict/theme-vibrant_ink.js",
+	"./theme-xcode": "./node_modules/ace-builds/src-min-noconflict/theme-xcode.js",
+	"./theme-xcode.js": "./node_modules/ace-builds/src-min-noconflict/theme-xcode.js"
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "./node_modules/ace-builds/src-min-noconflict sync recursive ^\\.\\/theme\\-.*$";
+
+/***/ }),
+
+/***/ "./node_modules/ace-builds/src-min-noconflict/snippets sync recursive ^\\.\\/.*$":
+/*!***************************************************************************!*\
+  !*** ./node_modules/ace-builds/src-min-noconflict/snippets sync ^\.\/.*$ ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./abap": "./node_modules/ace-builds/src-min-noconflict/snippets/abap.js",
+	"./abap.js": "./node_modules/ace-builds/src-min-noconflict/snippets/abap.js",
+	"./abc": "./node_modules/ace-builds/src-min-noconflict/snippets/abc.js",
+	"./abc.js": "./node_modules/ace-builds/src-min-noconflict/snippets/abc.js",
+	"./actionscript": "./node_modules/ace-builds/src-min-noconflict/snippets/actionscript.js",
+	"./actionscript.js": "./node_modules/ace-builds/src-min-noconflict/snippets/actionscript.js",
+	"./ada": "./node_modules/ace-builds/src-min-noconflict/snippets/ada.js",
+	"./ada.js": "./node_modules/ace-builds/src-min-noconflict/snippets/ada.js",
+	"./alda": "./node_modules/ace-builds/src-min-noconflict/snippets/alda.js",
+	"./alda.js": "./node_modules/ace-builds/src-min-noconflict/snippets/alda.js",
+	"./apache_conf": "./node_modules/ace-builds/src-min-noconflict/snippets/apache_conf.js",
+	"./apache_conf.js": "./node_modules/ace-builds/src-min-noconflict/snippets/apache_conf.js",
+	"./apex": "./node_modules/ace-builds/src-min-noconflict/snippets/apex.js",
+	"./apex.js": "./node_modules/ace-builds/src-min-noconflict/snippets/apex.js",
+	"./applescript": "./node_modules/ace-builds/src-min-noconflict/snippets/applescript.js",
+	"./applescript.js": "./node_modules/ace-builds/src-min-noconflict/snippets/applescript.js",
+	"./aql": "./node_modules/ace-builds/src-min-noconflict/snippets/aql.js",
+	"./aql.js": "./node_modules/ace-builds/src-min-noconflict/snippets/aql.js",
+	"./asciidoc": "./node_modules/ace-builds/src-min-noconflict/snippets/asciidoc.js",
+	"./asciidoc.js": "./node_modules/ace-builds/src-min-noconflict/snippets/asciidoc.js",
+	"./asl": "./node_modules/ace-builds/src-min-noconflict/snippets/asl.js",
+	"./asl.js": "./node_modules/ace-builds/src-min-noconflict/snippets/asl.js",
+	"./assembly_x86": "./node_modules/ace-builds/src-min-noconflict/snippets/assembly_x86.js",
+	"./assembly_x86.js": "./node_modules/ace-builds/src-min-noconflict/snippets/assembly_x86.js",
+	"./autohotkey": "./node_modules/ace-builds/src-min-noconflict/snippets/autohotkey.js",
+	"./autohotkey.js": "./node_modules/ace-builds/src-min-noconflict/snippets/autohotkey.js",
+	"./batchfile": "./node_modules/ace-builds/src-min-noconflict/snippets/batchfile.js",
+	"./batchfile.js": "./node_modules/ace-builds/src-min-noconflict/snippets/batchfile.js",
+	"./c9search": "./node_modules/ace-builds/src-min-noconflict/snippets/c9search.js",
+	"./c9search.js": "./node_modules/ace-builds/src-min-noconflict/snippets/c9search.js",
+	"./c_cpp": "./node_modules/ace-builds/src-min-noconflict/snippets/c_cpp.js",
+	"./c_cpp.js": "./node_modules/ace-builds/src-min-noconflict/snippets/c_cpp.js",
+	"./cirru": "./node_modules/ace-builds/src-min-noconflict/snippets/cirru.js",
+	"./cirru.js": "./node_modules/ace-builds/src-min-noconflict/snippets/cirru.js",
+	"./clojure": "./node_modules/ace-builds/src-min-noconflict/snippets/clojure.js",
+	"./clojure.js": "./node_modules/ace-builds/src-min-noconflict/snippets/clojure.js",
+	"./cobol": "./node_modules/ace-builds/src-min-noconflict/snippets/cobol.js",
+	"./cobol.js": "./node_modules/ace-builds/src-min-noconflict/snippets/cobol.js",
+	"./coffee": "./node_modules/ace-builds/src-min-noconflict/snippets/coffee.js",
+	"./coffee.js": "./node_modules/ace-builds/src-min-noconflict/snippets/coffee.js",
+	"./coldfusion": "./node_modules/ace-builds/src-min-noconflict/snippets/coldfusion.js",
+	"./coldfusion.js": "./node_modules/ace-builds/src-min-noconflict/snippets/coldfusion.js",
+	"./crystal": "./node_modules/ace-builds/src-min-noconflict/snippets/crystal.js",
+	"./crystal.js": "./node_modules/ace-builds/src-min-noconflict/snippets/crystal.js",
+	"./csharp": "./node_modules/ace-builds/src-min-noconflict/snippets/csharp.js",
+	"./csharp.js": "./node_modules/ace-builds/src-min-noconflict/snippets/csharp.js",
+	"./csound_document": "./node_modules/ace-builds/src-min-noconflict/snippets/csound_document.js",
+	"./csound_document.js": "./node_modules/ace-builds/src-min-noconflict/snippets/csound_document.js",
+	"./csound_orchestra": "./node_modules/ace-builds/src-min-noconflict/snippets/csound_orchestra.js",
+	"./csound_orchestra.js": "./node_modules/ace-builds/src-min-noconflict/snippets/csound_orchestra.js",
+	"./csound_score": "./node_modules/ace-builds/src-min-noconflict/snippets/csound_score.js",
+	"./csound_score.js": "./node_modules/ace-builds/src-min-noconflict/snippets/csound_score.js",
+	"./csp": "./node_modules/ace-builds/src-min-noconflict/snippets/csp.js",
+	"./csp.js": "./node_modules/ace-builds/src-min-noconflict/snippets/csp.js",
+	"./css": "./node_modules/ace-builds/src-min-noconflict/snippets/css.js",
+	"./css.js": "./node_modules/ace-builds/src-min-noconflict/snippets/css.js",
+	"./curly": "./node_modules/ace-builds/src-min-noconflict/snippets/curly.js",
+	"./curly.js": "./node_modules/ace-builds/src-min-noconflict/snippets/curly.js",
+	"./d": "./node_modules/ace-builds/src-min-noconflict/snippets/d.js",
+	"./d.js": "./node_modules/ace-builds/src-min-noconflict/snippets/d.js",
+	"./dart": "./node_modules/ace-builds/src-min-noconflict/snippets/dart.js",
+	"./dart.js": "./node_modules/ace-builds/src-min-noconflict/snippets/dart.js",
+	"./diff": "./node_modules/ace-builds/src-min-noconflict/snippets/diff.js",
+	"./diff.js": "./node_modules/ace-builds/src-min-noconflict/snippets/diff.js",
+	"./django": "./node_modules/ace-builds/src-min-noconflict/snippets/django.js",
+	"./django.js": "./node_modules/ace-builds/src-min-noconflict/snippets/django.js",
+	"./dockerfile": "./node_modules/ace-builds/src-min-noconflict/snippets/dockerfile.js",
+	"./dockerfile.js": "./node_modules/ace-builds/src-min-noconflict/snippets/dockerfile.js",
+	"./dot": "./node_modules/ace-builds/src-min-noconflict/snippets/dot.js",
+	"./dot.js": "./node_modules/ace-builds/src-min-noconflict/snippets/dot.js",
+	"./drools": "./node_modules/ace-builds/src-min-noconflict/snippets/drools.js",
+	"./drools.js": "./node_modules/ace-builds/src-min-noconflict/snippets/drools.js",
+	"./edifact": "./node_modules/ace-builds/src-min-noconflict/snippets/edifact.js",
+	"./edifact.js": "./node_modules/ace-builds/src-min-noconflict/snippets/edifact.js",
+	"./eiffel": "./node_modules/ace-builds/src-min-noconflict/snippets/eiffel.js",
+	"./eiffel.js": "./node_modules/ace-builds/src-min-noconflict/snippets/eiffel.js",
+	"./ejs": "./node_modules/ace-builds/src-min-noconflict/snippets/ejs.js",
+	"./ejs.js": "./node_modules/ace-builds/src-min-noconflict/snippets/ejs.js",
+	"./elixir": "./node_modules/ace-builds/src-min-noconflict/snippets/elixir.js",
+	"./elixir.js": "./node_modules/ace-builds/src-min-noconflict/snippets/elixir.js",
+	"./elm": "./node_modules/ace-builds/src-min-noconflict/snippets/elm.js",
+	"./elm.js": "./node_modules/ace-builds/src-min-noconflict/snippets/elm.js",
+	"./erlang": "./node_modules/ace-builds/src-min-noconflict/snippets/erlang.js",
+	"./erlang.js": "./node_modules/ace-builds/src-min-noconflict/snippets/erlang.js",
+	"./forth": "./node_modules/ace-builds/src-min-noconflict/snippets/forth.js",
+	"./forth.js": "./node_modules/ace-builds/src-min-noconflict/snippets/forth.js",
+	"./fortran": "./node_modules/ace-builds/src-min-noconflict/snippets/fortran.js",
+	"./fortran.js": "./node_modules/ace-builds/src-min-noconflict/snippets/fortran.js",
+	"./fsharp": "./node_modules/ace-builds/src-min-noconflict/snippets/fsharp.js",
+	"./fsharp.js": "./node_modules/ace-builds/src-min-noconflict/snippets/fsharp.js",
+	"./fsl": "./node_modules/ace-builds/src-min-noconflict/snippets/fsl.js",
+	"./fsl.js": "./node_modules/ace-builds/src-min-noconflict/snippets/fsl.js",
+	"./ftl": "./node_modules/ace-builds/src-min-noconflict/snippets/ftl.js",
+	"./ftl.js": "./node_modules/ace-builds/src-min-noconflict/snippets/ftl.js",
+	"./gcode": "./node_modules/ace-builds/src-min-noconflict/snippets/gcode.js",
+	"./gcode.js": "./node_modules/ace-builds/src-min-noconflict/snippets/gcode.js",
+	"./gherkin": "./node_modules/ace-builds/src-min-noconflict/snippets/gherkin.js",
+	"./gherkin.js": "./node_modules/ace-builds/src-min-noconflict/snippets/gherkin.js",
+	"./gitignore": "./node_modules/ace-builds/src-min-noconflict/snippets/gitignore.js",
+	"./gitignore.js": "./node_modules/ace-builds/src-min-noconflict/snippets/gitignore.js",
+	"./glsl": "./node_modules/ace-builds/src-min-noconflict/snippets/glsl.js",
+	"./glsl.js": "./node_modules/ace-builds/src-min-noconflict/snippets/glsl.js",
+	"./gobstones": "./node_modules/ace-builds/src-min-noconflict/snippets/gobstones.js",
+	"./gobstones.js": "./node_modules/ace-builds/src-min-noconflict/snippets/gobstones.js",
+	"./golang": "./node_modules/ace-builds/src-min-noconflict/snippets/golang.js",
+	"./golang.js": "./node_modules/ace-builds/src-min-noconflict/snippets/golang.js",
+	"./graphqlschema": "./node_modules/ace-builds/src-min-noconflict/snippets/graphqlschema.js",
+	"./graphqlschema.js": "./node_modules/ace-builds/src-min-noconflict/snippets/graphqlschema.js",
+	"./groovy": "./node_modules/ace-builds/src-min-noconflict/snippets/groovy.js",
+	"./groovy.js": "./node_modules/ace-builds/src-min-noconflict/snippets/groovy.js",
+	"./haml": "./node_modules/ace-builds/src-min-noconflict/snippets/haml.js",
+	"./haml.js": "./node_modules/ace-builds/src-min-noconflict/snippets/haml.js",
+	"./handlebars": "./node_modules/ace-builds/src-min-noconflict/snippets/handlebars.js",
+	"./handlebars.js": "./node_modules/ace-builds/src-min-noconflict/snippets/handlebars.js",
+	"./haskell": "./node_modules/ace-builds/src-min-noconflict/snippets/haskell.js",
+	"./haskell.js": "./node_modules/ace-builds/src-min-noconflict/snippets/haskell.js",
+	"./haskell_cabal": "./node_modules/ace-builds/src-min-noconflict/snippets/haskell_cabal.js",
+	"./haskell_cabal.js": "./node_modules/ace-builds/src-min-noconflict/snippets/haskell_cabal.js",
+	"./haxe": "./node_modules/ace-builds/src-min-noconflict/snippets/haxe.js",
+	"./haxe.js": "./node_modules/ace-builds/src-min-noconflict/snippets/haxe.js",
+	"./hjson": "./node_modules/ace-builds/src-min-noconflict/snippets/hjson.js",
+	"./hjson.js": "./node_modules/ace-builds/src-min-noconflict/snippets/hjson.js",
+	"./html": "./node_modules/ace-builds/src-min-noconflict/snippets/html.js",
+	"./html.js": "./node_modules/ace-builds/src-min-noconflict/snippets/html.js",
+	"./html_elixir": "./node_modules/ace-builds/src-min-noconflict/snippets/html_elixir.js",
+	"./html_elixir.js": "./node_modules/ace-builds/src-min-noconflict/snippets/html_elixir.js",
+	"./html_ruby": "./node_modules/ace-builds/src-min-noconflict/snippets/html_ruby.js",
+	"./html_ruby.js": "./node_modules/ace-builds/src-min-noconflict/snippets/html_ruby.js",
+	"./ini": "./node_modules/ace-builds/src-min-noconflict/snippets/ini.js",
+	"./ini.js": "./node_modules/ace-builds/src-min-noconflict/snippets/ini.js",
+	"./io": "./node_modules/ace-builds/src-min-noconflict/snippets/io.js",
+	"./io.js": "./node_modules/ace-builds/src-min-noconflict/snippets/io.js",
+	"./jack": "./node_modules/ace-builds/src-min-noconflict/snippets/jack.js",
+	"./jack.js": "./node_modules/ace-builds/src-min-noconflict/snippets/jack.js",
+	"./jade": "./node_modules/ace-builds/src-min-noconflict/snippets/jade.js",
+	"./jade.js": "./node_modules/ace-builds/src-min-noconflict/snippets/jade.js",
+	"./java": "./node_modules/ace-builds/src-min-noconflict/snippets/java.js",
+	"./java.js": "./node_modules/ace-builds/src-min-noconflict/snippets/java.js",
+	"./javascript": "./node_modules/ace-builds/src-min-noconflict/snippets/javascript.js",
+	"./javascript.js": "./node_modules/ace-builds/src-min-noconflict/snippets/javascript.js",
+	"./json": "./node_modules/ace-builds/src-min-noconflict/snippets/json.js",
+	"./json.js": "./node_modules/ace-builds/src-min-noconflict/snippets/json.js",
+	"./json5": "./node_modules/ace-builds/src-min-noconflict/snippets/json5.js",
+	"./json5.js": "./node_modules/ace-builds/src-min-noconflict/snippets/json5.js",
+	"./jsoniq": "./node_modules/ace-builds/src-min-noconflict/snippets/jsoniq.js",
+	"./jsoniq.js": "./node_modules/ace-builds/src-min-noconflict/snippets/jsoniq.js",
+	"./jsp": "./node_modules/ace-builds/src-min-noconflict/snippets/jsp.js",
+	"./jsp.js": "./node_modules/ace-builds/src-min-noconflict/snippets/jsp.js",
+	"./jssm": "./node_modules/ace-builds/src-min-noconflict/snippets/jssm.js",
+	"./jssm.js": "./node_modules/ace-builds/src-min-noconflict/snippets/jssm.js",
+	"./jsx": "./node_modules/ace-builds/src-min-noconflict/snippets/jsx.js",
+	"./jsx.js": "./node_modules/ace-builds/src-min-noconflict/snippets/jsx.js",
+	"./julia": "./node_modules/ace-builds/src-min-noconflict/snippets/julia.js",
+	"./julia.js": "./node_modules/ace-builds/src-min-noconflict/snippets/julia.js",
+	"./kotlin": "./node_modules/ace-builds/src-min-noconflict/snippets/kotlin.js",
+	"./kotlin.js": "./node_modules/ace-builds/src-min-noconflict/snippets/kotlin.js",
+	"./latex": "./node_modules/ace-builds/src-min-noconflict/snippets/latex.js",
+	"./latex.js": "./node_modules/ace-builds/src-min-noconflict/snippets/latex.js",
+	"./less": "./node_modules/ace-builds/src-min-noconflict/snippets/less.js",
+	"./less.js": "./node_modules/ace-builds/src-min-noconflict/snippets/less.js",
+	"./liquid": "./node_modules/ace-builds/src-min-noconflict/snippets/liquid.js",
+	"./liquid.js": "./node_modules/ace-builds/src-min-noconflict/snippets/liquid.js",
+	"./lisp": "./node_modules/ace-builds/src-min-noconflict/snippets/lisp.js",
+	"./lisp.js": "./node_modules/ace-builds/src-min-noconflict/snippets/lisp.js",
+	"./livescript": "./node_modules/ace-builds/src-min-noconflict/snippets/livescript.js",
+	"./livescript.js": "./node_modules/ace-builds/src-min-noconflict/snippets/livescript.js",
+	"./logiql": "./node_modules/ace-builds/src-min-noconflict/snippets/logiql.js",
+	"./logiql.js": "./node_modules/ace-builds/src-min-noconflict/snippets/logiql.js",
+	"./logtalk": "./node_modules/ace-builds/src-min-noconflict/snippets/logtalk.js",
+	"./logtalk.js": "./node_modules/ace-builds/src-min-noconflict/snippets/logtalk.js",
+	"./lsl": "./node_modules/ace-builds/src-min-noconflict/snippets/lsl.js",
+	"./lsl.js": "./node_modules/ace-builds/src-min-noconflict/snippets/lsl.js",
+	"./lua": "./node_modules/ace-builds/src-min-noconflict/snippets/lua.js",
+	"./lua.js": "./node_modules/ace-builds/src-min-noconflict/snippets/lua.js",
+	"./luapage": "./node_modules/ace-builds/src-min-noconflict/snippets/luapage.js",
+	"./luapage.js": "./node_modules/ace-builds/src-min-noconflict/snippets/luapage.js",
+	"./lucene": "./node_modules/ace-builds/src-min-noconflict/snippets/lucene.js",
+	"./lucene.js": "./node_modules/ace-builds/src-min-noconflict/snippets/lucene.js",
+	"./makefile": "./node_modules/ace-builds/src-min-noconflict/snippets/makefile.js",
+	"./makefile.js": "./node_modules/ace-builds/src-min-noconflict/snippets/makefile.js",
+	"./markdown": "./node_modules/ace-builds/src-min-noconflict/snippets/markdown.js",
+	"./markdown.js": "./node_modules/ace-builds/src-min-noconflict/snippets/markdown.js",
+	"./mask": "./node_modules/ace-builds/src-min-noconflict/snippets/mask.js",
+	"./mask.js": "./node_modules/ace-builds/src-min-noconflict/snippets/mask.js",
+	"./matlab": "./node_modules/ace-builds/src-min-noconflict/snippets/matlab.js",
+	"./matlab.js": "./node_modules/ace-builds/src-min-noconflict/snippets/matlab.js",
+	"./maze": "./node_modules/ace-builds/src-min-noconflict/snippets/maze.js",
+	"./maze.js": "./node_modules/ace-builds/src-min-noconflict/snippets/maze.js",
+	"./mediawiki": "./node_modules/ace-builds/src-min-noconflict/snippets/mediawiki.js",
+	"./mediawiki.js": "./node_modules/ace-builds/src-min-noconflict/snippets/mediawiki.js",
+	"./mel": "./node_modules/ace-builds/src-min-noconflict/snippets/mel.js",
+	"./mel.js": "./node_modules/ace-builds/src-min-noconflict/snippets/mel.js",
+	"./mixal": "./node_modules/ace-builds/src-min-noconflict/snippets/mixal.js",
+	"./mixal.js": "./node_modules/ace-builds/src-min-noconflict/snippets/mixal.js",
+	"./mushcode": "./node_modules/ace-builds/src-min-noconflict/snippets/mushcode.js",
+	"./mushcode.js": "./node_modules/ace-builds/src-min-noconflict/snippets/mushcode.js",
+	"./mysql": "./node_modules/ace-builds/src-min-noconflict/snippets/mysql.js",
+	"./mysql.js": "./node_modules/ace-builds/src-min-noconflict/snippets/mysql.js",
+	"./nginx": "./node_modules/ace-builds/src-min-noconflict/snippets/nginx.js",
+	"./nginx.js": "./node_modules/ace-builds/src-min-noconflict/snippets/nginx.js",
+	"./nim": "./node_modules/ace-builds/src-min-noconflict/snippets/nim.js",
+	"./nim.js": "./node_modules/ace-builds/src-min-noconflict/snippets/nim.js",
+	"./nix": "./node_modules/ace-builds/src-min-noconflict/snippets/nix.js",
+	"./nix.js": "./node_modules/ace-builds/src-min-noconflict/snippets/nix.js",
+	"./nsis": "./node_modules/ace-builds/src-min-noconflict/snippets/nsis.js",
+	"./nsis.js": "./node_modules/ace-builds/src-min-noconflict/snippets/nsis.js",
+	"./nunjucks": "./node_modules/ace-builds/src-min-noconflict/snippets/nunjucks.js",
+	"./nunjucks.js": "./node_modules/ace-builds/src-min-noconflict/snippets/nunjucks.js",
+	"./objectivec": "./node_modules/ace-builds/src-min-noconflict/snippets/objectivec.js",
+	"./objectivec.js": "./node_modules/ace-builds/src-min-noconflict/snippets/objectivec.js",
+	"./ocaml": "./node_modules/ace-builds/src-min-noconflict/snippets/ocaml.js",
+	"./ocaml.js": "./node_modules/ace-builds/src-min-noconflict/snippets/ocaml.js",
+	"./pascal": "./node_modules/ace-builds/src-min-noconflict/snippets/pascal.js",
+	"./pascal.js": "./node_modules/ace-builds/src-min-noconflict/snippets/pascal.js",
+	"./perl": "./node_modules/ace-builds/src-min-noconflict/snippets/perl.js",
+	"./perl.js": "./node_modules/ace-builds/src-min-noconflict/snippets/perl.js",
+	"./perl6": "./node_modules/ace-builds/src-min-noconflict/snippets/perl6.js",
+	"./perl6.js": "./node_modules/ace-builds/src-min-noconflict/snippets/perl6.js",
+	"./pgsql": "./node_modules/ace-builds/src-min-noconflict/snippets/pgsql.js",
+	"./pgsql.js": "./node_modules/ace-builds/src-min-noconflict/snippets/pgsql.js",
+	"./php": "./node_modules/ace-builds/src-min-noconflict/snippets/php.js",
+	"./php.js": "./node_modules/ace-builds/src-min-noconflict/snippets/php.js",
+	"./php_laravel_blade": "./node_modules/ace-builds/src-min-noconflict/snippets/php_laravel_blade.js",
+	"./php_laravel_blade.js": "./node_modules/ace-builds/src-min-noconflict/snippets/php_laravel_blade.js",
+	"./pig": "./node_modules/ace-builds/src-min-noconflict/snippets/pig.js",
+	"./pig.js": "./node_modules/ace-builds/src-min-noconflict/snippets/pig.js",
+	"./plain_text": "./node_modules/ace-builds/src-min-noconflict/snippets/plain_text.js",
+	"./plain_text.js": "./node_modules/ace-builds/src-min-noconflict/snippets/plain_text.js",
+	"./powershell": "./node_modules/ace-builds/src-min-noconflict/snippets/powershell.js",
+	"./powershell.js": "./node_modules/ace-builds/src-min-noconflict/snippets/powershell.js",
+	"./praat": "./node_modules/ace-builds/src-min-noconflict/snippets/praat.js",
+	"./praat.js": "./node_modules/ace-builds/src-min-noconflict/snippets/praat.js",
+	"./prisma": "./node_modules/ace-builds/src-min-noconflict/snippets/prisma.js",
+	"./prisma.js": "./node_modules/ace-builds/src-min-noconflict/snippets/prisma.js",
+	"./prolog": "./node_modules/ace-builds/src-min-noconflict/snippets/prolog.js",
+	"./prolog.js": "./node_modules/ace-builds/src-min-noconflict/snippets/prolog.js",
+	"./properties": "./node_modules/ace-builds/src-min-noconflict/snippets/properties.js",
+	"./properties.js": "./node_modules/ace-builds/src-min-noconflict/snippets/properties.js",
+	"./protobuf": "./node_modules/ace-builds/src-min-noconflict/snippets/protobuf.js",
+	"./protobuf.js": "./node_modules/ace-builds/src-min-noconflict/snippets/protobuf.js",
+	"./puppet": "./node_modules/ace-builds/src-min-noconflict/snippets/puppet.js",
+	"./puppet.js": "./node_modules/ace-builds/src-min-noconflict/snippets/puppet.js",
+	"./python": "./node_modules/ace-builds/src-min-noconflict/snippets/python.js",
+	"./python.js": "./node_modules/ace-builds/src-min-noconflict/snippets/python.js",
+	"./qml": "./node_modules/ace-builds/src-min-noconflict/snippets/qml.js",
+	"./qml.js": "./node_modules/ace-builds/src-min-noconflict/snippets/qml.js",
+	"./r": "./node_modules/ace-builds/src-min-noconflict/snippets/r.js",
+	"./r.js": "./node_modules/ace-builds/src-min-noconflict/snippets/r.js",
+	"./razor": "./node_modules/ace-builds/src-min-noconflict/snippets/razor.js",
+	"./razor.js": "./node_modules/ace-builds/src-min-noconflict/snippets/razor.js",
+	"./rdoc": "./node_modules/ace-builds/src-min-noconflict/snippets/rdoc.js",
+	"./rdoc.js": "./node_modules/ace-builds/src-min-noconflict/snippets/rdoc.js",
+	"./red": "./node_modules/ace-builds/src-min-noconflict/snippets/red.js",
+	"./red.js": "./node_modules/ace-builds/src-min-noconflict/snippets/red.js",
+	"./redshift": "./node_modules/ace-builds/src-min-noconflict/snippets/redshift.js",
+	"./redshift.js": "./node_modules/ace-builds/src-min-noconflict/snippets/redshift.js",
+	"./rhtml": "./node_modules/ace-builds/src-min-noconflict/snippets/rhtml.js",
+	"./rhtml.js": "./node_modules/ace-builds/src-min-noconflict/snippets/rhtml.js",
+	"./rst": "./node_modules/ace-builds/src-min-noconflict/snippets/rst.js",
+	"./rst.js": "./node_modules/ace-builds/src-min-noconflict/snippets/rst.js",
+	"./ruby": "./node_modules/ace-builds/src-min-noconflict/snippets/ruby.js",
+	"./ruby.js": "./node_modules/ace-builds/src-min-noconflict/snippets/ruby.js",
+	"./rust": "./node_modules/ace-builds/src-min-noconflict/snippets/rust.js",
+	"./rust.js": "./node_modules/ace-builds/src-min-noconflict/snippets/rust.js",
+	"./sass": "./node_modules/ace-builds/src-min-noconflict/snippets/sass.js",
+	"./sass.js": "./node_modules/ace-builds/src-min-noconflict/snippets/sass.js",
+	"./scad": "./node_modules/ace-builds/src-min-noconflict/snippets/scad.js",
+	"./scad.js": "./node_modules/ace-builds/src-min-noconflict/snippets/scad.js",
+	"./scala": "./node_modules/ace-builds/src-min-noconflict/snippets/scala.js",
+	"./scala.js": "./node_modules/ace-builds/src-min-noconflict/snippets/scala.js",
+	"./scheme": "./node_modules/ace-builds/src-min-noconflict/snippets/scheme.js",
+	"./scheme.js": "./node_modules/ace-builds/src-min-noconflict/snippets/scheme.js",
+	"./scss": "./node_modules/ace-builds/src-min-noconflict/snippets/scss.js",
+	"./scss.js": "./node_modules/ace-builds/src-min-noconflict/snippets/scss.js",
+	"./sh": "./node_modules/ace-builds/src-min-noconflict/snippets/sh.js",
+	"./sh.js": "./node_modules/ace-builds/src-min-noconflict/snippets/sh.js",
+	"./sjs": "./node_modules/ace-builds/src-min-noconflict/snippets/sjs.js",
+	"./sjs.js": "./node_modules/ace-builds/src-min-noconflict/snippets/sjs.js",
+	"./slim": "./node_modules/ace-builds/src-min-noconflict/snippets/slim.js",
+	"./slim.js": "./node_modules/ace-builds/src-min-noconflict/snippets/slim.js",
+	"./smarty": "./node_modules/ace-builds/src-min-noconflict/snippets/smarty.js",
+	"./smarty.js": "./node_modules/ace-builds/src-min-noconflict/snippets/smarty.js",
+	"./snippets": "./node_modules/ace-builds/src-min-noconflict/snippets/snippets.js",
+	"./snippets.js": "./node_modules/ace-builds/src-min-noconflict/snippets/snippets.js",
+	"./soy_template": "./node_modules/ace-builds/src-min-noconflict/snippets/soy_template.js",
+	"./soy_template.js": "./node_modules/ace-builds/src-min-noconflict/snippets/soy_template.js",
+	"./space": "./node_modules/ace-builds/src-min-noconflict/snippets/space.js",
+	"./space.js": "./node_modules/ace-builds/src-min-noconflict/snippets/space.js",
+	"./sparql": "./node_modules/ace-builds/src-min-noconflict/snippets/sparql.js",
+	"./sparql.js": "./node_modules/ace-builds/src-min-noconflict/snippets/sparql.js",
+	"./sql": "./node_modules/ace-builds/src-min-noconflict/snippets/sql.js",
+	"./sql.js": "./node_modules/ace-builds/src-min-noconflict/snippets/sql.js",
+	"./sqlserver": "./node_modules/ace-builds/src-min-noconflict/snippets/sqlserver.js",
+	"./sqlserver.js": "./node_modules/ace-builds/src-min-noconflict/snippets/sqlserver.js",
+	"./stylus": "./node_modules/ace-builds/src-min-noconflict/snippets/stylus.js",
+	"./stylus.js": "./node_modules/ace-builds/src-min-noconflict/snippets/stylus.js",
+	"./svg": "./node_modules/ace-builds/src-min-noconflict/snippets/svg.js",
+	"./svg.js": "./node_modules/ace-builds/src-min-noconflict/snippets/svg.js",
+	"./swift": "./node_modules/ace-builds/src-min-noconflict/snippets/swift.js",
+	"./swift.js": "./node_modules/ace-builds/src-min-noconflict/snippets/swift.js",
+	"./tcl": "./node_modules/ace-builds/src-min-noconflict/snippets/tcl.js",
+	"./tcl.js": "./node_modules/ace-builds/src-min-noconflict/snippets/tcl.js",
+	"./terraform": "./node_modules/ace-builds/src-min-noconflict/snippets/terraform.js",
+	"./terraform.js": "./node_modules/ace-builds/src-min-noconflict/snippets/terraform.js",
+	"./tex": "./node_modules/ace-builds/src-min-noconflict/snippets/tex.js",
+	"./tex.js": "./node_modules/ace-builds/src-min-noconflict/snippets/tex.js",
+	"./text": "./node_modules/ace-builds/src-min-noconflict/snippets/text.js",
+	"./text.js": "./node_modules/ace-builds/src-min-noconflict/snippets/text.js",
+	"./textile": "./node_modules/ace-builds/src-min-noconflict/snippets/textile.js",
+	"./textile.js": "./node_modules/ace-builds/src-min-noconflict/snippets/textile.js",
+	"./toml": "./node_modules/ace-builds/src-min-noconflict/snippets/toml.js",
+	"./toml.js": "./node_modules/ace-builds/src-min-noconflict/snippets/toml.js",
+	"./tsx": "./node_modules/ace-builds/src-min-noconflict/snippets/tsx.js",
+	"./tsx.js": "./node_modules/ace-builds/src-min-noconflict/snippets/tsx.js",
+	"./turtle": "./node_modules/ace-builds/src-min-noconflict/snippets/turtle.js",
+	"./turtle.js": "./node_modules/ace-builds/src-min-noconflict/snippets/turtle.js",
+	"./twig": "./node_modules/ace-builds/src-min-noconflict/snippets/twig.js",
+	"./twig.js": "./node_modules/ace-builds/src-min-noconflict/snippets/twig.js",
+	"./typescript": "./node_modules/ace-builds/src-min-noconflict/snippets/typescript.js",
+	"./typescript.js": "./node_modules/ace-builds/src-min-noconflict/snippets/typescript.js",
+	"./vala": "./node_modules/ace-builds/src-min-noconflict/snippets/vala.js",
+	"./vala.js": "./node_modules/ace-builds/src-min-noconflict/snippets/vala.js",
+	"./vbscript": "./node_modules/ace-builds/src-min-noconflict/snippets/vbscript.js",
+	"./vbscript.js": "./node_modules/ace-builds/src-min-noconflict/snippets/vbscript.js",
+	"./velocity": "./node_modules/ace-builds/src-min-noconflict/snippets/velocity.js",
+	"./velocity.js": "./node_modules/ace-builds/src-min-noconflict/snippets/velocity.js",
+	"./verilog": "./node_modules/ace-builds/src-min-noconflict/snippets/verilog.js",
+	"./verilog.js": "./node_modules/ace-builds/src-min-noconflict/snippets/verilog.js",
+	"./vhdl": "./node_modules/ace-builds/src-min-noconflict/snippets/vhdl.js",
+	"./vhdl.js": "./node_modules/ace-builds/src-min-noconflict/snippets/vhdl.js",
+	"./visualforce": "./node_modules/ace-builds/src-min-noconflict/snippets/visualforce.js",
+	"./visualforce.js": "./node_modules/ace-builds/src-min-noconflict/snippets/visualforce.js",
+	"./wollok": "./node_modules/ace-builds/src-min-noconflict/snippets/wollok.js",
+	"./wollok.js": "./node_modules/ace-builds/src-min-noconflict/snippets/wollok.js",
+	"./xml": "./node_modules/ace-builds/src-min-noconflict/snippets/xml.js",
+	"./xml.js": "./node_modules/ace-builds/src-min-noconflict/snippets/xml.js",
+	"./xquery": "./node_modules/ace-builds/src-min-noconflict/snippets/xquery.js",
+	"./xquery.js": "./node_modules/ace-builds/src-min-noconflict/snippets/xquery.js",
+	"./yaml": "./node_modules/ace-builds/src-min-noconflict/snippets/yaml.js",
+	"./yaml.js": "./node_modules/ace-builds/src-min-noconflict/snippets/yaml.js",
+	"./zeek": "./node_modules/ace-builds/src-min-noconflict/snippets/zeek.js",
+	"./zeek.js": "./node_modules/ace-builds/src-min-noconflict/snippets/zeek.js"
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "./node_modules/ace-builds/src-min-noconflict/snippets sync recursive ^\\.\\/.*$";
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/App.css":
+/*!************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!./node_modules/postcss-loader/src??postcss!./src/App.css ***!
+  \************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, "ul {\r\n  margin: 0;\r\n  padding: 0;\r\n  list-style-type: none;\r\n}\r\n\r\na {\r\n  text-decoration: none;\r\n}\r\n\r\n.larger-screen-warn {\r\n  font-size: small !important;\r\n  margin-bottom: 15px !important;\r\n  display: none;\r\n}\r\n\r\n@media only screen and (max-width: 769px) {\r\n  .hide-tablet {\r\n    display: none !important;\r\n  }\r\n\r\n  .larger-screen-warn {\r\n    display: block;\r\n  }\r\n}\r\n\r\n@media only screen and (max-width: 600px) {\r\n  .hide-mobile {\r\n    display: none !important;\r\n  }\r\n}\r\n", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/code/css/Execute.css":
+/*!************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!./node_modules/postcss-loader/src??postcss!./src/components/code/css/Execute.css ***!
+  \************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, ".code-layout {\r\n  height: var(--editer-height);\r\n  min-height: var(--editer-min-height);\r\n  display: flex;\r\n  flex-direction: row;\r\n  justify-content: flex-start;\r\n  align-content: flex-start;\r\n  border-bottom: 8px solid var(--editer-gray);\r\n  border-top: 5px solid var(--editer-gray);\r\n}\r\n\r\n.code-results {\r\n  flex-basis: 35%;\r\n  border-left: 5px solid var(--editer-gray);\r\n  color: var(--editer-white);\r\n}\r\n\r\n#text-edit {\r\n  height: var(--editer-height) !important;\r\n  flex-basis: 65%;\r\n}\r\n\r\n#code-results {\r\n  height: var(--editer-height) !important;\r\n  width: 100% !important;\r\n  border-bottom: 8px solid var(--editer-gray);\r\n}\r\n\r\n#overlay {\r\n  position: fixed;\r\n  display: none;\r\n  width: 100%;\r\n  height: 100%;\r\n  top: 0;\r\n  left: 0;\r\n  right: 0;\r\n  bottom: 0;\r\n  background-color: rgba(0, 0, 0, 0.5);\r\n  z-index: 99;\r\n  cursor: wait;\r\n}\r\n\r\n#overlay .spinner {\r\n  margin: 50vh auto;\r\n}\r\n\r\n/* #code-results,\r\n#text-edit {\r\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\",\r\n    monospace;\r\n} */\r\n\r\n@media only screen and (max-width: 769px) {\r\n  #text-edit {\r\n    font-size: medium !important;\r\n  }\r\n\r\n  #code-results {\r\n    font-size: medium !important;\r\n  }\r\n}\r\n\r\n@media only screen and (max-width: 769px) {\r\n  .code-layout {\r\n    height: 750px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: flex-start;\r\n    align-content: flex-start;\r\n    border-bottom: 0 solid var(--editer-gray);\r\n    border-top: 10px solid var(--editer-gray);\r\n  }\r\n\r\n  .code-results {\r\n    flex-basis: 100%;\r\n    border-left: 0 solid var(--editer-gray);\r\n    color: var(--editer-white);\r\n    height: 250px !important;\r\n  }\r\n\r\n  .ace-content {\r\n    height: 500px !important;\r\n  }\r\n\r\n  #text-edit {\r\n    height: 500px !important;\r\n    flex-basis: 100%;\r\n    width: 100% !important;\r\n    border-bottom: 8px solid var(--editer-gray);\r\n  }\r\n\r\n  #code-results {\r\n    height: 250px !important;\r\n    width: 100% !important;\r\n    flex-basis: 100%;\r\n    width: 100% !important;\r\n    border-bottom: 0 solid var(--editer-gray);\r\n  }\r\n\r\n  footer {\r\n    border-top: 10px solid var(--editer-gray);\r\n  }\r\n}\r\n", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/footer/css/footer.css":
+/*!*************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!./node_modules/postcss-loader/src??postcss!./src/components/footer/css/footer.css ***!
+  \*************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, "footer ul {\r\n  display: flex;\r\n  flex-direction: row;\r\n  justify-content: center;\r\n  align-content: center;\r\n  width: 100%;\r\n  margin-top: 20px;\r\n  margin-bottom: 10px;\r\n}\r\n\r\nfooter li {\r\n  margin: 0 20px;\r\n}\r\n\r\nfooter li a,\r\np {\r\n  color: var(--editer-white);\r\n}\r\n\r\nfooter p a {\r\n  color: var(--editer-white);\r\n  font-weight: bold;\r\n  text-decoration: underline;\r\n}\r\n\r\nfooter p {\r\n  margin-top: 20px;\r\n  margin-bottom: 30px;\r\n  text-align: center;\r\n}\r\n", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/header/css/Header.css":
+/*!*************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!./node_modules/postcss-loader/src??postcss!./src/components/header/css/Header.css ***!
+  \*************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, "header {\r\n  display: flex;\r\n  flex-direction: row;\r\n  height: 55px;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n  align-content: center;\r\n}\r\n\r\n.header-buttons {\r\n  display: flex;\r\n  flex-direction: row;\r\n  padding-right: 20px;\r\n}\r\n\r\n.header-buttons div {\r\n  margin: auto 5px;\r\n}\r\n\r\n.run-code img {\r\n  height: 37px;\r\n  width: 45px;\r\n  padding: 0 2px;\r\n  margin: 0;\r\n  cursor: pointer;\r\n}\r\n\r\n.dropdown {\r\n  position: relative;\r\n  display: inline-block;\r\n  cursor: pointer;\r\n}\r\n\r\n.dropdown button {\r\n  border: none;\r\n  background-color: var(--editer-gray);\r\n  margin: 0;\r\n  padding: 7px 0;\r\n  width: 115px;\r\n  border-radius: 4px;\r\n  cursor: pointer;\r\n}\r\n\r\n.dropdown button,\r\nli {\r\n  text-transform: capitalize;\r\n}\r\n\r\n.dropdown:hover .dropdown-content {\r\n  display: block;\r\n}\r\n\r\n.dropdown button,\r\n.dropdown-content {\r\n  font-size: medium;\r\n}\r\n\r\n.dropdown-content {\r\n  display: none;\r\n  position: absolute;\r\n  background-color: var(--editer-light-gray);\r\n  /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */\r\n  padding: 0;\r\n  width: 115px;\r\n  margin: 0;\r\n  z-index: 5;\r\n  border-radius: 0 0 3% 3%;\r\n  list-style-type: none;\r\n  text-align: center;\r\n  margin-top: -1px;\r\n}\r\n\r\n.dropdown-content li {\r\n  margin: 0;\r\n  padding: 5px 1px;\r\n}\r\n\r\n.dropdown-content li:hover {\r\n  font-size: large;\r\n  font-weight: bold;\r\n}\r\n\r\n/* .dropdown-content p:last-of-type {\r\n  font-size: 0.75em;\r\n} */\r\n\r\n.tooltiptext {\r\n  visibility: hidden;\r\n  width: 90px;\r\n  color: var(--editer-white);\r\n  text-align: center;\r\n  padding: 5px 0;\r\n  position: absolute;\r\n  z-index: 1;\r\n  right: 3px;\r\n  top: 45px;\r\n  font-size: medium;\r\n}\r\n\r\n.run-code:hover .tooltiptext {\r\n  visibility: visible;\r\n}\r\n\r\n.header-intro img {\r\n  height: 45px;\r\n  width: 45px;\r\n  padding: 5px 15px;\r\n}\r\n\r\n@media only screen and (max-width: 600px) {\r\n  .dropdown button {\r\n    padding: 7px 0;\r\n    width: 95px;\r\n  }\r\n\r\n  .dropdown-content {\r\n    width: 95px;\r\n  }\r\n}\r\n", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/index.css":
+/*!**************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!./node_modules/postcss-loader/src??postcss!./src/index.css ***!
+  \**************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, ":root {\r\n  --editer-gray: #808080;\r\n  --editer-light-gray: lightgray;\r\n  --editer-black: #282a36;\r\n  --editer-white: azure;\r\n  --editer-min-height: 490px;\r\n  --editer-height: 74vh;\r\n}\r\n\r\nbody {\r\n  margin: 0;\r\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Roboto\", \"Oxygen\",\r\n    \"Ubuntu\", \"Cantarell\", \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\",\r\n    sans-serif;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\r\n}\r\n\r\ncode {\r\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\",\r\n    monospace;\r\n}\r\n", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ "./src/App.css":
+/*!*********************!*\
+  !*** ./src/App.css ***!
+  \*********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../node_modules/postcss-loader/src??postcss!./App.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/App.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(true) {
+	module.hot.accept(/*! !../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../node_modules/postcss-loader/src??postcss!./App.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/App.css", function() {
+		var newContent = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../node_modules/postcss-loader/src??postcss!./App.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/App.css");
+
+		if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ "./src/App.js":
+/*!********************!*\
+  !*** ./src/App.js ***!
+  \********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./store */ "./src/store.js");
+/* harmony import */ var _App_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./App.css */ "./src/App.css");
+/* harmony import */ var _App_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_App_css__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_code_Execute__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/code/Execute */ "./src/components/code/Execute.js");
+/* harmony import */ var _components_footer_Footer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/footer/Footer */ "./src/components/footer/Footer.js");
+var _jsxFileName = "C:\\Users\\akshi\\Desktop\\ibm_prjct\\online compilers\\remote-code-execution-environment\\frontend\\src\\App.js";
+
+
+
+
+
+ // TODO: Add more paths
+// import { Switch, HashRouter, Route } from "react-router-dom";
+// import Error404 from "./components/Error404 ";
+
+function App() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_redux__WEBPACK_IMPORTED_MODULE_1__["Provider"], {
+    store: _store__WEBPACK_IMPORTED_MODULE_2__["default"],
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13,
+      columnNumber: 5
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_code_Execute__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14,
+      columnNumber: 7
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_footer_Footer__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21,
+      columnNumber: 7
+    }
+  }));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (App);
+
+/***/ }),
+
+/***/ "./src/actions/Execute.js":
+/*!********************************!*\
+  !*** ./src/actions/Execute.js ***!
+  \********************************/
+/*! exports provided: runCode */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "runCode", function() { return runCode; });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./types */ "./src/actions/types.js");
+
+
+var server = "https://rscompiler.herokuapp.com";
+
+const addr = () => {
+  if (true) {
+    return "https://rscompiler.herokuapp.com/code";
+  } else {}
+};
+
+const headers = {
+  "Content-Type": "multipart/form-data"
+};
+const runCode = code => (dispatch, getState) => {
+  dispatch({
+    type: _types__WEBPACK_IMPORTED_MODULE_1__["RUN_CODE_RUNNING"]
+  });
+  axios__WEBPACK_IMPORTED_MODULE_0___default.a.post(addr(), code, {
+    headers: headers
+  }).then(res => {
+    dispatch({
+      type: _types__WEBPACK_IMPORTED_MODULE_1__["RUN_CODE_SUCCESS"],
+      payload: res.data
+    });
+  }).catch(err => {
+    console.log(err);
+    dispatch({
+      type: _types__WEBPACK_IMPORTED_MODULE_1__["RUN_CODE_FAILED"]
+    });
+  });
+};
+
+/***/ }),
+
+/***/ "./src/actions/types.js":
+/*!******************************!*\
+  !*** ./src/actions/types.js ***!
+  \******************************/
+/*! exports provided: RUN_CODE_SUCCESS, RUN_CODE_RUNNING, RUN_CODE_FAILED */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RUN_CODE_SUCCESS", function() { return RUN_CODE_SUCCESS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RUN_CODE_RUNNING", function() { return RUN_CODE_RUNNING; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RUN_CODE_FAILED", function() { return RUN_CODE_FAILED; });
+const RUN_CODE_SUCCESS = "RUN_CODE_SUCCESS";
+const RUN_CODE_RUNNING = "RUN_CODE_RUNNING";
+const RUN_CODE_FAILED = "RUN_CODE_FAILED";
+
+/***/ }),
+
+/***/ "./src/components/code/Execute.js":
+/*!****************************************!*\
+  !*** ./src/components/code/Execute.js ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var react_ace__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-ace */ "./node_modules/react-ace/lib/index.js");
+/* harmony import */ var react_ace__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_ace__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_epic_spinners__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-epic-spinners */ "./node_modules/react-epic-spinners/dist/react-epic-spinners.umd.min.js");
+/* harmony import */ var react_epic_spinners__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_epic_spinners__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var ace_builds_src_min_noconflict_ext_language_tools__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ace-builds/src-min-noconflict/ext-language_tools */ "./node_modules/ace-builds/src-min-noconflict/ext-language_tools.js");
+/* harmony import */ var ace_builds_src_min_noconflict_ext_language_tools__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(ace_builds_src_min_noconflict_ext_language_tools__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _actions_Execute__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../actions/Execute */ "./src/actions/Execute.js");
+/* harmony import */ var _defaults__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./defaults */ "./src/components/code/defaults.js");
+/* harmony import */ var _css_Execute_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./css/Execute.css */ "./src/components/code/css/Execute.css");
+/* harmony import */ var _css_Execute_css__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_css_Execute_css__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _header_css_Header_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../header/css/Header.css */ "./src/components/header/css/Header.css");
+/* harmony import */ var _header_css_Header_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_header_css_Header_css__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _media_icon_play_light_gray_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../media/icon-play-light-gray.png */ "./src/media/icon-play-light-gray.png");
+/* harmony import */ var _media_icon_play_light_gray_png__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_media_icon_play_light_gray_png__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _media_icon_octocat_gray_png__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../media/icon-octocat-gray.png */ "./src/media/icon-octocat-gray.png");
+/* harmony import */ var _media_icon_octocat_gray_png__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_media_icon_octocat_gray_png__WEBPACK_IMPORTED_MODULE_10__);
+var _jsxFileName = "C:\\Users\\akshi\\Desktop\\ibm_prjct\\online compilers\\remote-code-execution-environment\\frontend\\src\\components\\code\\Execute.js";
+
+
+
+
+
+
+
+
+
+ // import playBlackIcon from "../../media/icon-play-black.png";
+// import gearsIcon from "../../media/icon-gears.png";
+
+ // import octoBlack from "../../media/icon-octocat-black.png";
+
+const languages = ["javascript", "java", "python", "csharp", "golang", "rust"];
+const themes = ["dracula", "monokai"];
+const tabSizes = [2, 4, 8];
+const fontSizes = [12, 14, 16, 18, 20, 22, 24, 28, 30, 32];
+themes.forEach(theme => __webpack_require__("./node_modules/ace-builds/src-min-noconflict sync recursive ^\\.\\/theme\\-.*$")(`./theme-${theme}`));
+languages.forEach(lang => {
+  __webpack_require__("./node_modules/ace-builds/src-min-noconflict sync recursive ^\\.\\/mode\\-.*$")(`./mode-${lang}`);
+
+  __webpack_require__("./node_modules/ace-builds/src-min-noconflict/snippets sync recursive ^\\.\\/.*$")(`./${lang}`);
+});
+
+function Execute(props) {
+  const [theme, setTheme] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])("dracula");
+  const [language, setLangauge] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])("python");
+  const [codeText, setCodeText] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(_defaults__WEBPACK_IMPORTED_MODULE_6__["pyDefault"]);
+  const [tabs, setTabs] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(4);
+  const [fontSize, setFontSize] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(17);
+  const [results, setResults] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(null);
+  const [handledSucOutput, setHandledSucOutput] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
+  const [handledFailOutput, setHandledFailOutput] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
+
+  const onChange = values => {
+    setCodeText(values);
+  };
+
+  const printSucResults = res => {
+    setResults(res);
+
+    if (document) {
+      var el = document.getElementById("code-results");
+      el.style.color = "var(--editer-white)";
+    }
+  };
+
+  const printErrResults = res => {
+    setResults(res);
+
+    if (document) {
+      var el = document.getElementById("code-results");
+      el.style.color = "red";
+    }
+  };
+
+  const handleSubmit = e => {
+    var data = codeText;
+    setResults("");
+    setHandledSucOutput(false);
+    setHandledFailOutput(false);
+    e.preventDefault();
+
+    if (data) {
+      var content = new FormData();
+      content.append("text", data);
+      content.append("language", language);
+      props.runCode(content);
+    } else {
+      printSucResults("Please write some code first :)");
+    }
+  };
+
+  const handleSuc = res => {
+    if (res) {
+      if (res.ERROR) {
+        printErrResults(res.ERROR);
+      } else if (res.stdout) {
+        printSucResults(res.stdout);
+      } else {
+        printSucResults("Code executed successfully with no outputs :)");
+      }
+    } else {
+      printSucResults("Code executed successfully with no outputs :)");
+    }
+  };
+
+  const handleFail = res => {
+    if (res) {
+      printErrResults(res);
+    } else {
+      printErrResults("Something went wrong. Please check your code and try again later.");
+    }
+  };
+
+  const onLanguageChange = lang => {
+    if ([_defaults__WEBPACK_IMPORTED_MODULE_6__["pyDefault"], _defaults__WEBPACK_IMPORTED_MODULE_6__["jsDefault"], _defaults__WEBPACK_IMPORTED_MODULE_6__["javaDefault"], _defaults__WEBPACK_IMPORTED_MODULE_6__["csDefault"], _defaults__WEBPACK_IMPORTED_MODULE_6__["golangDefault"], _defaults__WEBPACK_IMPORTED_MODULE_6__["rustDefault"]].includes(codeText) || !codeText) {
+      if (lang === "python") {
+        setCodeText(_defaults__WEBPACK_IMPORTED_MODULE_6__["pyDefault"]);
+      } else if (lang === "java") {
+        setCodeText(_defaults__WEBPACK_IMPORTED_MODULE_6__["javaDefault"]);
+      } else if (lang === "javascript") {
+        setCodeText(_defaults__WEBPACK_IMPORTED_MODULE_6__["jsDefault"]);
+      } else if (lang === "csharp") {
+        setCodeText(_defaults__WEBPACK_IMPORTED_MODULE_6__["csDefault"]);
+      } else if (lang === 'golang') {
+        setCodeText(_defaults__WEBPACK_IMPORTED_MODULE_6__["golangDefault"]);
+      } else if (lang === 'rust') {
+        setCodeText(_defaults__WEBPACK_IMPORTED_MODULE_6__["rustDefault"]);
+      }
+    }
+
+    setLangauge(lang);
+  };
+
+  const onThemeChange = th => {
+    setTheme(th); // more logic
+  };
+
+  const onTabChange = tb => {
+    setTabs(tb);
+  };
+
+  const onFontSzChange = fn => {
+    setFontSize(fn);
+  };
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    if (props.runCodeOk && !handledSucOutput) {
+      handleSuc(props.output);
+      setHandledSucOutput(true);
+    } else if (props.runCodeFail && !handledFailOutput) {
+      handleFail(props.output);
+      setHandledFailOutput(true);
+    } // eslint-disable-next-line
+
+  }, [props.runCodeOk, props.runCodeFail]);
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    if (props.runCodeLoading) {
+      document.getElementById("overlay").style.display = "block";
+    } else {
+      document.getElementById("overlay").style.display = "none";
+    } // eslint-disable-next-line
+
+  }, [props.runCodeLoading]);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 151,
+      columnNumber: 5
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 152,
+      columnNumber: 7
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "header-intro",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 153,
+      columnNumber: 9
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _media_icon_octocat_gray_png__WEBPACK_IMPORTED_MODULE_10___default.a,
+    alt: "Octocat Logo",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 154,
+      columnNumber: 13
+    }
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "header-buttons",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 156,
+      columnNumber: 9
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "dropdown",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 157,
+      columnNumber: 11
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    id: "langauge-btn",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 158,
+      columnNumber: 13
+    }
+  }, language === "csharp" ? "C#" : language), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: "dropdown-content",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 161,
+      columnNumber: 13
+    }
+  }, languages.filter(lang => lang !== language).map(obj => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    key: obj,
+    onClick: () => {
+      onLanguageChange(obj);
+    },
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 165,
+      columnNumber: 19
+    }
+  }, obj === "csharp" ? "C#" : obj)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "dropdown hide-tablet",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 176,
+      columnNumber: 11
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 177,
+      columnNumber: 13
+    }
+  }, theme), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: "dropdown-content",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 178,
+      columnNumber: 13
+    }
+  }, themes.filter(th => th !== theme).map(obj => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    key: obj,
+    onClick: () => {
+      onThemeChange(obj);
+    },
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 182,
+      columnNumber: 19
+    }
+  }, obj)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "dropdown hide-mobile",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 193,
+      columnNumber: 11
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 194,
+      columnNumber: 13
+    }
+  }, "Tab Size: ", tabs), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: "dropdown-content",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 195,
+      columnNumber: 13
+    }
+  }, tabSizes.filter(tb => tb !== tabs).map(obj => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    key: obj,
+    onClick: () => {
+      onTabChange(obj);
+    },
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 199,
+      columnNumber: 19
+    }
+  }, obj)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "dropdown  hide-tablet",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 211,
+      columnNumber: 11
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 212,
+      columnNumber: 13
+    }
+  }, "Font Size: ", fontSize), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: "dropdown-content",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 213,
+      columnNumber: 13
+    }
+  }, fontSizes.filter(fn => fn !== fontSizes).map(obj => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    key: obj,
+    onClick: () => {
+      onFontSzChange(obj);
+    },
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 217,
+      columnNumber: 19
+    }
+  }, obj)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "run-code",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 229,
+      columnNumber: 11
+    }
+  }, props.runCodeLoading ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_epic_spinners__WEBPACK_IMPORTED_MODULE_3__["SwappingSquaresSpinner"], {
+    size: 45,
+    color: "var(--editer-light-gray)",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 231,
+      columnNumber: 15
+    }
+  }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 236,
+      columnNumber: 17
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _media_icon_play_light_gray_png__WEBPACK_IMPORTED_MODULE_9___default.a,
+    alt: "Play Button",
+    onClick: handleSubmit,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 237,
+      columnNumber: 19
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "tooltiptext",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 242,
+      columnNumber: 19
+    }
+  }, "Run Code"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "code-layout",
+    id: "code-layout",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 248,
+      columnNumber: 7
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_ace__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    placeholder: "Write Code. Change the world. Have fun while doing it :)",
+    mode: language,
+    theme: theme,
+    name: "text-edit" // onLoad={onLoad}
+    ,
+    onChange: onChange,
+    fontSize: fontSize,
+    showPrintMargin: true,
+    showGutter: true,
+    highlightActiveLine: true,
+    value: codeText,
+    readOnly: props.runCodeLoading,
+    setOptions: {
+      enableBasicAutocompletion: true,
+      enableLiveAutocompletion: true,
+      showLineNumbers: true,
+      tabSize: tabs
+    },
+    editorProps: {
+      $blockScrolling: true
+    },
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 249,
+      columnNumber: 9
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "code-results",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 270,
+      columnNumber: 9
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_ace__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    placeholder: "Output will be shown here.",
+    mode: "text",
+    theme: theme,
+    name: "code-results",
+    fontSize: fontSize + 2,
+    showPrintMargin: false,
+    showGutter: false,
+    highlightActiveLine: false,
+    value: results,
+    readOnly: false,
+    editorProps: {
+      $blockScrolling: true
+    },
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 271,
+      columnNumber: 11
+    }
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "overlay",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 286,
+      columnNumber: 7
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_epic_spinners__WEBPACK_IMPORTED_MODULE_3__["AtomSpinner"], {
+    size: 120,
+    className: "spinner",
+    color: "var(--editer-light-gray)",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 287,
+      columnNumber: 9
+    }
+  })));
+}
+
+const mapStateToProps = state => ({
+  output: state.executionReducer.output,
+  runCodeLoading: state.executionReducer.runCodeLoading,
+  runCodeFail: state.executionReducer.runCodeFail,
+  runCodeOk: state.executionReducer.runCodeOk
+});
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, {
+  runCode: _actions_Execute__WEBPACK_IMPORTED_MODULE_5__["runCode"]
+})(Execute));
+
+/***/ }),
+
+/***/ "./src/components/code/css/Execute.css":
+/*!*********************************************!*\
+  !*** ./src/components/code/css/Execute.css ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../../node_modules/postcss-loader/src??postcss!./Execute.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/code/css/Execute.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(true) {
+	module.hot.accept(/*! !../../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../../node_modules/postcss-loader/src??postcss!./Execute.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/code/css/Execute.css", function() {
+		var newContent = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../../node_modules/postcss-loader/src??postcss!./Execute.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/code/css/Execute.css");
+
+		if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ "./src/components/code/defaults.js":
+/*!*****************************************!*\
+  !*** ./src/components/code/defaults.js ***!
+  \*****************************************/
+/*! exports provided: javaDefault, pyDefault, jsDefault, csDefault, golangDefault, rustDefault */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "javaDefault", function() { return javaDefault; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pyDefault", function() { return pyDefault; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "jsDefault", function() { return jsDefault; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "csDefault", function() { return csDefault; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "golangDefault", function() { return golangDefault; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rustDefault", function() { return rustDefault; });
+const javaDefault = `public class Main {
+    public static void main(String[] args) {
+        System.out.println("FAST. GOOD. CHEAP. Choose any two.");
+    }
+  }`;
+const pyDefault = `print("Truth can only be found in one place: the code.")`;
+const jsDefault = `console.log("The best way to get a project done faster is to start sooner.")`;
+const csDefault = `using System;
+
+  public class HelloWorld
+  {
+      public static void Main(string[] args)
+      {
+          Console.WriteLine ("Code is like humor. When you have to explain it, it’s bad.");
+      }
+  }`;
+const golangDefault = `// You can edit this code!
+package main
+
+import "fmt"
+
+func main() {
+	fmt.Println("Go will make you love programming again.")
+}
+`;
+const rustDefault = `fn main() {
+    println!("Hello world");
+}`;
+
+/***/ }),
+
+/***/ "./src/components/footer/Footer.js":
+/*!*****************************************!*\
+  !*** ./src/components/footer/Footer.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _css_footer_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./css/footer.css */ "./src/components/footer/css/footer.css");
+/* harmony import */ var _css_footer_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_footer_css__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "C:\\Users\\akshi\\Desktop\\ibm_prjct\\online compilers\\remote-code-execution-environment\\frontend\\src\\components\\footer\\Footer.js";
+
+
+
+const Footer = () => {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6,
+      columnNumber: 5
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "larger-screen-warn",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7,
+      columnNumber: 7
+    }
+  }, "To access all features, view this system in a larger screen."));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Footer);
+
+/***/ }),
+
+/***/ "./src/components/footer/css/footer.css":
+/*!**********************************************!*\
+  !*** ./src/components/footer/css/footer.css ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../../node_modules/postcss-loader/src??postcss!./footer.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/footer/css/footer.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(true) {
+	module.hot.accept(/*! !../../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../../node_modules/postcss-loader/src??postcss!./footer.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/footer/css/footer.css", function() {
+		var newContent = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../../node_modules/postcss-loader/src??postcss!./footer.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/footer/css/footer.css");
+
+		if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ "./src/components/header/css/Header.css":
+/*!**********************************************!*\
+  !*** ./src/components/header/css/Header.css ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../../node_modules/postcss-loader/src??postcss!./Header.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/header/css/Header.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(true) {
+	module.hot.accept(/*! !../../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../../node_modules/postcss-loader/src??postcss!./Header.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/header/css/Header.css", function() {
+		var newContent = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../../node_modules/postcss-loader/src??postcss!./Header.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/header/css/Header.css");
+
+		if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ "./src/index.css":
+/*!***********************!*\
+  !*** ./src/index.css ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../node_modules/postcss-loader/src??postcss!./index.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/index.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(true) {
+	module.hot.accept(/*! !../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../node_modules/postcss-loader/src??postcss!./index.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/index.css", function() {
+		var newContent = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../node_modules/postcss-loader/src??postcss!./index.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/index.css");
+
+		if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index.css */ "./src/index.css");
+/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_index_css__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./App */ "./src/App.js");
+/* harmony import */ var _serviceWorker__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./serviceWorker */ "./src/serviceWorker.js");
+var _jsxFileName = "C:\\Users\\akshi\\Desktop\\ibm_prjct\\online compilers\\remote-code-execution-environment\\frontend\\src\\index.js";
+
+
+
+
+
+react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.StrictMode, {
+  __self: undefined,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 8,
+    columnNumber: 3
+  }
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_App__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  __self: undefined,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 9,
+    columnNumber: 5
+  }
+})), document.getElementById("root"));
+_serviceWorker__WEBPACK_IMPORTED_MODULE_4__["register"]();
+
+/***/ }),
+
+/***/ "./src/media/icon-octocat-gray.png":
+/*!*****************************************!*\
+  !*** ./src/media/icon-octocat-gray.png ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAABmJLR0QA/wD/AP+gvaeTAAAGCklEQVRoge2aXWxURRTHf3N3W2qbXhUEQvwAqR/R+JUoJoqJkBoEjJ+PJipKMEYSMEgfpC17WrrFBF8kRkMURBOfSNTEiBq/qjFRAiagqIkEFFELAlVXVgu7944PdxuhO/fObNutkOwv2ZeZM2fOf2fu3JkzF2rUqFGjRo0a/xfKxUZEvgV8oB/4XCnV19zcvHXFihX/VDc8M+vXr58wMDAwG7gNuBWYDhwVkesAndTWKri7u3t2GIafGar+AF5Lp9PrOjo69o8g7orJZrPTCoXCk8DDwMTh9Z7nzVm9evUnST7Stk7CMLw9puocYGmxWFwiIs83NTV1tLW15V0Cr5QNGzbUHTx4cFWhUGgDmhJinQckCvYc+rvZUl8PPJHP57/u6upqdfBXESJySX9//xdaayFBbAlbrPYRBi51CQy4WGv9voj0KKW2A9dorS8HLgCmEf0xPpAimh1F4BiQA/4B/gJ+BvYppb7RWm/3PK85DMM3gSmOMVxgM3AR7NoZRGtCp9aJ68YQdcC5pd8QswCG2odhWEHXAJxnM3CZ0i42pwvNNgMXMb+NQSDjxTGbgYvgX8YgkPHiV5uBi+BvxyCQ8eJLm4GL4A/GIJDxYovNwCpYKeX6Wvq/0ThM6cStpYjcA7xuszuN6E+n07M6Ojpi151YIdlsdmqhUNiNw7vtNONDYJ6IGF/isVO6UCj0cOaJBWhVSj0UV2kcYRGZCXxPtA08E+n3fb/FdHyNG+HHOXPFAkzL5XIPmCrKBIuIB9xf9ZCqz6OmQtMI30h0ujnTub70aJ6C6bR0S4WOtwObU6nUx0EQHPB9P8jlcpM8z5uqtZ4JzNRazyBKw0zn1BPSH8AAsB/Yr5T6keh4uC8Mw0O+7x8NgsAbHBy8KAiCucAiSicqF5RSrcC+k8tMgm9w9HdcKbU0k8lsojyP9HPpZ93qOfJd6feCiCwGngMm2BpprW8CXjy5zDSly6aBgSJwTyaT2YglaTbGaBF5SSl1dykGG5cPLzAJvtDB0VoRedfBripkMpn3gLUOptOHF5gE2w7RvwNPO3RWVXzfXwsctZidPbzAJNj2bLwiIn+7BlYtSpuKVy1mjcMLTIILFicfugY1DnxkqT8+vMC0SueBsxKcfBVXISKP8N+z9ZSIbLIENCo/6XR6V7GYuHaV5clNIzyQ5KGpqcn43IjIfGAjUZZzCrCxVFYRlfhpbGw8YnFXpsUk+IckD/l8Pm6P3WYoW2kJaFR+giCwJTDKtJga7LU4iTsyXutYZsPZTz6fn2zxVabFJPjzJA+e59k6GU9slwRlWkyCP03yEIZh3KjtNJTtsgQ0Kj9KKdsMKtNiOh7+BGxLcLIgpvwZTt1maqXUOktAo/KjtU5aFLeVtJxC3EO/OcHRQhEpu7QSkXeVUouBQ8AhpdTi0hawIlz99PT0nA/ckeBqs6nQeJnm+/4ruVyuHfNtXD3QCzw4vCKTybwMvJwQhBMuforFYi/xu8IDxAg2jnBp29ae0N8DXV1dDycFVE1EZBGGP3wIpVS7iAya6mLzVn19fbvmzJlzNXBljMkdc+fOPdLX17ejkmBHi4g8BrxA/OO4RUQ649on3g83NDQsHhwcnAFcb2qrtX5eROanUqmVnZ2de1yDHgkichmwDrgrwWxHQ0PDkiQ/1huF3t7eSSdOnNhKlOuKIwTeAt6sr69/e9WqVYdtfl3o7e2dXCgUFmqt7wXuJPlqaBvRgpq4NXa6Qil9JrQeWOLQJgR2ALuBPUqpPUqpn8IwPJpOp4+nUqm/W1pacgB79+71gyBoLBaLEzzPm6S1vgi4RGt9KXAVUbrJli7WwIsTJ05ctmzZsrLT0XAqujPq7u6+NQzDZxnZlrEa7ASWi0jiZulkRnJJpkRkAbAcaGX8E/YB0Zn8WRF5hwpzaqO6Fcxms1OLxeJ9WutWoi/iqnUXdYTo+6sP6urq3mhvbz80UkdjeQ2q1qxZMyMMw6u01lcQJQOnA5OJNghnAw1EyQW/1Gbok6VB4E+iDMVhojz1AaXUd57n7e7s7PyR8c2O1qhRo0aNGjWqwL+KJe7bFjsqEwAAAABJRU5ErkJggg=="
+
+/***/ }),
+
+/***/ "./src/media/icon-play-light-gray.png":
+/*!********************************************!*\
+  !*** ./src/media/icon-play-light-gray.png ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAACGElEQVRoge2ZPYgTURDH/7NezoDY2VqGFPsBNrbXi62llnbmDrzKK7Sz0MZOGwvtgqXYH2KpB5kXNiFgI3ZipZAPydh4kMvd4Xtv52WfuL8usDs7P+btzh8CNDQ0NKzCzPvD4XC77j7OI3G49slyuTSDweBGsG4qQLYXMrOs/HwrIrtFUXwO0JMXLhNZ5SYRlcz8bDQaXVbtyBNfEQDYBtBbLBalMeaOiFhPNwS+R+ssDgH08jwfVGvJjyoTWWcHwBEzvxqPx1cU61qhKXJc7/Z8Ph8z826/37+gXP9cNI/WKUTkKEmSe1mWfXC91xXtiZyAiK6JyHtjTJ+Zr4Z8VlCRP5CI3AJQMvOjyWRyMcRDNiFyzCUAD6fTKYdIB0Hfkb+gmg42OZF1VNNBnSKAYjqo82idhXc6qHsi6+wA+GiMeeGaDmITAYAtEbnrmg5iO1qnsE0HMU7kBLbpIHoRW7bqbsCCT0TU+5eP1ncAe2VZXrdJzzFO5BcRvWy1Wgfdbveb7U2xiRwC6GVZ5rwQYxH5SkQP0jR9TURen/m6ReYAnidJcpCm6Y8qheoUUY3xdYhMRGSvKIp3mkU3KfITwNN2u/240+nMtItvQkSI6I2I3M/z/Euoh4QWsdrKGoTa7E5bWQPtiXhtZQ00Rby3sgYaIpW3sgZVRNS2sga+ItH99eYqEmQra+Dy+d2fzWZpjBINDQ3/Eb8BQCT0fAhJ1foAAAAASUVORK5CYII="
+
+/***/ }),
+
+/***/ "./src/reducers/Execute.js":
+/*!*********************************!*\
+  !*** ./src/reducers/Execute.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _actions_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/types */ "./src/actions/types.js");
+
+const initialState = {
+  output: null,
+  runCodeLoading: false,
+  runCodeFail: false,
+  runCodeOk: false
+};
+/* harmony default export */ __webpack_exports__["default"] = (function (state = initialState, action) {
+  switch (action.type) {
+    case _actions_types__WEBPACK_IMPORTED_MODULE_0__["RUN_CODE_SUCCESS"]:
+      return { ...state,
+        output: action.payload,
+        runCodeLoading: false,
+        runCodeFail: false,
+        runCodeOk: true
+      };
+
+    case _actions_types__WEBPACK_IMPORTED_MODULE_0__["RUN_CODE_RUNNING"]:
+      return { ...state,
+        output: null,
+        runCodeLoading: true,
+        runCodeFail: false,
+        runCodeOk: false
+      };
+
+    case _actions_types__WEBPACK_IMPORTED_MODULE_0__["RUN_CODE_FAILED"]:
+      return { ...state,
+        output: null,
+        runCodeLoading: false,
+        runCodeFail: true,
+        runCodeOk: false
+      };
+
+    default:
+      return state;
+  }
+});
+
+/***/ }),
+
+/***/ "./src/reducers/index.js":
+/*!*******************************!*\
+  !*** ./src/reducers/index.js ***!
+  \*******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
+/* harmony import */ var _Execute__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Execute */ "./src/reducers/Execute.js");
+
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
+  executionReducer: _Execute__WEBPACK_IMPORTED_MODULE_1__["default"]
+}));
+
+/***/ }),
+
+/***/ "./src/serviceWorker.js":
+/*!******************************!*\
+  !*** ./src/serviceWorker.js ***!
+  \******************************/
+/*! exports provided: register, unregister */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "register", function() { return register; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unregister", function() { return unregister; });
+// This optional code is used to register a service worker.
+// register() is not called by default.
+// This lets the app load faster on subsequent visits in production, and gives
+// it offline capabilities. However, it also means that developers (and users)
+// will only see deployed updates on subsequent visits to a page, after all the
+// existing tabs open on the page have been closed, since previously cached
+// resources are updated in the background.
+// To learn more about the benefits of this model and instructions on how to
+// opt-in, read https://bit.ly/CRA-PWA
+const isLocalhost = Boolean(window.location.hostname === 'localhost' || // [::1] is the IPv6 localhost address.
+window.location.hostname === '[::1]' || // 127.0.0.0/8 are considered localhost for IPv4.
+window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/));
+function register(config) {
+  if (false) {}
+}
+
+function registerValidSW(swUrl, config) {
+  navigator.serviceWorker.register(swUrl).then(registration => {
+    registration.onupdatefound = () => {
+      const installingWorker = registration.installing;
+
+      if (installingWorker == null) {
+        return;
+      }
+
+      installingWorker.onstatechange = () => {
+        if (installingWorker.state === 'installed') {
+          if (navigator.serviceWorker.controller) {
+            // At this point, the updated precached content has been fetched,
+            // but the previous service worker will still serve the older
+            // content until all client tabs are closed.
+            console.log('New content is available and will be used when all ' + 'tabs for this page are closed. See https://bit.ly/CRA-PWA.'); // Execute callback
+
+            if (config && config.onUpdate) {
+              config.onUpdate(registration);
+            }
+          } else {
+            // At this point, everything has been precached.
+            // It's the perfect time to display a
+            // "Content is cached for offline use." message.
+            console.log('Content is cached for offline use.'); // Execute callback
+
+            if (config && config.onSuccess) {
+              config.onSuccess(registration);
+            }
+          }
+        }
+      };
+    };
+  }).catch(error => {
+    console.error('Error during service worker registration:', error);
+  });
+}
+
+function checkValidServiceWorker(swUrl, config) {
+  // Check if the service worker can be found. If it can't reload the page.
+  fetch(swUrl, {
+    headers: {
+      'Service-Worker': 'script'
+    }
+  }).then(response => {
+    // Ensure service worker exists, and that we really are getting a JS file.
+    const contentType = response.headers.get('content-type');
+
+    if (response.status === 404 || contentType != null && contentType.indexOf('javascript') === -1) {
+      // No service worker found. Probably a different app. Reload the page.
+      navigator.serviceWorker.ready.then(registration => {
+        registration.unregister().then(() => {
+          window.location.reload();
+        });
+      });
+    } else {
+      // Service worker found. Proceed as normal.
+      registerValidSW(swUrl, config);
+    }
+  }).catch(() => {
+    console.log('No internet connection found. App is running in offline mode.');
+  });
+}
+
+function unregister() {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.ready.then(registration => {
+      registration.unregister();
+    }).catch(error => {
+      console.error(error.message);
+    });
+  }
+}
+
+/***/ }),
+
+/***/ "./src/store.js":
+/*!**********************!*\
+  !*** ./src/store.js ***!
+  \**********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
+/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux-thunk */ "./node_modules/redux-thunk/es/index.js");
+/* harmony import */ var _reducers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./reducers */ "./src/reducers/index.js");
+
+
+
+const initialState = {};
+const middleware = [redux_thunk__WEBPACK_IMPORTED_MODULE_1__["default"]];
+var md = null;
+
+if (true) {
+  const {
+    createLogger
+  } = __webpack_require__(/*! redux-logger */ "./node_modules/redux-logger/dist/redux-logger.js");
+
+  const {
+    composeWithDevTools
+  } = __webpack_require__(/*! redux-devtools-extension */ "./node_modules/redux-devtools-extension/index.js");
+
+  const logger = createLogger({// ...options
+  });
+  middleware.push(logger);
+  md = composeWithDevTools(Object(redux__WEBPACK_IMPORTED_MODULE_0__["applyMiddleware"])(...middleware));
+} else {}
+
+const store = Object(redux__WEBPACK_IMPORTED_MODULE_0__["createStore"])(_reducers__WEBPACK_IMPORTED_MODULE_2__["default"], initialState, md);
+/* harmony default export */ __webpack_exports__["default"] = (store);
+
+/***/ }),
+
+/***/ 1:
+/*!**************************************************************************************************************!*\
+  !*** multi (webpack)/hot/dev-server.js ./node_modules/react-dev-utils/webpackHotDevClient.js ./src/index.js ***!
+  \**************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! C:\Users\akshi\Desktop\ibm_prjct\online compilers\remote-code-execution-environment\frontend\node_modules\webpack\hot\dev-server.js */"./node_modules/webpack/hot/dev-server.js");
+__webpack_require__(/*! C:\Users\akshi\Desktop\ibm_prjct\online compilers\remote-code-execution-environment\frontend\node_modules\react-dev-utils\webpackHotDevClient.js */"./node_modules/react-dev-utils/webpackHotDevClient.js");
+module.exports = __webpack_require__(/*! C:\Users\akshi\Desktop\ibm_prjct\online compilers\remote-code-execution-environment\frontend\src\index.js */"./src/index.js");
+
+
+/***/ })
+
+},[[1,"runtime-main",0]]]);
+//# sourceMappingURL=main.chunk.js.map
