@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<!-- saved from url=(0022)http://localhost:3000/ -->
-<html lang="en">
-<style type="text/css" id="black-mode-custom-style"></style>
+<html lang="en" class="">
+<style type="text/css" id="dark-mode-custom-style"></style>
+<style type="text/css" id="dark-mode-theme-changer-style"></style>
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -553,10 +553,7 @@
       border: 1px solid rgb(200, 200, 250);
     }
 
-    .ace-tm .ace_indent-guide {
-      background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==") right repeat-y;
-    }
-
+    
     /*# sourceURL=ace/css/ace-tm */
   </style>
   <style id="ace_editor.css">
@@ -724,11 +721,6 @@
       background-repeat: no-repeat;
     }
 
-    .ace_gutter-cell.ace_error {
-      background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABOFBMVEX/////////QRswFAb/Ui4wFAYwFAYwFAaWGAfDRymzOSH/PxswFAb/SiUwFAYwFAbUPRvjQiDllog5HhHdRybsTi3/Tyv9Tir+Syj/UC3////XurebMBIwFAb/RSHbPx/gUzfdwL3kzMivKBAwFAbbvbnhPx66NhowFAYwFAaZJg8wFAaxKBDZurf/RB6mMxb/SCMwFAYwFAbxQB3+RB4wFAb/Qhy4Oh+4QifbNRcwFAYwFAYwFAb/QRzdNhgwFAYwFAbav7v/Uy7oaE68MBK5LxLewr/r2NXewLswFAaxJw4wFAbkPRy2PyYwFAaxKhLm1tMwFAazPiQwFAaUGAb/QBrfOx3bvrv/VC/maE4wFAbRPBq6MRO8Qynew8Dp2tjfwb0wFAbx6eju5+by6uns4uH9/f36+vr/GkHjAAAAYnRSTlMAGt+64rnWu/bo8eAA4InH3+DwoN7j4eLi4xP99Nfg4+b+/u9B/eDs1MD1mO7+4PHg2MXa347g7vDizMLN4eG+Pv7i5evs/v79yu7S3/DV7/498Yv24eH+4ufQ3Ozu/v7+y13sRqwAAADLSURBVHjaZc/XDsFgGIBhtDrshlitmk2IrbHFqL2pvXf/+78DPokj7+Fz9qpU/9UXJIlhmPaTaQ6QPaz0mm+5gwkgovcV6GZzd5JtCQwgsxoHOvJO15kleRLAnMgHFIESUEPmawB9ngmelTtipwwfASilxOLyiV5UVUyVAfbG0cCPHig+GBkzAENHS0AstVF6bacZIOzgLmxsHbt2OecNgJC83JERmePUYq8ARGkJx6XtFsdddBQgZE2nPR6CICZhawjA4Fb/chv+399kfR+MMMDGOQAAAABJRU5ErkJggg==");
-      background-repeat: no-repeat;
-      background-position: 2px center;
-    }
 
     .ace_gutter-cell.ace_warning {
       background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAmVBMVEX///8AAAD///8AAAAAAABPSzb/5sAAAAB/blH/73z/ulkAAAAAAAD85pkAAAAAAAACAgP/vGz/rkDerGbGrV7/pkQICAf////e0IsAAAD/oED/qTvhrnUAAAD/yHD/njcAAADuv2r/nz//oTj/p064oGf/zHAAAAA9Nir/tFIAAAD/tlTiuWf/tkIAAACynXEAAAAAAAAtIRW7zBpBAAAAM3RSTlMAABR1m7RXO8Ln31Z36zT+neXe5OzooRDfn+TZ4p3h2hTf4t3k3ucyrN1K5+Xaks52Sfs9CXgrAAAAjklEQVR42o3PbQ+CIBQFYEwboPhSYgoYunIqqLn6/z8uYdH8Vmdnu9vz4WwXgN/xTPRD2+sgOcZjsge/whXZgUaYYvT8QnuJaUrjrHUQreGczuEafQCO/SJTufTbroWsPgsllVhq3wJEk2jUSzX3CUEDJC84707djRc5MTAQxoLgupWRwW6UB5fS++NV8AbOZgnsC7BpEAAAAABJRU5ErkJggg==");
@@ -1214,12 +1206,11 @@
     /*# sourceURL=ace/css/ace_editor.css */
   </style>
 
-  <link rel="icon" href="assets\Code Executer_files\0.chunk.js.download/favicon.ico">
+  <link rel="icon" href="assets/images/index-meta.png">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#000000">
   <meta name="description" content="Remote code execution web app">
-  <link rel="apple-touch-icon" href="assets\Code Executer_files\logo192.png">
-  <link rel="manifest" href="assets\Code Executer_files\manifest.json">
+  <link rel="apple-touch-icon" href="\assets\logo192.png">
   <style>
     .svgLoader {
       animation: spin 0.5s linear infinite;
@@ -1305,6 +1296,22 @@
     }
   </style>
   <style type="text/css">
+    .brand_title {
+      height: 100%;
+      text-align: center;
+      padding-top: 50%;
+      padding-bottom: 50%;
+      margin-bottom: 50%;
+      color: purple;
+      font-size: 30px;
+    }
+
+    .paddingseting {
+      padding-bottom: 0px;
+      border-radius: 30%;
+      margin-bottom: 0px;
+    }
+
     .code-layout {
       height: var(--editer-height);
       min-height: var(--editer-min-height);
@@ -1816,9 +1823,9 @@
   <!--    ::APP::    -->
   <div id="root">
     <header>
-      <div class="header-intro"><img
-          src="data:image/png;base64,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"
-          alt="Octocat Logo"></div>
+      <div class="header-intro"><a href="https://rutherfordsstudio.herokuapp.com/" target="_blank"
+          rel="noopener noreferrer"><img src="assets/Code Executer_files/white.d957afeb.png" class="paddingseting"
+            alt="Rutherford Logo"></a></div>
       <div class="header-buttons">
         <div class="dropdown"><button id="langauge-btn">python</button>
           <ul class="dropdown-content">
@@ -1860,24 +1867,28 @@
       </div>
     </header>
     <div class="code-layout" id="code-layout">
-      <div id="text-edit" class=" ace_editor ace-dracula ace_dark"
+      <div id="text-edit" class=" ace_editor ace-dracula ace_dark ace_focus"
         style="width: 500px; height: 500px; font-size: 17px;"><textarea class="ace_text-input" wrap="off"
           autocorrect="off" autocapitalize="off" spellcheck="false"
-          style="opacity: 0; font-size: 1px; height: 1px; width: 1px; top: 20px; left: 149px;"></textarea>
+          style="opacity: 0; font-size: 1px; height: 1px; width: 1px; top: 20px; left: 570px;"></textarea>
         <div class="ace_gutter" aria-hidden="true" style="left: 0px; width: 43px;">
           <div class="ace_layer ace_gutter-layer ace_folding-enabled"
             style="height: 1e+06px; top: 0px; left: 0px; width: 43px;">
             <div class="ace_gutter-cell ace_gutter-active-line " style="height: 20px; top: 0px;">1<span
-                style="display: none; height: 20px;" class="ace_fold-widget ace_start ace_open"></span></div>
+                style="display: none;"></span></div>
           </div>
         </div>
-        <div class="ace_scroller" style="line-height: 20px; left: 42.3476px; right: 0px; bottom: 0px;">
-          <div class="ace_content" style="top: 0px; left: 0px; width: 952.652px; height: 531px;">
+        <div class="ace_scroller" style="line-height: 20px; left: 42.3477px; right: 0px; bottom: 0px;">
+          <div class="ace_content" style="top: 0px; left: 0px; width: 952.652px; height: 598px;">
             <div class="ace_layer ace_print-margin-layer">
               <div class="ace_print-margin" style="left: 752px; visibility: visible;"></div>
             </div>
             <div class="ace_layer ace_marker-layer">
               <div class="ace_active-line" style="height: 20px; top: 0px; left: 0px; right: 0px;"></div>
+              <div class="ace_bracket ace_start ace_br15"
+                style="height: 20px; width: 9.34766px; top: 0px; left: 518.121px;"></div>
+              <div class="ace_bracket ace_start ace_br15"
+                style="height: 20px; width: 9.34766px; top: 0px; left: 50.7383px;"></div>
             </div>
             <div class="ace_layer ace_text-layer" style="height: 1e+06px; margin: 0px 4px; top: 0px; left: 0px;">
               <div class="ace_line" style="height: 20px; top: 0px;"><span class="ace_keyword">print</span><span
@@ -1885,9 +1896,9 @@
                   the code."</span><span class="ace_paren ace_rparen">)</span></div>
             </div>
             <div class="ace_layer ace_marker-layer"></div>
-            <div class="ace_layer ace_cursor-layer ace_hidden-cursors">
+            <div class="ace_layer ace_cursor-layer ace_animate-blinking">
               <div class="ace_cursor"
-                style="display: block; top: 0px; left: 107px; width: 9px; height: 20px; animation-duration: 1000ms;">
+                style="display: block; top: 0px; left: 527px; width: 9px; height: 20px; animation-duration: 1000ms;">
               </div>
             </div>
           </div>
@@ -1895,7 +1906,7 @@
         <div class="ace_scrollbar ace_scrollbar-v" style="display: none; width: 22px; bottom: 0px;">
           <div class="ace_scrollbar-inner" style="width: 22px; height: 20px;">&nbsp;</div>
         </div>
-        <div class="ace_scrollbar ace_scrollbar-h" style="display: none; height: 22px; left: 42.3476px; right: 0px;">
+        <div class="ace_scrollbar ace_scrollbar-h" style="display: none; height: 22px; left: 42.3477px; right: 0px;">
           <div class="ace_scrollbar-inner" style="height: 22px; width: 995px;">&nbsp;</div>
         </div>
         <div
@@ -1914,7 +1925,7 @@
         <div id="code-results" class=" ace_editor ace-dracula ace_dark"
           style="width: 500px; height: 500px; font-size: 19px; color: var(--editer-white);"><textarea
             class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false"
-            style="opacity: 0; font-size: 1px; height: 1px; width: 1px; top: 22px; left: 4px;"></textarea>
+            style="opacity: 0; font-size: 1px; height: 1px; width: 1px; top: 22px; left: 495px;" readonly=""></textarea>
           <div class="ace_gutter" aria-hidden="true" style="left: 0px; width: 44px; display: none;">
             <div class="ace_layer ace_gutter-layer ace_folding-enabled"
               style="height: 1e+06px; top: 0px; left: 0px; width: 44px;">
@@ -1924,7 +1935,7 @@
             </div>
           </div>
           <div class="ace_scroller" style="line-height: 22px; left: 0px; right: 0px; bottom: 0px;">
-            <div class="ace_content" style="top: 0px; left: 0px; width: 536px; height: 535px;">
+            <div class="ace_content" style="top: 0px; left: 0px; width: 536px; height: 602px;">
               <div class="ace_layer ace_print-margin-layer">
                 <div class="ace_print-margin" style="left: 840px; visibility: hidden;"></div>
               </div>
@@ -1936,7 +1947,7 @@
               </div>
               <div class="ace_layer ace_marker-layer"></div>
               <div class="ace_layer ace_cursor-layer ace_hidden-cursors">
-                <div class="ace_cursor" style="display: block; top: 0px; left: 4px; width: 10px; height: 22px;"></div>
+                <div class="ace_cursor" style="display: block; top: 0px; left: 495px; width: 10px; height: 22px;"></div>
               </div>
             </div>
           </div>
@@ -1974,16 +1985,97 @@
       <p class="larger-screen-warn">To access all features, view this system in a larger screen.</p>
     </footer>
   </div>
-  <script defer="" src="assets\Code Executer_files\firebase-app.js.download"></script>
-  <script defer="" src="assets\Code Executer_files\init.js.download"></script>
-  <script src="assets\Code Executer_files\bundle.js.download"></script>
-  <script src="assets\Code Executer_files\0.chunk.js.download"></script>
-  <script src="assets\Code Executer_files\main.chunk.js.download"></script>
-  <script src="assets\Code Executer_files\main.c91efcb5d2e47af95b6d.hot-update.js.download"></script>
+  <script defer="" src="assets/Code Executer_files/init.js.download"></script>
+  <script src="assets/Code Executer_files/bundle.js.download"></script>
+  <script src="assets/Code Executer_files/0.chunk.js.download"></script>
+  <script src="assets/Code Executer_files/main.chunk.js.download"></script>
 
+  <div class=" ace_editor ace_autocomplete ace_dark ace-dracula"
+    style="font-size: 17px; top: 101px; left: 162.867px; height: 184px; display: none;"><textarea class="ace_text-input"
+      wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false"
+      style="opacity: 0; font-size: 1px; top: 0px; left: -100px;"></textarea>
+    <div class="ace_gutter" aria-hidden="true" style="display: none; left: 0px; width: 43px;">
+      <div class="ace_layer ace_gutter-layer ace_folding-enabled"
+        style="height: 1e+06px; top: 0px; left: 0px; width: 43px;">
+        <div class="ace_gutter-cell " style="height: 23px; top: 0px;">1<span style="display: none;"></span></div>
+        <div class="ace_gutter-cell " style="height: 23px; top: 23px;">2<span style="display: none;"></span></div>
+        <div class="ace_gutter-cell " style="height: 23px; top: 46px;">3<span style="display: none;"></span></div>
+        <div class="ace_gutter-cell " style="height: 23px; top: 69px;">4<span style="display: none;"></span></div>
+        <div class="ace_gutter-cell " style="height: 23px; top: 92px;">5<span style="display: none;"></span></div>
+        <div class="ace_gutter-cell " style="height: 23px; top: 115px;">6<span style="display: none;"></span></div>
+        <div class="ace_gutter-cell " style="height: 23px; top: 138px;">7<span style="display: none;"></span></div>
+        <div class="ace_gutter-cell " style="height: 23px; top: 161px;">8<span style="display: none;"></span></div>
+        <div class="ace_gutter-cell " style="height: 23px; top: 184px;">9<span style="display: none;"></span></div>
+      </div>
+    </div>
+    <div class="ace_scroller" style="line-height: 23px; left: 0px; right: 17px; bottom: 0px;">
+      <div class="ace_content" style="cursor: default; top: 0px; left: 0px; width: 283px; height: 230px;">
+        <div class="ace_layer ace_print-margin-layer">
+          <div class="ace_print-margin" style="left: 752px; visibility: hidden;"></div>
+        </div>
+        <div class="ace_layer ace_marker-layer">
+          <div class="ace_active-line" style="height: 23px; top: 0px; left: 0px; right: 0px;"></div>
+        </div>
+        <div class="ace_layer ace_text-layer" style="height: 1e+06px; margin: 0px 4px; top: 0px; left: 0px;">
+          <div class="ace_line ace_selected" style="height: 23px; top: 0px;"><span class="ace_">en</span><span
+              class="ace_completion-highlight">te</span><span class="ace_">r</span><span
+              class="ace_completion-meta">local</span></div>
+          <div class="ace_line" style="height: 23px; top: 23px;"><span class="ace_completion-highlight">t</span><span
+              class="ace_">h</span><span class="ace_completion-highlight">e</span><span
+              class="ace_completion-meta">local</span></div>
+          <div class="ace_line" style="height: 23px; top: 46px;"><span class="ace_">i</span><span
+              class="ace_completion-highlight">te</span><span class="ace_">r</span><span
+              class="ace_completion-meta">keyword</span></div>
+          <div class="ace_line" style="height: 23px; top: 69px;"><span class="ace_">by</span><span
+              class="ace_completion-highlight">te</span><span class="ace_">array</span><span
+              class="ace_completion-meta">keyword</span></div>
+          <div class="ace_line" style="height: 23px; top: 92px;"><span class="ace_">by</span><span
+              class="ace_completion-highlight">te</span><span class="ace_">s</span><span
+              class="ace_completion-meta">keyword</span></div>
+          <div class="ace_line" style="height: 23px; top: 115px;"><span class="ace_">in</span><span
+              class="ace_completion-highlight">te</span><span class="ace_">rn</span><span
+              class="ace_completion-meta">keyword</span></div>
+          <div class="ace_line" style="height: 23px; top: 138px;"><span class="ace_completion-highlight">T</span><span
+              class="ace_">ru</span><span class="ace_completion-highlight">e</span><span
+              class="ace_completion-meta">keyword</span></div>
+          <div class="ace_line" style="height: 23px; top: 161px;"><span class="ace_completion-highlight">t</span><span
+              class="ace_">yp</span><span class="ace_completion-highlight">e</span><span
+              class="ace_completion-meta">keyword</span></div>
+          <div class="ace_line" style="height: 23px; top: 184px;"><span class="ace_">fil</span><span
+              class="ace_completion-highlight">te</span><span class="ace_">r</span><span
+              class="ace_completion-meta">keyword</span></div>
+        </div>
+        <div class="ace_layer ace_marker-layer"></div>
+        <div class="ace_layer ace_cursor-layer ace_hidden-cursors" style="opacity: 0;">
+          <div class="ace_cursor" style="display: block; top: 0px; left: 4px; width: 9px; height: 23px;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="ace_scrollbar ace_scrollbar-v" style="width: 22px; bottom: 0px;">
+      <div class="ace_scrollbar-inner" style="width: 22px; height: 368px;">&nbsp;</div>
+    </div>
+    <div class="ace_scrollbar ace_scrollbar-h" style="display: none; height: 22px; left: 0px; right: 17px;">
+      <div class="ace_scrollbar-inner" style="height: 22px; width: 283px;">&nbsp;</div>
+    </div>
+    <div
+      style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: hidden;">
+      <div
+        style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;">
+        הההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההה
+      </div>
+      <div
+        style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: visible;">
+        XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+      </div>
+    </div>
+  </div>
+  <script>
+    logopicic=document.querySelector('img');
+    logopicic.setAttribute('src','assets/Code Executer_files/white.d957afeb.png')
+    logopicic.setAttribute('class','paddingseting')
+    firstatag=document.querySelector('a')
+    firstatag.setAttribute('href',"{{url_for('main.index')}}")
+  </script>
 </body>
-<div id="screen-shader"
-  style="            transition: opacity 0.1s ease 0s;             z-index: 2147483647;            margin: 0;             border-radius: 0;             padding: 0;             background: #939393 !important;             pointer-events: none;             position: fixed;             top: -10%;             right: -10%;             width: 120%;             height: 120%;             opacity: 0.6000;            mix-blend-mode: multiply;             display: none;        ">
-</div>
 
 </html>

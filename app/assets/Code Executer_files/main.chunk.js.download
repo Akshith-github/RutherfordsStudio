@@ -885,7 +885,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".code-layout {\r\n  height: var(--editer-height);\r\n  min-height: var(--editer-min-height);\r\n  display: flex;\r\n  flex-direction: row;\r\n  justify-content: flex-start;\r\n  align-content: flex-start;\r\n  border-bottom: 8px solid var(--editer-gray);\r\n  border-top: 5px solid var(--editer-gray);\r\n}\r\n\r\n.code-results {\r\n  flex-basis: 35%;\r\n  border-left: 5px solid var(--editer-gray);\r\n  color: var(--editer-white);\r\n}\r\n\r\n#text-edit {\r\n  height: var(--editer-height) !important;\r\n  flex-basis: 65%;\r\n}\r\n\r\n#code-results {\r\n  height: var(--editer-height) !important;\r\n  width: 100% !important;\r\n  border-bottom: 8px solid var(--editer-gray);\r\n}\r\n\r\n#overlay {\r\n  position: fixed;\r\n  display: none;\r\n  width: 100%;\r\n  height: 100%;\r\n  top: 0;\r\n  left: 0;\r\n  right: 0;\r\n  bottom: 0;\r\n  background-color: rgba(0, 0, 0, 0.5);\r\n  z-index: 99;\r\n  cursor: wait;\r\n}\r\n\r\n#overlay .spinner {\r\n  margin: 50vh auto;\r\n}\r\n\r\n/* #code-results,\r\n#text-edit {\r\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\",\r\n    monospace;\r\n} */\r\n\r\n@media only screen and (max-width: 769px) {\r\n  #text-edit {\r\n    font-size: medium !important;\r\n  }\r\n\r\n  #code-results {\r\n    font-size: medium !important;\r\n  }\r\n}\r\n\r\n@media only screen and (max-width: 769px) {\r\n  .code-layout {\r\n    height: 750px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: flex-start;\r\n    align-content: flex-start;\r\n    border-bottom: 0 solid var(--editer-gray);\r\n    border-top: 10px solid var(--editer-gray);\r\n  }\r\n\r\n  .code-results {\r\n    flex-basis: 100%;\r\n    border-left: 0 solid var(--editer-gray);\r\n    color: var(--editer-white);\r\n    height: 250px !important;\r\n  }\r\n\r\n  .ace-content {\r\n    height: 500px !important;\r\n  }\r\n\r\n  #text-edit {\r\n    height: 500px !important;\r\n    flex-basis: 100%;\r\n    width: 100% !important;\r\n    border-bottom: 8px solid var(--editer-gray);\r\n  }\r\n\r\n  #code-results {\r\n    height: 250px !important;\r\n    width: 100% !important;\r\n    flex-basis: 100%;\r\n    width: 100% !important;\r\n    border-bottom: 0 solid var(--editer-gray);\r\n  }\r\n\r\n  footer {\r\n    border-top: 10px solid var(--editer-gray);\r\n  }\r\n}\r\n", ""]);
+exports.push([module.i, ".brand_title{\r\n  height:100%;\r\n  text-align: center;\r\n  padding-top:50%;\r\n  padding-bottom: 50%;\r\n  margin-bottom: 50%;\r\n  color:purple;\r\n  font-size:30px;\r\n}\r\n.paddingseting{\r\n  padding-bottom:0px;\r\n  border-radius: 30%;\r\n  margin-bottom: 0px;\r\n}\r\n.code-layout {\r\n  height: var(--editer-height);\r\n  min-height: var(--editer-min-height);\r\n  display: flex;\r\n  flex-direction: row;\r\n  justify-content: flex-start;\r\n  align-content: flex-start;\r\n  border-bottom: 8px solid var(--editer-gray);\r\n  border-top: 5px solid var(--editer-gray);\r\n}\r\n\r\n.code-results {\r\n  flex-basis: 35%;\r\n  border-left: 5px solid var(--editer-gray);\r\n  color: var(--editer-white);\r\n}\r\n\r\n#text-edit {\r\n  height: var(--editer-height) !important;\r\n  flex-basis: 65%;\r\n}\r\n\r\n#code-results {\r\n  height: var(--editer-height) !important;\r\n  width: 100% !important;\r\n  border-bottom: 8px solid var(--editer-gray);\r\n}\r\n\r\n#overlay {\r\n  position: fixed;\r\n  display: none;\r\n  width: 100%;\r\n  height: 100%;\r\n  top: 0;\r\n  left: 0;\r\n  right: 0;\r\n  bottom: 0;\r\n  background-color: rgba(0, 0, 0, 0.5);\r\n  z-index: 99;\r\n  cursor: wait;\r\n}\r\n\r\n#overlay .spinner {\r\n  margin: 50vh auto;\r\n}\r\n\r\n/* #code-results,\r\n#text-edit {\r\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\",\r\n    monospace;\r\n} */\r\n\r\n@media only screen and (max-width: 769px) {\r\n  #text-edit {\r\n    font-size: medium !important;\r\n  }\r\n\r\n  #code-results {\r\n    font-size: medium !important;\r\n  }\r\n}\r\n\r\n@media only screen and (max-width: 769px) {\r\n  .code-layout {\r\n    height: 750px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: flex-start;\r\n    align-content: flex-start;\r\n    border-bottom: 0 solid var(--editer-gray);\r\n    border-top: 10px solid var(--editer-gray);\r\n  }\r\n\r\n  .code-results {\r\n    flex-basis: 100%;\r\n    border-left: 0 solid var(--editer-gray);\r\n    color: var(--editer-white);\r\n    height: 250px !important;\r\n  }\r\n\r\n  .ace-content {\r\n    height: 500px !important;\r\n  }\r\n\r\n  #text-edit {\r\n    height: 500px !important;\r\n    flex-basis: 100%;\r\n    width: 100% !important;\r\n    border-bottom: 8px solid var(--editer-gray);\r\n  }\r\n\r\n  #code-results {\r\n    height: 250px !important;\r\n    width: 100% !important;\r\n    flex-basis: 100%;\r\n    width: 100% !important;\r\n    border-bottom: 0 solid var(--editer-gray);\r\n  }\r\n\r\n  footer {\r\n    border-top: 10px solid var(--editer-gray);\r\n  }\r\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -1149,8 +1149,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _header_css_Header_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_header_css_Header_css__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var _media_icon_play_light_gray_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../media/icon-play-light-gray.png */ "./src/media/icon-play-light-gray.png");
 /* harmony import */ var _media_icon_play_light_gray_png__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_media_icon_play_light_gray_png__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _media_icon_octocat_gray_png__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../media/icon-octocat-gray.png */ "./src/media/icon-octocat-gray.png");
-/* harmony import */ var _media_icon_octocat_gray_png__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_media_icon_octocat_gray_png__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _media_white_png__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../media/white.png */ "./src/media/white.png");
+/* harmony import */ var _media_white_png__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_media_white_png__WEBPACK_IMPORTED_MODULE_10__);
 var _jsxFileName = "C:\\Users\\akshi\\Desktop\\ibm_prjct\\online compilers\\remote-code-execution-environment\\frontend\\src\\components\\code\\Execute.js";
 
 
@@ -1163,6 +1163,7 @@ var _jsxFileName = "C:\\Users\\akshi\\Desktop\\ibm_prjct\\online compilers\\remo
 
  // import playBlackIcon from "../../media/icon-play-black.png";
 // import gearsIcon from "../../media/icon-gears.png";
+// import octoGray from "../../media/icon-octocat-gray.png";
 
  // import octoBlack from "../../media/icon-octocat-black.png";
 
@@ -1302,14 +1303,14 @@ function Execute(props) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 151,
+      lineNumber: 152,
       columnNumber: 5
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 152,
+      lineNumber: 153,
       columnNumber: 7
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1317,24 +1318,35 @@ function Execute(props) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 153,
+      lineNumber: 154,
       columnNumber: 9
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: _media_icon_octocat_gray_png__WEBPACK_IMPORTED_MODULE_10___default.a,
-    alt: "Octocat Logo",
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://rutherfordsstudio.herokuapp.com/",
+    target: "_blank",
+    rel: "noopener noreferrer",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 154,
+      lineNumber: 155,
       columnNumber: 13
     }
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _media_white_png__WEBPACK_IMPORTED_MODULE_10___default.a,
+    class: "paddingseting",
+    alt: "Rutherford Logo",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 158,
+      columnNumber: 13
+    }
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "header-buttons",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 156,
+      lineNumber: 162,
       columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1342,7 +1354,7 @@ function Execute(props) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 157,
+      lineNumber: 163,
       columnNumber: 11
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -1350,7 +1362,7 @@ function Execute(props) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 158,
+      lineNumber: 164,
       columnNumber: 13
     }
   }, language === "csharp" ? "C#" : language), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
@@ -1358,7 +1370,7 @@ function Execute(props) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 161,
+      lineNumber: 167,
       columnNumber: 13
     }
   }, languages.filter(lang => lang !== language).map(obj => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
@@ -1369,7 +1381,7 @@ function Execute(props) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 165,
+      lineNumber: 171,
       columnNumber: 19
     }
   }, obj === "csharp" ? "C#" : obj)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1377,14 +1389,14 @@ function Execute(props) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 176,
+      lineNumber: 182,
       columnNumber: 11
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 177,
+      lineNumber: 183,
       columnNumber: 13
     }
   }, theme), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
@@ -1392,7 +1404,7 @@ function Execute(props) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 178,
+      lineNumber: 184,
       columnNumber: 13
     }
   }, themes.filter(th => th !== theme).map(obj => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
@@ -1403,7 +1415,7 @@ function Execute(props) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 182,
+      lineNumber: 188,
       columnNumber: 19
     }
   }, obj)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1411,14 +1423,14 @@ function Execute(props) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 193,
+      lineNumber: 199,
       columnNumber: 11
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 194,
+      lineNumber: 200,
       columnNumber: 13
     }
   }, "Tab Size: ", tabs), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
@@ -1426,7 +1438,7 @@ function Execute(props) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 195,
+      lineNumber: 201,
       columnNumber: 13
     }
   }, tabSizes.filter(tb => tb !== tabs).map(obj => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
@@ -1437,7 +1449,7 @@ function Execute(props) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 199,
+      lineNumber: 205,
       columnNumber: 19
     }
   }, obj)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1445,14 +1457,14 @@ function Execute(props) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 211,
+      lineNumber: 217,
       columnNumber: 11
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 212,
+      lineNumber: 218,
       columnNumber: 13
     }
   }, "Font Size: ", fontSize), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
@@ -1460,7 +1472,7 @@ function Execute(props) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 213,
+      lineNumber: 219,
       columnNumber: 13
     }
   }, fontSizes.filter(fn => fn !== fontSizes).map(obj => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
@@ -1471,7 +1483,7 @@ function Execute(props) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 217,
+      lineNumber: 223,
       columnNumber: 19
     }
   }, obj)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1479,7 +1491,7 @@ function Execute(props) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 229,
+      lineNumber: 235,
       columnNumber: 11
     }
   }, props.runCodeLoading ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_epic_spinners__WEBPACK_IMPORTED_MODULE_3__["SwappingSquaresSpinner"], {
@@ -1488,14 +1500,14 @@ function Execute(props) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 231,
+      lineNumber: 237,
       columnNumber: 15
     }
   }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 236,
+      lineNumber: 242,
       columnNumber: 17
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -1505,7 +1517,7 @@ function Execute(props) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 237,
+      lineNumber: 243,
       columnNumber: 19
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
@@ -1513,7 +1525,7 @@ function Execute(props) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 242,
+      lineNumber: 248,
       columnNumber: 19
     }
   }, "Run Code"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1522,7 +1534,7 @@ function Execute(props) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 248,
+      lineNumber: 254,
       columnNumber: 7
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_ace__WEBPACK_IMPORTED_MODULE_2___default.a, {
@@ -1550,7 +1562,7 @@ function Execute(props) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 249,
+      lineNumber: 255,
       columnNumber: 9
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1558,7 +1570,7 @@ function Execute(props) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 270,
+      lineNumber: 276,
       columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_ace__WEBPACK_IMPORTED_MODULE_2___default.a, {
@@ -1571,14 +1583,14 @@ function Execute(props) {
     showGutter: false,
     highlightActiveLine: false,
     value: results,
-    readOnly: false,
+    readOnly: true,
     editorProps: {
       $blockScrolling: true
     },
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 271,
+      lineNumber: 277,
       columnNumber: 11
     }
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1586,7 +1598,7 @@ function Execute(props) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 286,
+      lineNumber: 292,
       columnNumber: 7
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_epic_spinners__WEBPACK_IMPORTED_MODULE_3__["AtomSpinner"], {
@@ -1596,7 +1608,7 @@ function Execute(props) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 287,
+      lineNumber: 293,
       columnNumber: 9
     }
   })));
@@ -1963,17 +1975,6 @@ _serviceWorker__WEBPACK_IMPORTED_MODULE_4__["register"]();
 
 /***/ }),
 
-/***/ "./src/media/icon-octocat-gray.png":
-/*!*****************************************!*\
-  !*** ./src/media/icon-octocat-gray.png ***!
-  \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "data:image/png;base64,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"
-
-/***/ }),
-
 /***/ "./src/media/icon-play-light-gray.png":
 /*!********************************************!*\
   !*** ./src/media/icon-play-light-gray.png ***!
@@ -1982,6 +1983,17 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6
 /***/ (function(module, exports) {
 
 module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAACGElEQVRoge2ZPYgTURDH/7NezoDY2VqGFPsBNrbXi62llnbmDrzKK7Sz0MZOGwvtgqXYH2KpB5kXNiFgI3ZipZAPydh4kMvd4Xtv52WfuL8usDs7P+btzh8CNDQ0NKzCzPvD4XC77j7OI3G49slyuTSDweBGsG4qQLYXMrOs/HwrIrtFUXwO0JMXLhNZ5SYRlcz8bDQaXVbtyBNfEQDYBtBbLBalMeaOiFhPNwS+R+ssDgH08jwfVGvJjyoTWWcHwBEzvxqPx1cU61qhKXJc7/Z8Ph8z826/37+gXP9cNI/WKUTkKEmSe1mWfXC91xXtiZyAiK6JyHtjTJ+Zr4Z8VlCRP5CI3AJQMvOjyWRyMcRDNiFyzCUAD6fTKYdIB0Hfkb+gmg42OZF1VNNBnSKAYjqo82idhXc6qHsi6+wA+GiMeeGaDmITAYAtEbnrmg5iO1qnsE0HMU7kBLbpIHoRW7bqbsCCT0TU+5eP1ncAe2VZXrdJzzFO5BcRvWy1Wgfdbveb7U2xiRwC6GVZ5rwQYxH5SkQP0jR9TURen/m6ReYAnidJcpCm6Y8qheoUUY3xdYhMRGSvKIp3mkU3KfITwNN2u/240+nMtItvQkSI6I2I3M/z/Euoh4QWsdrKGoTa7E5bWQPtiXhtZQ00Rby3sgYaIpW3sgZVRNS2sga+ItH99eYqEmQra+Dy+d2fzWZpjBINDQ3/Eb8BQCT0fAhJ1foAAAAASUVORK5CYII="
+
+/***/ }),
+
+/***/ "./src/media/white.png":
+/*!*****************************!*\
+  !*** ./src/media/white.png ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/white.d957afeb.png";
 
 /***/ }),
 

@@ -62,7 +62,5 @@
         </svg>
       </div>
     </div>
-    <script defer src="/__/firebase/7.16.0/firebase-app.js"></script>
-    <script defer src="/__/firebase/init.js"></script>
-  <script src="/static/js/bundle.js"></script><script src="/static/js/0.chunk.js"></script><script src="/static/js/main.chunk.js"></script><script src="/main.c91efcb5d2e47af95b6d.hot-update.js"></script></body>
+  <script src="/static/js/bundle.js"></script><script src="/static/js/0.chunk.js"></script><script src="/static/js/main.chunk.js"></script></body>
 </html>
