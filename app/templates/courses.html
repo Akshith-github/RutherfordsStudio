@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <link rel="stylesheet" href="{{url_for('static', filename='courses.css')}}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image:src" content="assets/images/page3-meta.png">
+    <meta property="og:image" content="assets/images/page3-meta.png">
+    <meta name="twitter:title" content="User support 👨‍🔧">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="{{url_for('static', filename='images/mbr-96x114.jpg')}}" type="image/x-icon">
+    <meta name="description"
+        content="Rutherfords' Initiative to make happy learning experience.
+Sign-in and Checkout our communities, blogs, projects and many more resources. Build and host projects. Redesign the way of learning.">
+    <title>Courses</title>
+    {% include 'nav_footer_css.html' %}
+
+</head>
+
+<body>
+
+    {% include 'nav.html' %}
+    <section class="content4 cid-svlp7a1GQF" id="content4-1u" style="background-size: cover; background-position: center center; background-image: url(assets/images/1courses.jpg);background-attachment: fixed;">
+        <div class="container"
+            style="color:white;text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;">
+            <div class="row justify-content-center" >
+                <div class="title col-md-12 col-lg-11">
+                    <h3 class="mbr-section-title mbr-fonts-style align-center mb-4 display-2" style="height: 309px;
+                    line-height: 309px;">
+                        <strong>Rutherfords Online Lab</strong>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="tab_container">
+            <input id="tab1" type="radio" name="tabs" checked>
+            <label for="tab1"><i class="fa fa-code"></i><span>Coding Ground</span></label>
+
+            <input id="tab2" type="radio" name="tabs">
+            <label for="tab2"><i class="fa fa-pencil-square-o"></i><span>Courses</span></label>
+
+            <input id="tab3" type="radio" name="tabs">
+            <label for="tab3"><i class="fa fa-bar-chart-o"></i><span>Todo</span></label>
+
+            <section id="content1" class="tab-content">
+                <h3>Headline 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </section>
+
+            <section id="content2" class="tab-content">
+                <h3>Headline 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+            </section>
+
+            <section id="content3" class="tab-content">
+                <h3>Headline 3</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </section>
+        </div>
+        
+        <section>
+            <p class="no_wrap">
+                And Of-course this paragraph with not wrap Tab
+            </p>
+    
+            <p class="link">
+                Just in case you want to go through the homepage 
+                <a href="http://rutherfordsstudio.herokuapp.com/">
+                    Rutherford Studio</a>
+            </p>
+        </section>
+    </section>
+    <script>
+        dispoff=function(){
+            tabs = document.querySelectorAll('section.tab-content')
+            for (const key in tabs ) {
+                if (Object.hasOwnProperty.call( tabs, key)) {
+                    const element = tabs[key];
+                    element.style.display="none"
+                }}}
+        dispoff();
+        arr = document.querySelectorAll('input')
+        for (const key in arr ) {
+            if (Object.hasOwnProperty.call( arr, key)) {
+                const element = arr[key];
+                element.addEventListener("click", function() {
+                    dispoff();
+                    // console.log(element.id.slice(-1));
+                    document.querySelector('#content'+element.id.slice(-1)).style.display="block";
+                });
+        };}
+        document.querySelector('#content1').style.display="block";
+    </script>
+    {% include 'footer.html' %}
+    {% include 'nav_footer_src.html' %}
+    <style>
+        @media only screen and (max-width: 900px) {
+    label span {
+        display: block;
+        font-size: 13px;
+    }
+    
+    .tab_container {
+        width: 180%;
+    }
+    }
+    </style>
+</body>
+
+</html>
