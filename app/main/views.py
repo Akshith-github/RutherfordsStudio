@@ -279,6 +279,10 @@ def open_book(isbn):
 def open_code_ground():
     return render_template('Code Executer.html')
 
+@main.route('/Courses')
+def open_courses():
+    return render_template('courses.html')
+
 
 @main.route('/post/<int:id>', methods=['GET', 'POST'])
 def post(id):

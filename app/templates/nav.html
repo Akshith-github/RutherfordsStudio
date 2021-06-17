@@ -1,8 +1,10 @@
 <div class='topper_top'></div>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <section class="menu cid-s48OLK6784" once="menu" id="menu1-2s" style="margin:5px;">
 
-    <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
-        <div class="container">
+    <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg" style="padding:5px;">
+        <div class="container" >
             <div class="navbar-brand" style="padding-right:0rem">
                 <span class="navbar-logo">
                     <a href="https://en.wikipedia.org/wiki/Ernest_Rutherford" >
@@ -25,34 +27,66 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
                     <li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="{{url_for('main.home')}}"
-                            ><span class="mbrib-home mbr-iconfont mbr-iconfont-btn"></span>Home</a></li>
+                            ><span class="mbrib-home mbr-iconfont mbr-iconfont-btn"></span>Home</a>
+                    </li>
                     
-                    <li class="nav-item dropdown open"><a class="nav-link link text-black dropdown-toggle display-4"
-                            href="#" data-toggle="dropdown-submenu" aria-expanded="true"><span
+                    <li class="nav-item dropdown open"><a class="nav-link link text-black dropdown-toggle display-4" href="#" data-toggle="dropdown-submenu" aria-expanded="true"><span
                                 class="mobi-mbri mobi-mbri-extension mbr-iconfont mbr-iconfont-btn"></span>Resources</a>
                         <div class="dropdown-menu">
                             <a class="text-black dropdown-item text-primary display-4"
-                                href="{{url_for('main.open_resources')}}" >Communities and Misc<br></a>
+                                href="{{url_for('main.open_resources')}}" >
+                                <i class="fa fa-users"></i>
+                                Communities and Misc<br></a>
                             <a class="text-black dropdown-item text-primary display-4"
-                                href="https://a2zlibrarie.web.app/" >A2Zlibrary<br></a>
+                                href="https://a2zlibrarie.web.app/" >
+                                <i class="fa fa-file-pdf-o"></i>
+                                A2Zlibrary<br></a>
                             <a class="text-black dropdown-item text-primary display-4"
-                                href="{{url_for('main.redirect_to_codearena')}}" >Code arena<br></a>
+                                href="{{url_for('main.redirect_to_codearena')}}" >
+                                <i class="	fa fa-file-code-o"></i>
+                                Code arena<br></a>
                             <a class="text-black dropdown-item text-primary display-4"
-                                href="{{url_for('main.open_library')}}" >Library<br></a>
+                                href="{{url_for('main.open_library')}}" >
+                                <i class="fa fa-institution"></i>
+                                Library<br></a>
                             <a class="text-black dropdown-item text-primary display-4"
-                                href="{{url_for('main.open_code_ground')}}" >Coding Zone<br></a>
+                                href="{{url_for('main.open_code_ground')}}" >
+                                <i class="	fa fa-tv"></i>
+                                Coding Zone<br></a>
                             <a class="text-black dropdown-item text-primary display-4"
                                 href="https://a2zlibrarie.web.app/" >Upcoming Events<br></a>
                             <a class="text-black dropdown-item text-primary display-4" href="{{url_for('main.open_blogs')}}"
-                                >Expo and blogs<br></a>
+                                >
+                                <i class="fa fa-trophy"></i>
+                                Expo and blogs<br></a>
                             <a class="text-black dropdown-item text-primary display-4" href="{{url_for('main.open_contactus')}}"
-                                >Donate &amp; Feedback<br></a>
+                                >
+                                <i class="fa fa-quote-left"></i>
+                                Donate &amp; Feedback<br></a>
                         </div>
                     </li>
-                    <li class="nav-item"><a class="nav-link link text-black text-primary display-4"
-                            href="{{url_for('main.open_explorer')}}"><span
-                                class="mobi-mbri mobi-mbri-touch mbr-iconfont mbr-iconfont-btn">Explorer</span></a>
-                    </li>
+                    <li class="nav-item dropdown open">
+                    <a class="nav-link link text-black dropdown-toggle display-4" href="#" data-toggle="dropdown-submenu" aria-expanded="true">
+                        <!-- <span class="mobi-mbri mobi-mbri-extension mbr-iconfont mbr-iconfont-btn material-icons dp48"> -->
+                            <span class="col s6 m3 mobi-mbri mbr-iconfont mbr-iconfont-btn">
+                                <!-- <i class="material-icons large icon-demo">work</i> -->
+                                <i class="fa fa-institution"></i>
+                                    Work
+                                
+                        </span>
+                        <!-- </span>Works -->
+                    </a>
+                <div class="dropdown-menu">
+                    <a class="text-black dropdown-item text-primary display-4"
+                        href="{{url_for('main.open_courses')}}">
+                        <i class="	fa fa-mortar-board"></i>
+                        Courses <br></a>
+                    <a class="text-black dropdown-item text-primary display-4"
+                        href="{{url_for('main.open_explorer')}}">
+                        <i class="fa fa-newspaper-o"></i>
+                        Explorer <br></a>
+                </div>
+            </li>
                     {% if current_user.is_authenticated %}
                     <li class="dropdown">
                         <a class="nav-link link text-black text-primary dropdown-toggle display-4" href="#" data-toggle="dropdown-submenu" aria-expanded="true">
