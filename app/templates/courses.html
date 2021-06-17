@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{url_for('static', filename='courses.css')}}">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,26 +17,61 @@
 Sign-in and Checkout our communities, blogs, projects and many more resources. Build and host projects. Redesign the way of learning.">
     <title>Courses</title>
     {% include 'nav_footer_css.html' %}
-
+    <style>
+        .img_container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 1em;
+            justify-content: space-between;
+            background-color:#2d62a3;
+            border-radius: 3px;
+            
+            transition: transform 250ms;
+        }
+        .item {
+            margin: 5px;
+        }
+        .img_container>img{
+            width:20vh;
+            border-radius: 10px;
+            
+            transition: transform 250ms;
+        }
+        .img_container>icon_rust{
+            width:20vh; 
+            border-radius: 10px;
+            
+            transition: transform 250ms;
+        }
+    </style>
 </head>
 
 <body>
 
     {% include 'nav.html' %}
-    <section class="content4 cid-svlp7a1GQF" id="content4-1u" style="background-size: cover; background-position: center center; background-image: url(assets/images/1courses.jpg);background-attachment: fixed;">
-        <div class="container"
-            style="color:white;text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;">
-            <div class="row justify-content-center" >
+    <section class="content4 cid-svlp7a1GQF" id="content4-1u"
+        style="background-size: cover; background-position: center center; background-image: url(assets/images/1courses.jpg);background-attachment: fixed;">
+        <div class="container" style="color:white;
+            text-shadow:1px  1px 4px black,
+                        1px -1px 4px black,
+                        -1px  1px 4px black,
+                        -1px -1px 4px black;">
+            <div class="row justify-content-center">
                 <div class="title col-md-12 col-lg-11">
-                    <h3 class="mbr-section-title mbr-fonts-style align-center mb-4 display-2" style="height: 309px;
-                    line-height: 309px;">
-                        <strong>Rutherfords Online Lab</strong>
+                    <h3 class="mbr-section-title mbr-fonts-style align-center mb-4 display-2" style="height:40vh;padding-top:20vh">
+                        <span class="title2" style="border:1px solid white;
+                        border-radius: 3px;padding:0.2em;background-color:black;opacity: 0.75;">
+                            <strong >Rutherfords Studio Online Learning</strong>
+                        </span>
                     </h3>
                 </div>
             </div>
         </div>
     </section>
-
+    <!-- <div id="large-header" class="large-header">
+        <canvas id="demo-canvas"></canvas>
+        <h1 class="main-title">Connect <span class="thin">Three</span></h1>
+    </div> -->
     <section>
         <div class="tab_container">
             <input id="tab1" type="radio" name="tabs" checked>
@@ -46,82 +81,368 @@ Sign-in and Checkout our communities, blogs, projects and many more resources. B
             <label for="tab2"><i class="fa fa-pencil-square-o"></i><span>Courses</span></label>
 
             <input id="tab3" type="radio" name="tabs">
-            <label for="tab3"><i class="fa fa-bar-chart-o"></i><span>Todo</span></label>
+            <label for="tab3"><i class="fa fa-bar-chart-o"></i><span>Extensions</span></label>
 
             <section id="content1" class="tab-content">
-                <h3>Headline 1</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <!-- <div style="background-image: url(assets/images/coding_zone.PNG);color: white"> -->
+                    <h3>Coding Ground</h3>
+                <p>A very dedicated online code running platform.We have got all the top 6 most used programming
+                    languages compiled on our site.<br>Lets Code and raise the competitive coding skills anywhere and
+                    from any device</p>
+                <div style="background-image: url(assets/images/1coding_zone.PNG);color: white;min-height:90vh;background-size: 100%; background-position: top center;background-repeat: no-repeat;margin-top:1em;text-align:center;padding-top:3em;background-attachment: fixed;" class="codgrndimg">
+                    <br>
+
+                    <b style="font-style:italic;font-size:30px;background-color:black">Whole Interactive and Modern Code playGround</b>
+                        <br>
+                    <a href="{{url_for('main.open_code_ground')}}">Check out the coding ground</a>
+                    <div class="img_container" style="margin-top:10%">
+                        <img src="assets/images/python.jpg">
+                        <img src="assets/images/js.png" >
+                        <img src="assets/images/go.png">
+                        <img src="assets/images/java.png" >
+                        <img src="assets/images/csharp.jpg">
+                        <img src="assets/images/c.jpg">
+                        <div class="icon_rust" 
+                        style="display:inline-block;background-image: url(assets/images/c.jpg);background-size: cover; background-position: center center;background-repeat: no-repeat;width:20vh;text-align:center;padding-top:1em;color:white;font-weight: bold;font-size:1em"> <strong style="transform:rotate(90deg) 3;">C (upcoming)</strong>
+                        </div>
+                        <div class="icon_rust" 
+                        style="display:inline-block;background-image: url(assets/images/rust2.png);background-size: cover; background-position: center center;background-repeat: no-repeat;width:20vh;text-align:center;padding-top:5em"> <strong>Rust</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="cp_embed_wrapper resizable" style="height: 674px;"><iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="674" width="100%" name="cp_embed_1" scrolling="no" src="https://codepen.io/chriscoyier/embed/drwJOm?height=674&amp;theme-id=1&amp;default-tab=css%2Cresult&amp;user=chriscoyier&amp;slug-hash=drwJOm&amp;pen-title=Sideways%20Headers&amp;name=cp_embed_1" style="width: 100%; overflow: hidden; display: block; height: 100%;" title="Sideways Headers" loading="lazy" id="cp_embed_drwJOm"></iframe><div class="win-size-grip" style="touch-action: none;"></div></div>
+                
+                
+                <!-- <div class="row">
+                    <div class="column">
+                        <img src="assets/images/python.jpg">
+                        <img src="assets/images/js.png" >
+                        <img src="/w3images/falls2.jpg" >
+                    </div>
+                    <div class="column">
+                        <img src="assets/images/python.jpg">
+                        <img src="assets/images/js.png" >
+                        <img src="/w3images/wedding.jpg" >
+                    </div>
+                </div> -->
             </section>
 
             <section id="content2" class="tab-content">
-                <h3>Headline 2</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+                <h3> Course Enrollment and Management</h3>
+                <p>Advanced Integrity of coding Ground and courses
+                    <ul style="list-style-type:disc">
+                        <li>Multiple faculty as administrators for Same course</li>
+                        <li>Coding Ground functionalities control with assigning exercises and adding test cases
+                        </li>
+                        <li>Validating the Code through customized tests</li>
+                        <li>Google Classroom features cum Hackerrank Coding experience</li>
+                        <li>Code validation, Report, Scoring and Code Runtime checks and many more...</li>
+                    </ul>
+                </p>
             </section>
 
             <section id="content3" class="tab-content">
-                <h3>Headline 3</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <h3>Extensions like Todo,timetable</h3>
+                <p> Various Applications are planned to develop the level of learning and increase the Development
+                    <ul>
+                        <li>Communities with open source projects contribution and Blogs</li>
+                        <li>Applications and web app to keep track of personal and academic learning along with helping your peers. </li>
+                        <li>Timetable and SIS mobile and web applications</li>
+                    </ul>
+                </p>
             </section>
         </div>
-        
+
         <section>
             <p class="no_wrap">
-                And Of-course this paragraph with not wrap Tab
+                By the Student;For the Students;From the Students 
             </p>
-    
+
             <p class="link">
-                Just in case you want to go through the homepage 
+                Just in case you want to go through the homepage
                 <a href="http://rutherfordsstudio.herokuapp.com/">
                     Rutherford Studio</a>
             </p>
         </section>
     </section>
+
+    <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script> -->
+
+
+    <!-- <script>
+        (function () {
+
+            var width, height, largeHeader, canvas, ctx, points, target, animateHeader = true;
+
+            // Main
+            initHeader();
+            initAnimation();
+            addListeners();
+
+            function initHeader() {
+                width = window.innerWidth;
+                height = window.innerHeight;
+                target = { x: width / 2, y: height / 2 };
+
+                largeHeader = document.getElementById('large-header');
+                largeHeader.style.height = height + 'px';
+
+                canvas = document.getElementById('demo-canvas');
+                canvas.width = width;
+                canvas.height = height;
+                ctx = canvas.getContext('2d');
+
+                // create points
+                points = [];
+                for (var x = 0; x < width; x = x + width / 20) {
+                    for (var y = 0; y < height; y = y + height / 20) {
+                        var px = x + Math.random() * width / 20;
+                        var py = y + Math.random() * height / 20;
+                        var p = { x: px, originX: px, y: py, originY: py };
+                        points.push(p);
+                    }
+                }
+
+                // for each point find the 5 closest points
+                for (var i = 0; i < points.length; i++) {
+                    var closest = [];
+                    var p1 = points[i];
+                    for (var j = 0; j < points.length; j++) {
+                        var p2 = points[j]
+                        if (!(p1 == p2)) {
+                            var placed = false;
+                            for (var k = 0; k < 5; k++) {
+                                if (!placed) {
+                                    if (closest[k] == undefined) {
+                                        closest[k] = p2;
+                                        placed = true;
+                                    }
+                                }
+                            }
+
+                            for (var k = 0; k < 5; k++) {
+                                if (!placed) {
+                                    if (getDistance(p1, p2) < getDistance(p1, closest[k])) {
+                                        closest[k] = p2;
+                                        placed = true;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    p1.closest = closest;
+                }
+
+                // assign a circle to each point
+                for (var i in points) {
+                    var c = new Circle(points[i], 2 + Math.random() * 2, 'rgba(255,255,255,0.3)');
+                    points[i].circle = c;
+                }
+            }
+
+            // Event handling
+            function addListeners() {
+                if (!('ontouchstart' in window)) {
+                    window.addEventListener('mousemove', mouseMove);
+                }
+                window.addEventListener('scroll', scrollCheck);
+                window.addEventListener('resize', resize);
+            }
+
+            function mouseMove(e) {
+                var posx = posy = 0;
+                if (e.pageX || e.pageY) {
+                    posx = e.pageX;
+                    posy = e.pageY;
+                }
+                else if (e.clientX || e.clientY) {
+                    posx = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
+                    posy = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
+                }
+                target.x = posx;
+                target.y = posy;
+            }
+
+            function scrollCheck() {
+                if (document.body.scrollTop > height) animateHeader = false;
+                else animateHeader = true;
+            }
+
+            function resize() {
+                width = window.innerWidth;
+                height = window.innerHeight;
+                largeHeader.style.height = height + 'px';
+                canvas.width = width;
+                canvas.height = height;
+            }
+
+            // animation
+            function initAnimation() {
+                animate();
+                for (var i in points) {
+                    shiftPoint(points[i]);
+                }
+            }
+
+            function animate() {
+                if (animateHeader) {
+                    ctx.clearRect(0, 0, width, height);
+                    for (var i in points) {
+                        // detect points in range
+                        if (Math.abs(getDistance(target, points[i])) < 4000) {
+                            points[i].active = 0.3;
+                            points[i].circle.active = 0.6;
+                        } else if (Math.abs(getDistance(target, points[i])) < 20000) {
+                            points[i].active = 0.1;
+                            points[i].circle.active = 0.3;
+                        } else if (Math.abs(getDistance(target, points[i])) < 40000) {
+                            points[i].active = 0.02;
+                            points[i].circle.active = 0.1;
+                        } else {
+                            points[i].active = 0;
+                            points[i].circle.active = 0;
+                        }
+
+                        drawLines(points[i]);
+                        points[i].circle.draw();
+                    }
+                }
+                requestAnimationFrame(animate);
+            }
+
+            function shiftPoint(p) {
+                TweenLite.to(p, 1 + 1 * Math.random(), {
+                    x: p.originX - 50 + Math.random() * 100,
+                    y: p.originY - 50 + Math.random() * 100, ease: Circ.easeInOut,
+                    onComplete: function () {
+                        shiftPoint(p);
+                    }
+                });
+            }
+
+            // Canvas manipulation
+            function drawLines(p) {
+                if (!p.active) return;
+                for (var i in p.closest) {
+                    ctx.beginPath();
+                    ctx.moveTo(p.x, p.y);
+                    ctx.lineTo(p.closest[i].x, p.closest[i].y);
+                    ctx.strokeStyle = 'rgba(156,217,249,' + p.active + ')';
+                    ctx.stroke();
+                }
+            }
+
+            function Circle(pos, rad, color) {
+                var _this = this;
+
+                // constructor
+                (function () {
+                    _this.pos = pos || null;
+                    _this.radius = rad || null;
+                    _this.color = color || null;
+                })();
+
+                this.draw = function () {
+                    if (!_this.active) return;
+                    ctx.beginPath();
+                    ctx.arc(_this.pos.x, _this.pos.y, _this.radius, 0, 2 * Math.PI, false);
+                    ctx.fillStyle = 'rgba(156,217,249,' + _this.active + ')';
+                    ctx.fill();
+                };
+            }
+
+            // Util
+            function getDistance(p1, p2) {
+                return Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2);
+            }
+
+        })();
+    </script> -->
+
     <script>
-        dispoff=function(){
+        dispoff = function () {
             tabs = document.querySelectorAll('section.tab-content')
-            for (const key in tabs ) {
-                if (Object.hasOwnProperty.call( tabs, key)) {
+            for (const key in tabs) {
+                if (Object.hasOwnProperty.call(tabs, key)) {
                     const element = tabs[key];
-                    element.style.display="none"
-                }}}
+                    element.style.display = "none"
+                }
+            }
+        }
         dispoff();
         arr = document.querySelectorAll('input')
-        for (const key in arr ) {
-            if (Object.hasOwnProperty.call( arr, key)) {
+        for (const key in arr) {
+            if (Object.hasOwnProperty.call(arr, key)) {
                 const element = arr[key];
-                element.addEventListener("click", function() {
+                element.addEventListener("click", function () {
                     dispoff();
                     // console.log(element.id.slice(-1));
-                    document.querySelector('#content'+element.id.slice(-1)).style.display="block";
+                    document.querySelector('#content' + element.id.slice(-1)).style.display = "block";
                 });
-        };}
-        document.querySelector('#content1').style.display="block";
+            };
+        }
+        document.querySelector('#content1').style.display = "block";
     </script>
     {% include 'footer.html' %}
     {% include 'nav_footer_src.html' %}
     <style>
-        @media only screen and (max-width: 900px) {
-    label span {
-        display: block;
-        font-size: 13px;
-    }
-    
-    .tab_container {
-        width: 180%;
-    }
-    }
+        .img_container>img:hover{
+                transform: translateY(-10px);
+            }
+        .img_container>div:hover{
+                transform: translateY(-10px);
+            }
+        .tab_container .tab-content p,
+        .tab_container .tab-content h3 {
+            -webkit-animation: fadeInScale 0.7s ease-in-out;
+            -moz-animation: fadeInScale 0.7s ease-in-out;
+            animation: fadeInScale 0.7s ease-in-out;
+            color: black;
+            text-align: center;
+            font-size:20px;
+        }
+        .tab-content h3{
+            font-style:normal;
+            font-weight:bolder;
+        }
+
+        .img_container>img:hover .img_container>*:hover{
+                transform: translateY(-10px);
+            }
+
+        @media only screen and (max-width: 1000px) {
+
+            .title2>strong{
+                font-size:15px;
+                width:100vh;
+            }
+
+            label span {
+                display: block;
+                font-size: 13px;
+            }
+            .tab_container > label{
+                width: 33%;
+            }
+
+            .tab-content {
+                width: 100%;
+            }
+
+            .img_container{
+                margin:1vh;
+                padding:1vh;
+            }
+
+            .img_container>img .img_container>*{
+                width:5vh;
+                height:5vh;
+            }
+
+            .codgrndimg{
+                min-height:180vh;
+            }
+        }
     </style>
 </body>
 
